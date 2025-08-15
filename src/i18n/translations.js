@@ -221,22 +221,72 @@ export const translations = {
       subtitle: "无论是内容营销、企业报告还是团队协作，熵变AI都能为您提供专业的解决方案",
       cases: [
         {
-          title: "内容营销",
-          description: "创作引人入胜的营销内容，提升品牌影响力",
-          features: ["品牌故事叙述", "社交媒体内容", "邮件营销", "产品描述"],
-          benefits: { quality: "内容质量", efficiency: "创作效率", engagement: "用户参与度", conversion: "转化率" }
+          title: "企业内容营销",
+          description: "助力企业打造专业的品牌内容体系",
+          features: [
+            "品牌故事创作",
+            "产品介绍文案",
+            "社交媒体内容",
+            "营销邮件文案",
+            "白皮书制作",
+            "案例研究报告"
+          ],
+          results: {
+            efficiency: "80%",
+            quality: "95%",
+            time: "70%"
+          }
         },
         {
-          title: "企业报告", 
-          description: "快速生成专业的商业报告",
-          features: ["数据分析报告", "市场调研", "项目总结", "绩效报告"],
-          benefits: { accuracy: "数据准确性", speed: "报告速度", insights: "商业洞察", time: "节省时间" }
+          title: "教育培训",
+          description: "为教育机构提供课程内容和培训材料制作",
+          features: [
+            "课程大纲设计",
+            "教学材料制作",
+            "练习题生成",
+            "培训手册编写",
+            "学习评估报告",
+            "在线课程内容"
+          ],
+          results: {
+            efficiency: "75%",
+            quality: "90%",
+            time: "65%"
+          }
+        },
+        {
+          title: "企业报告",
+          description: "快速生成各类企业报告和分析文档",
+          features: [
+            "财务分析报告",
+            "市场调研报告",
+            "项目总结报告",
+            "年度工作总结",
+            "竞品分析报告",
+            "投资建议书"
+          ],
+          results: {
+            efficiency: "85%",
+            quality: "92%",
+            time: "75%"
+          }
         },
         {
           title: "团队协作",
-          description: "提升团队沟通和协作效率",
-          features: ["会议纪要", "项目文档", "知识分享", "团队简报"],
-          benefits: { communication: "沟通效率", knowledge: "知识共享", collaboration: "团队协作", time: "时间效率" }
+          description: "提升团队协作效率，统一内容标准",
+          features: [
+            "团队知识库",
+            "协作文档编写",
+            "内容审核流程",
+            "版本控制管理",
+            "模板标准化",
+            "团队培训材料"
+          ],
+          results: {
+            efficiency: "70%",
+            quality: "88%",
+            time: "60%"
+          }
         }
       ],
       applicationResults: "应用效果",
@@ -486,22 +536,72 @@ export const translations = {
       subtitle: "Whether content marketing, enterprise reports or team collaboration, Entropy AI provides professional solutions",
       cases: [
         {
-          title: "Content Marketing",
-          description: "Create compelling marketing content to boost brand influence",
-          features: ["Brand storytelling", "Social media content", "Email marketing", "Product descriptions"],
-          benefits: { quality: "Content quality", efficiency: "Creation efficiency", engagement: "User engagement", conversion: "Conversion rate" }
+          title: "Enterprise Content Marketing",
+          description: "Help enterprises build professional brand content systems",
+          features: [
+            "Brand Story Creation",
+            "Product Introduction Copy",
+            "Social Media Content",
+            "Marketing Email Copy",
+            "White Paper Production",
+            "Case Study Reports"
+          ],
+          results: {
+            efficiency: "80%",
+            quality: "95%",
+            time: "70%"
+          }
         },
         {
-          title: "Enterprise Reports", 
-          description: "Generate professional business reports quickly",
-          features: ["Data analysis reports", "Market research", "Project summaries", "Performance reports"],
-          benefits: { accuracy: "Data accuracy", speed: "Report speed", insights: "Business insights", time: "Time saved" }
+          title: "Education & Training",
+          description: "Provide course content and training material production for educational institutions",
+          features: [
+            "Course Outline Design",
+            "Teaching Material Production",
+            "Exercise Generation",
+            "Training Manual Writing",
+            "Learning Assessment Reports",
+            "Online Course Content"
+          ],
+          results: {
+            efficiency: "75%",
+            quality: "90%",
+            time: "65%"
+          }
+        },
+        {
+          title: "Enterprise Reports",
+          description: "Quickly generate various enterprise reports and analysis documents",
+          features: [
+            "Financial Analysis Reports",
+            "Market Research Reports",
+            "Project Summary Reports",
+            "Annual Work Summaries",
+            "Competitive Analysis Reports",
+            "Investment Proposals"
+          ],
+          results: {
+            efficiency: "85%",
+            quality: "92%",
+            time: "75%"
+          }
         },
         {
           title: "Team Collaboration",
-          description: "Improve team communication and collaboration efficiency", 
-          features: ["Meeting minutes", "Project documentation", "Knowledge sharing", "Team briefings"],
-          benefits: { communication: "Communication efficiency", knowledge: "Knowledge sharing", collaboration: "Team collaboration", time: "Time efficiency" }
+          description: "Improve team collaboration efficiency and unify content standards",
+          features: [
+            "Team Knowledge Base",
+            "Collaborative Document Writing",
+            "Content Review Process",
+            "Version Control Management",
+            "Template Standardization",
+            "Team Training Materials"
+          ],
+          results: {
+            efficiency: "70%",
+            quality: "88%",
+            time: "60%"
+          }
         }
       ],
       applicationResults: "Application Results",

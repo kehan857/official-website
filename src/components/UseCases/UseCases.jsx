@@ -8,84 +8,25 @@ const UseCases = () => {
   const t = useMemo(() => translations[lang], [lang])
   const [activeTab, setActiveTab] = useState(0)
   
-  const useCases = [
-    {
-      icon: <Briefcase className="w-8 h-8" />,
-      title: "企业内容营销",
-      description: "助力企业打造专业的品牌内容体系",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      features: [
-        "品牌故事创作",
-        "产品介绍文案",
-        "社交媒体内容",
-        "营销邮件文案",
-        "白皮书制作",
-        "案例研究报告"
-      ],
-      results: {
-        efficiency: "80%",
-        quality: "95%",
-        time: "70%"
-      }
-    },
-    {
-      icon: <GraduationCap className="w-8 h-8" />,
-      title: "教育培训",
-      description: "为教育机构提供课程内容和培训材料制作",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
-      features: [
-        "课程大纲设计",
-        "教学材料制作",
-        "练习题生成",
-        "培训手册编写",
-        "学习评估报告",
-        "在线课程内容"
-      ],
-      results: {
-        efficiency: "75%",
-        quality: "90%",
-        time: "65%"
-      }
-    },
-    {
-      icon: <Building2 className="w-8 h-8" />,
-      title: "企业报告",
-      description: "快速生成各类企业报告和分析文档",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      features: [
-        "财务分析报告",
-        "市场调研报告",
-        "项目总结报告",
-        "年度工作总结",
-        "竞品分析报告",
-        "投资建议书"
-      ],
-      results: {
-        efficiency: "85%",
-        quality: "92%",
-        time: "75%"
-      }
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "团队协作",
-      description: "提升团队协作效率，统一内容标准",
-      image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
-      features: [
-        "团队知识库",
-        "协作文档编写",
-        "内容审核流程",
-        "版本控制管理",
-        "模板标准化",
-        "团队培训材料"
-      ],
-      results: {
-        efficiency: "70%",
-        quality: "88%",
-        time: "60%"
-      }
-    }
+  const icons = [
+    <Briefcase className="w-8 h-8" />,
+    <GraduationCap className="w-8 h-8" />,
+    <Building2 className="w-8 h-8" />,
+    <Users className="w-8 h-8" />
   ]
+  
+  const images = [
+    "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop"
+  ]
+  
+  const useCases = t.useCases.cases.map((useCase, index) => ({
+    ...useCase,
+    icon: icons[index],
+    image: images[index]
+  }))
 
   return (
     <section className="section-spacing bg-white">
