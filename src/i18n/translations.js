@@ -117,8 +117,6 @@ export const translations = {
         s3: "满意度",
         s4: "技术支持"
       },
-      trustTitle: "被各行业团队信任",
-      trustDesc: "覆盖内容、市场、产品、研发、咨询等多场景。",
       items: [
         {
           name: "王宁",
@@ -491,13 +489,11 @@ export const translations = {
       header2: "Entropy AI",
       subtitle: "From individuals to teams, they create more, better.",
       stats: { s1: "Happy creators", s2: "Words", s3: "Satisfaction", s4: "Support" },
-      trustTitle: "Trusted by teams worldwide",
-      trustDesc: "From content and marketing to product and consulting.",
       items: [
-        { name: "Ning Wang", role: "PM", company: "Internet", content: "Reliable RAG and source citations. Team output up significantly.", rating: 5 },
-        { name: "Ran Li", role: "Technical Writer", company: "DevTools", content: "End-to-end flow makes documentation production stable.", rating: 5 },
-        { name: "Amy", role: "Head of Marketing", company: "SaaS", content: "Templates + AI speed up content while keeping brand.", rating: 5 },
-        { name: "Daniel", role: "Creator", company: "Indie", content: "Boards unify materials and notes. Frictionless experience.", rating: 5 }
+        { name: "Sarah", role: "Product Manager", company: "Tech Startup", content: "RAG retrieval and citation tracing are very reliable, team collaboration writing efficiency has improved significantly.", rating: 5 },
+        { name: "Michael", role: "Technical Writer", company: "DevTools", content: "From material collection to structured output, the integrated process makes document production more stable.", rating: 5 },
+        { name: "Emily", role: "Marketing Director", company: "SaaS Company", content: "Templates + AI generation make content turnover faster and brand consistency better.", rating: 5 },
+        { name: "David", role: "Independent Creator", company: "Freelance", content: "Project boards unify materials and notes. Frictionless experience.", rating: 5 }
       ]
     },
     workflow: {

@@ -78,28 +78,6 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        
-        {/* Trust Indicators */}
-        <div className="bg-white rounded-3xl p-12 shadow-sm border border-gray-200">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">{t.testimonials.trustTitle}</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{t.testimonials.trustDesc}</p>
-          </div>
-          
-          {/* Company Logos */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 items-center">
-            {[
-              { name: "中国移动", bg: "from-red-500 to-pink-500" },
-              { name: "华为", bg: "from-blue-500 to-indigo-500" },
-              { name: "阿里巴巴", bg: "from-orange-500 to-red-500" },
-              { name: "腾讯", bg: "from-green-500 to-blue-500" }
-            ].map((company, i) => (
-              <div key={i} className={`bg-gradient-to-r ${company.bg} h-16 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-300`}>
-                <span className="text-white font-bold text-lg">{company.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )
