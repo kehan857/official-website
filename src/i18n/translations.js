@@ -253,31 +253,61 @@ export const translations = {
       billing: { monthly: "按月付费", yearly: "按年付费", save: "节省20%" },
       plans: [
         {
-          name: "入门版",
-          price: "免费",
-          period: "永久免费",
-          description: "适合个人用户体验AI创作",
-          features: ["每月5个项目", "基础AI生成", "标准模板", "社区支持"],
-          cta: "免费开始",
-          popular: false
+          name: "免费体验",
+          price: { monthly: 0, annual: 0 },
+          description: "适合个人用户试用体验",
+          features: [
+            "每月5次AI创作",
+            "基础模板库",
+            "标准导出格式",
+            "社区支持",
+            "基础教程"
+          ],
+          limitations: [
+            "功能限制较多",
+            "无法商用"
+          ],
+          buttonText: "免费开始",
+          popular: false,
+          color: "border-gray-200"
         },
         {
           name: "专业版",
-          price: { monthly: "¥199", yearly: "¥1,990" },
-          period: "每月",
-          description: "适合内容创作者和小团队",
-          features: ["无限项目", "高级AI能力", "高级模板", "优先支持", "团队协作", "多格式导出"],
-          cta: "选择专业版",
-          popular: true
+          price: { monthly: 299, annual: 2399 },
+          description: "适合中小企业和团队使用",
+          features: [
+            "无限AI创作次数",
+            "高级模板库",
+            "多格式导出",
+            "团队协作功能",
+            "优先技术支持",
+            "自定义品牌",
+            "API接口访问",
+            "数据分析报告"
+          ],
+          limitations: [],
+          buttonText: "立即购买",
+          popular: true,
+          color: "border-blue-500"
         },
         {
           name: "企业版",
-          price: "定制",
-          period: "联系销售",
-          description: "为大型企业定制的解决方案",
-          features: ["自定义部署", "企业级安全", "专属客户经理", "API访问", "自定义集成", "SLA保障"],
-          cta: "联系销售",
-          popular: false
+          price: { monthly: 999, annual: 9999 },
+          description: "适合大型企业定制化需求",
+          features: [
+            "所有专业版功能",
+            "私有化部署",
+            "定制化开发",
+            "专属客户经理",
+            "SLA服务保障",
+            "企业级安全",
+            "无限用户数",
+            "培训与咨询"
+          ],
+          limitations: [],
+          buttonText: "联系销售",
+          popular: false,
+          color: "border-gray-800"
         }
       ],
       mostPopular: "最受欢迎",
@@ -295,7 +325,15 @@ export const translations = {
       haveQuestions: "还有疑问？",
       salesTeam: "我们的销售团队随时为您答疑解惑",
       contactSales: "联系销售",
-      viewFAQ: "查看常见问题"
+      viewFAQ: "查看常见问题",
+      features: [
+        "AI智能创作引擎",
+        "多模态内容支持",
+        "企业级安全保障",
+        "24/7技术支持",
+        "数据隐私保护",
+        "云端同步备份"
+      ]
     }
   },
   en: {
@@ -480,31 +518,61 @@ export const translations = {
       billing: { monthly: "Monthly", yearly: "Yearly", save: "Save 20%" },
       plans: [
         {
-          name: "Starter",
-          price: "Free",
-          period: "forever",
-          description: "Perfect for individual users to experience AI creation",
-          features: ["5 projects per month", "Basic AI generation", "Standard templates", "Community support"],
-          cta: "Start free",
-          popular: false
+          name: "Free Trial",
+          price: { monthly: 0, annual: 0 },
+          description: "Perfect for individual users to try out",
+          features: [
+            "5 AI creations per month",
+            "Basic template library",
+            "Standard export formats",
+            "Community support",
+            "Basic tutorials"
+          ],
+          limitations: [
+            "More feature limitations",
+            "Cannot be used for commercial purposes"
+          ],
+          buttonText: "Start for Free",
+          popular: false,
+          color: "border-gray-200"
         },
         {
-          name: "Professional", 
-          price: { monthly: "¥199", yearly: "¥1,990" },
-          period: "per month",
-          description: "Suitable for content creators and small teams",
-          features: ["Unlimited projects", "Advanced AI capabilities", "Premium templates", "Priority support", "Team collaboration", "Export multiple formats"],
-          cta: "Choose Professional",
-          popular: true
+          name: "Professional Edition",
+          price: { monthly: 299, annual: 2399 },
+          description: "Suitable for small and medium-sized enterprises and teams",
+          features: [
+            "Unlimited AI creation times",
+            "Advanced template library",
+            "Multiple export formats",
+            "Team collaboration features",
+            "Priority technical support",
+            "Custom branding",
+            "API interface access",
+            "Data analysis reports"
+          ],
+          limitations: [],
+          buttonText: "Buy Now",
+          popular: true,
+          color: "border-blue-500"
         },
         {
-          name: "Enterprise",
-          price: "Custom",
-          period: "contact sales",
-          description: "Customized solutions for large enterprises",
-          features: ["Custom deployment", "Enterprise-level security", "Dedicated account manager", "API access", "Custom integrations", "SLA guarantee"],
-          cta: "Contact sales",
-          popular: false
+          name: "Enterprise Edition",
+          price: { monthly: 999, annual: 9999 },
+          description: "Suitable for large enterprises with customized needs",
+          features: [
+            "All Professional Edition features",
+            "Private deployment",
+            "Customized development",
+            "Dedicated account manager",
+            "SLA service guarantee",
+            "Enterprise-grade security",
+            "Unlimited users",
+            "Training and consulting"
+          ],
+          limitations: [],
+          buttonText: "Contact Sales",
+          popular: false,
+          color: "border-gray-800"
         }
       ],
       mostPopular: "Most Popular",
@@ -522,7 +590,15 @@ export const translations = {
       haveQuestions: "Have questions?",
       salesTeam: "Our sales team is always ready to answer your questions",
       contactSales: "Contact Sales",
-      viewFAQ: "View FAQ"
+      viewFAQ: "View FAQ",
+      features: [
+        "AI Intelligent Creation Engine",
+        "Multimodal Content Support",
+        "Enterprise-grade Security",
+        "24/7 Technical Support",
+        "Data Privacy Protection",
+        "Cloud Sync Backup"
+      ]
     },
     footer: {
       topTitle1: "Write",

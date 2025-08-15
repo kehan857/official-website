@@ -8,74 +8,8 @@ const Pricing = () => {
   const t = useMemo(() => translations[lang], [lang])
   const [isAnnual, setIsAnnual] = useState(true)
   
-  const plans = [
-    {
-      name: "免费体验",
-      price: { monthly: 0, annual: 0 },
-      description: "适合个人用户试用体验",
-      features: [
-        "每月5次AI创作",
-        "基础模板库",
-        "标准导出格式",
-        "社区支持",
-        "基础教程"
-      ],
-      limitations: [
-        "功能限制较多",
-        "无法商用"
-      ],
-      buttonText: "免费开始",
-      popular: false,
-      color: "border-gray-200"
-    },
-    {
-      name: "专业版",
-      price: { monthly: 299, annual: 2399 },
-      description: "适合中小企业和团队使用",
-      features: [
-        "无限AI创作次数",
-        "高级模板库",
-        "多格式导出",
-        "团队协作功能",
-        "优先技术支持",
-        "自定义品牌",
-        "API接口访问",
-        "数据分析报告"
-      ],
-      limitations: [],
-      buttonText: "立即购买",
-      popular: true,
-      color: "border-blue-500"
-    },
-    {
-      name: "企业版",
-      price: { monthly: 999, annual: 9999 },
-      description: "适合大型企业定制化需求",
-      features: [
-        "所有专业版功能",
-        "私有化部署",
-        "定制化开发",
-        "专属客户经理",
-        "SLA服务保障",
-        "企业级安全",
-        "无限用户数",
-        "培训与咨询"
-      ],
-      limitations: [],
-      buttonText: "联系销售",
-      popular: false,
-      color: "border-gray-800"
-    }
-  ]
-
-  const features = [
-    "AI智能创作引擎",
-    "多模态内容支持",
-    "企业级安全保障",
-    "24/7技术支持",
-    "数据隐私保护",
-    "云端同步备份"
-  ]
+  const plans = t.pricing.plans
+  const features = t.pricing.features
 
   return (
     <section className="section-spacing bg-white">
