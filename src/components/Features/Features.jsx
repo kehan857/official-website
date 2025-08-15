@@ -16,49 +16,42 @@ const Features = () => {
   ]
 
   return (
-    <section id="features" className="section-padding bg-muted">
+    <section id="features" className="section-padding-lg bg-muted">
       <div className="container-max">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
             {t.features.header1}
-            <span className="block text-accent">{t.features.header2}</span>
+            <span className="block text-gradient">{t.features.header2}</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t.features.desc}</p>
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">{t.features.desc}</p>
         </div>
         
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <div key={index} className="card group hover:scale-105 transition-all duration-300">
               {/* Icon */}
-              <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-300`}>
                 {feature.icon}
               </div>
               
               {/* Content */}
-              <h3 className="text-xl font-semibold text-primary mb-3">
+              <h3 className="text-xl font-semibold text-primary mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-text-secondary leading-relaxed">
                 {feature.description}
               </p>
-              
-              {/* Hover Effect */}
-              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="text-primary font-medium text-sm hover:text-accent transition-colors">
-                  →
-                </button>
-              </div>
             </div>
           ))}
         </div>
         
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+        {/* Bottom CTA - 简化 */}
+        <div className="text-center mt-20">
+          <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-primary mb-4">{t.features.bottomCtaTitle}</h3>
-            <p className="text-gray-600 mb-6">{t.features.bottomCtaDesc}</p>
+            <p className="text-text-secondary mb-8 leading-relaxed">{t.features.bottomCtaDesc}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-primary">{t.features.bottomPrimary}</button>
               <button className="btn-secondary">{t.features.bottomSecondary}</button>

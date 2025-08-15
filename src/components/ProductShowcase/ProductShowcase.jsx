@@ -13,16 +13,16 @@ const ProductShowcase = () => {
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding-lg bg-white">
       <div className="container-max">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left - Product Screenshot */}
           <div className="relative">
             <div className="relative z-10">
               {/* Main Product Interface */}
-              <div className="bg-gray-50 rounded-2xl shadow-2xl overflow-hidden">
+              <div className="bg-gray-50 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
                 {/* Header */}
-                <div className="bg-white px-6 py-4 border-b flex items-center justify-between">
+                <div className="bg-white px-6 py-4 border-b border-gray-100 flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                       <span className="text-white font-bold text-sm">Y</span>
@@ -36,22 +36,22 @@ const ProductShowcase = () => {
                 </div>
                 
                 {/* Toolbar */}
-                <div className="bg-white px-6 py-3 border-b flex items-center space-x-4">
+                <div className="bg-white px-6 py-3 border-b border-gray-100 flex items-center space-x-4">
                   <button className="px-3 py-1 bg-primary text-white rounded text-sm font-medium">B</button>
-                  <button className="px-3 py-1 border rounded text-sm">I</button>
-                  <button className="px-3 py-1 border rounded text-sm">U</button>
-                  <div className="w-px h-6 bg-gray-300"></div>
-                  <button className="px-3 py-1 border rounded text-sm">H1</button>
-                  <button className="px-3 py-1 border rounded text-sm">H2</button>
+                  <button className="px-3 py-1 border border-gray-200 rounded text-sm">I</button>
+                  <button className="px-3 py-1 border border-gray-200 rounded text-sm">U</button>
+                  <div className="w-px h-6 bg-gray-200"></div>
+                  <button className="px-3 py-1 border border-gray-200 rounded text-sm">H1</button>
+                  <button className="px-3 py-1 border border-gray-200 rounded text-sm">H2</button>
                 </div>
                 
                 {/* Content Area */}
-                <div className="p-6 space-y-4">
+                <div className="p-8 space-y-4">
                   <h2 className="text-xl font-bold text-gray-800">Chapter 1: Getting Started</h2>
-                  <div className="space-y-2">
-                    <div className="h-4 bg-gray-300 rounded w-full"></div>
-                    <div className="h-4 bg-gray-300 rounded w-5/6"></div>
-                    <div className="h-4 bg-gray-300 rounded w-4/5"></div>
+                  <div className="space-y-3">
+                    <div className="h-4 bg-gray-200 rounded w-full"></div>
+                    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                    <div className="h-4 bg-gray-200 rounded w-4/5"></div>
                   </div>
                   
                   <div className="bg-accent/10 border-l-4 border-accent p-4 rounded">
@@ -59,15 +59,15 @@ const ProductShowcase = () => {
                     <div className="h-3 bg-accent/30 rounded w-1/2 mt-2"></div>
                   </div>
                   
-                  <div className="space-y-2">
-                    <div className="h-4 bg-gray-300 rounded w-full"></div>
-                    <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+                  <div className="space-y-3">
+                    <div className="h-4 bg-gray-200 rounded w-full"></div>
+                    <div className="h-4 bg-gray-200 rounded w-3/4"></div>
                   </div>
                 </div>
               </div>
               
               {/* AI Suggestion Popup */}
-              <div className="absolute top-32 -right-8 bg-white rounded-lg shadow-xl p-4 border max-w-xs">
+              <div className="absolute top-32 -right-8 bg-white rounded-lg shadow-lg p-4 border border-gray-100 max-w-xs">
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                     <Star className="w-4 h-4 text-white" />
@@ -90,36 +90,35 @@ const ProductShowcase = () => {
           
           {/* Right - Content */}
           <div>
-            <div className="mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <div className="mb-10">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
                 {t.product.title1}
-                <span className="block text-accent">{t.product.title2}</span>
+                <span className="block text-gradient">{t.product.title2}</span>
               </h2>
-              <p className="text-lg text-gray-600">{t.product.subtitle}</p>
+              <p className="text-xl text-text-secondary leading-relaxed">{t.product.subtitle}</p>
             </div>
             
-            {/* Feature List */}
-            <div className="space-y-6 mb-8">
+            {/* Features List */}
+            <div className="space-y-6 mb-10">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                    {feature.icon}
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="text-accent">
+                      {feature.icon}
+                    </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="font-semibold text-primary mb-2">{feature.title}</h3>
+                    <p className="text-text-secondary leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
             
             {/* CTA */}
-            <div className="flex items-center space-x-4">
-              <button className="btn-primary">{t.product.cta.primary}</button>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <Check className="w-4 h-4 text-green-500" />
-                <span>{t.product.cta.note}</span>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="btn-primary">开始使用</button>
+              <button className="btn-secondary">了解更多</button>
             </div>
           </div>
         </div>
