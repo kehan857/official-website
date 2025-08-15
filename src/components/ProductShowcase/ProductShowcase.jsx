@@ -13,15 +13,15 @@ const ProductShowcase = () => {
   ]
 
   return (
-    <section className="section-padding bg-white">
-      <div className="container-content">
+    <section className="section-spacing bg-white">
+      <div className="container-section">
         {/* Section Header */}
-        <div className="section-header">
-          <h2 className="section-title">
+        <div className="text-center mb-20">
+          <h2 className="heading-section">
             {t.product.title1}
-            <span className="block text-primary mt-4">{t.product.title2}</span>
+            <span className="block text-black">{t.product.title2}</span>
           </h2>
-          <p className="section-subtitle">{t.product.subtitle}</p>
+          <p className="text-section max-w-3xl mx-auto">{t.product.subtitle}</p>
         </div>
 
         {/* Main Content Grid */}
@@ -93,24 +93,24 @@ const ProductShowcase = () => {
           
           {/* Right - Feature List */}
           <div className="order-1 lg:order-2">
-            <div className="space-y-8">
+            <div className="space-y-10">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-5">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                <div key={index} className="flex items-start space-x-6">
+                  <div className="flex-shrink-0 w-14 h-14 bg-black/5 rounded-2xl flex items-center justify-center text-black">
                     {feature.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                    <h3 className="heading-card">{feature.title}</h3>
+                    <p className="text-body">{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
             
             {/* CTA Section */}
-            <div className="mt-12 p-8 bg-white rounded-2xl border border-gray-200 shadow-sm">
+            <div className="mt-16 p-8 bg-gray-50 rounded-3xl">
               <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
-                <div className="flex items-center space-x-3 text-sm text-gray-600">
+                <div className="flex items-center space-x-3 text-gray-600" style={{fontSize: 'var(--text-sm)'}}>
                   <Check className="w-5 h-5 text-green-500" />
                   <span>{t.product.cta.note}</span>
                 </div>

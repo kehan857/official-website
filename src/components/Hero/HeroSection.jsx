@@ -9,16 +9,16 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       {/* Hero Content */}
-      <div className="py-40 px-6 sm:px-8 lg:px-12 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="section-spacing-lg bg-white">
+        <div className="container-hero text-center">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-12">
+          <h1 className="heading-hero">
             {t.hero.title1}
-            <span className="block mt-4">{t.hero.title2}</span>
+            <span className="block">{t.hero.title2}</span>
           </h1>
           
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-16">
+          <p className="text-hero max-w-3xl mx-auto">
             {t.hero.subtitle}
           </p>
           
@@ -26,7 +26,7 @@ const HeroSection = () => {
           <div className="mb-24">
             <button 
               onClick={()=>setAuthModal({ open: true, mode: 'register' })} 
-              className="bg-black text-white px-12 py-6 rounded-full text-xl font-medium hover:bg-gray-800 transition-all duration-300 inline-flex items-center justify-center"
+              className="btn-primary text-lg px-12 py-5"
             >
               {t.hero.ctaPrimary}
             </button>
@@ -35,14 +35,14 @@ const HeroSection = () => {
       </div>
 
       {/* Visual Demo Section */}
-      <div className="py-32 px-6 sm:px-8 lg:px-12 bg-black">
-        <div className="max-w-6xl mx-auto">
+      <div className="section-spacing bg-black">
+        <div className="container-section">
           {/* Section Title */}
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="heading-section text-white">
               AI驱动的智能创作平台
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-section text-gray-300 max-w-3xl mx-auto">
               体验全新的智能创作流程，从想法到成品，一站式解决方案
             </p>
           </div>

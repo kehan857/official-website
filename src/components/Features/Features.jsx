@@ -16,31 +16,31 @@ const Features = () => {
   ]
 
   return (
-    <section id="features" className="section-padding bg-white">
-      <div className="container-content">
+    <section id="features" className="section-spacing bg-gray-50">
+      <div className="container-section">
         {/* Section Header */}
-        <div className="section-header">
-          <h2 className="section-title">
+        <div className="text-center mb-20">
+          <h2 className="heading-section">
             {t.features.header1}
-            <span className="block text-primary mt-4">{t.features.header2}</span>
+            <span className="block text-black">{t.features.header2}</span>
           </h2>
-          <p className="section-subtitle">{t.features.desc}</p>
+          <p className="text-section max-w-3xl mx-auto">{t.features.desc}</p>
         </div>
         
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="card-feature group cursor-pointer">
+            <div key={index} className="card-base card-hover group cursor-pointer">
               {/* Icon */}
-              <div className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+              <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-105 transition-all duration-300">
                 {feature.icon}
               </div>
               
               {/* Content */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
+              <h3 className="heading-card group-hover:text-black transition-colors duration-300">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <p className="text-body">
                 {feature.description}
               </p>
               

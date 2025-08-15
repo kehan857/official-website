@@ -13,50 +13,56 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container-max">
-        <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+    <header className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/90">
+      <div className="container-section">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-primary">{t.brand.name}</span>
+              <span className="text-2xl font-bold text-black">{t.brand.name}</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#hero" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+            <div className="flex items-center space-x-12">
+              <a href="#hero" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.home}
               </a>
-              <a href="#features" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+              <a href="#features" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.features}
               </a>
-              <a href="#testimonials" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+              <a href="#testimonials" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.reviews}
               </a>
-              <a href="#resources" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+              <a href="#resources" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.resources}
               </a>
-              <div className="ml-4">
-                <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium border rounded-lg">
-                  {lang==='zh'? t.lang.en : t.lang.zh}
-                </button>
-              </div>
+              <button 
+                onClick={()=>setLang(lang==='zh'?'en':'zh')} 
+                className="text-gray-600 hover:text-black px-3 py-1 border border-gray-200 rounded-full transition-colors duration-200"
+                style={{fontSize: 'var(--text-sm)'}}
+              >
+                {lang==='zh'? t.lang.en : t.lang.zh}
+              </button>
             </div>
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-4">
             {user ? (
               <>
-                <span className="text-sm text-gray-600">{user.email}</span>
+                <span className="text-gray-600" style={{fontSize: 'var(--text-sm)'}}>{user.email}</span>
                 <button onClick={()=>setUser(null)} className="btn-secondary">{t.auth.logout}</button>
               </>
             ) : (
               <>
-                <button onClick={()=>setAuthModal({ open: true, mode: 'login' })} className="btn-secondary">{t.auth.login}</button>
-                <button onClick={()=>setAuthModal({ open: true, mode: 'register' })} className="btn-primary">{t.auth.register}</button>
+                <button onClick={()=>setAuthModal({ open: true, mode: 'login' })} className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
+                  {t.auth.login}
+                </button>
+                <button onClick={()=>setAuthModal({ open: true, mode: 'register' })} className="btn-primary">
+                  {t.auth.register}
+                </button>
               </>
             )}
           </div>
@@ -65,7 +71,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-primary p-2"
+              className="text-gray-600 hover:text-black p-2 transition-colors duration-200"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
