@@ -35,7 +35,7 @@
   }
   
   .card-dark {
-    @apply bg-primary text-white rounded-3xl shadow-2xl border border-dark-border p-12 hover:shadow-3xl transition-all duration-500;
+    @apply bg-primary text-white rounded-3xl shadow-2xl border border-gray-800 p-12 hover:shadow-2xl transition-all duration-500;
   }
   
   .card-feature {
@@ -71,7 +71,7 @@
   }
   
   .dark-bg {
-    @apply bg-gradient-to-br from-primary via-dark-lighter to-primary;
+    @apply bg-gradient-to-br from-primary via-gray-900 to-primary;
   }
   
   .section-header {

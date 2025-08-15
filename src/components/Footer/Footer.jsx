@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               {t.footer.topTitle1}
-              <span className="block text-accent mt-2">{t.footer.topTitle2}</span>
+              <span className="block text-white mt-2">{t.footer.topTitle2}</span>
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">{t.footer.topDesc}</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -69,7 +69,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="mb-8">
-                <span className="text-3xl font-bold text-accent">{t.brand.name}</span>
+                <span className="text-3xl font-bold text-white">{t.brand.name}</span>
               </div>
               <p className="text-gray-300 mb-8 leading-relaxed text-lg">{t.hero.subtitle}</p>
               
@@ -102,7 +102,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 {footerLinks.product.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-300 hover:text-accent transition-colors">
+                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -116,7 +116,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-300 hover:text-accent transition-colors">
+                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -130,7 +130,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 {footerLinks.resources.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-300 hover:text-accent transition-colors">
+                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -144,7 +144,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 {footerLinks.legal.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-300 hover:text-accent transition-colors">
+                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -166,7 +166,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-accent hover:bg-gray-700 transition-all duration-200"
+                  className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
                   aria-label={social.name}
                 >
                   {social.icon}

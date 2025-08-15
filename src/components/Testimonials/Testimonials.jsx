@@ -21,7 +21,7 @@ const Testimonials = () => {
         <div className="section-header">
           <h2 className="section-title">
             {t.testimonials.header1}
-            <span className="block text-accent mt-2">{t.testimonials.header2}</span>
+            <span className="block text-primary mt-4">{t.testimonials.header2}</span>
           </h2>
           <p className="section-subtitle">{t.testimonials.subtitle}</p>
         </div>
@@ -49,14 +49,14 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-3xl p-10 shadow-sm border border-gray-200 relative group hover:shadow-lg transition-all duration-300">
               {/* Quote Icon */}
-              <div className="absolute top-8 right-8 text-gray-200 group-hover:text-accent/20 transition-colors duration-300">
+              <div className="absolute top-8 right-8 text-gray-200 group-hover:text-primary/20 transition-colors duration-300">
                 <Quote className="w-10 h-10" />
               </div>
               
               {/* Rating */}
               <div className="flex items-center space-x-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 fill-accent text-accent" />
+                  <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
               

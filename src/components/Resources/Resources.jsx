@@ -26,7 +26,7 @@ const Resources = () => {
         <div className="section-header">
           <h2 className="section-title">
             {t.resources.header1}
-            <span className="block text-accent mt-2">{t.resources.header2}</span>
+            <span className="block text-primary mt-4">{t.resources.header2}</span>
           </h2>
           <p className="section-subtitle">{t.resources.desc}</p>
         </div>
@@ -38,7 +38,7 @@ const Resources = () => {
               key={index}
               className={`px-8 py-4 rounded-2xl font-medium transition-all duration-200 text-lg ${
                 category.active
-                  ? 'bg-accent text-white shadow-lg scale-105'
+                  ? 'bg-primary text-white shadow-lg scale-105'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200 border border-gray-200'
               }`}
             >
@@ -76,11 +76,11 @@ const Resources = () => {
                 {/* Content */}
                 <div className="p-8">
                   <div className="flex items-center justify-between text-sm mb-4">
-                    <span className="text-accent font-semibold bg-accent/10 px-3 py-1 rounded-lg">{resource.category}</span>
+                    <span className="text-primary font-semibold bg-primary/10 px-3 py-1 rounded-lg">{resource.category}</span>
                     <span className="text-gray-500">{resource.readTime}</span>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-accent transition-colors leading-tight">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors leading-tight">
                     {resource.title}
                   </h3>
                   
@@ -88,7 +88,7 @@ const Resources = () => {
                     {resource.description}
                   </p>
                   
-                  <div className="flex items-center text-accent font-semibold group-hover:translate-x-1 transition-transform">
+                  <div className="flex items-center text-primary font-semibold group-hover:translate-x-1 transition-transform">
                     <span>{t.resources.list.readmore}</span>
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </div>
@@ -108,9 +108,9 @@ const Resources = () => {
               <input 
                 type="email" 
                 placeholder="输入您的邮箱地址"
-                className="flex-1 px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-lg"
+                className="flex-1 px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
               />
-              <button className="btn-accent text-lg whitespace-nowrap">{t.resources.list.subscribe}</button>
+              <button className="btn-primary text-lg whitespace-nowrap">{t.resources.list.subscribe}</button>
             </div>
             
             <p className="text-sm text-gray-500 mt-6">{t.resources.list.privacy}</p>
