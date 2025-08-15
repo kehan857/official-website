@@ -9,16 +9,16 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
       {/* Hero Content */}
-      <div className="section-padding-lg bg-white">
-        <div className="container-narrow text-center">
+      <div className="py-40 px-6 sm:px-8 lg:px-12 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Main Headline */}
-          <h1 className="section-title mb-12">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-12">
             {t.hero.title1}
             <span className="block mt-4">{t.hero.title2}</span>
           </h1>
           
           {/* Subtitle */}
-          <p className="section-subtitle mb-16 text-spacing">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-16">
             {t.hero.subtitle}
           </p>
           
@@ -26,7 +26,7 @@ const HeroSection = () => {
           <div className="mb-24">
             <button 
               onClick={()=>setAuthModal({ open: true, mode: 'register' })} 
-              className="btn-primary text-xl px-12 py-6 rounded-full inline-flex items-center justify-center group"
+              className="bg-black text-white px-12 py-6 rounded-full text-xl font-medium hover:bg-gray-800 transition-all duration-300 inline-flex items-center justify-center"
             >
               {t.hero.ctaPrimary}
             </button>
@@ -35,8 +35,8 @@ const HeroSection = () => {
       </div>
 
       {/* Visual Demo Section */}
-      <div className="section-padding dark-bg">
-        <div className="container-content">
+      <div className="py-32 px-6 sm:px-8 lg:px-12 bg-black">
+        <div className="max-w-6xl mx-auto">
           {/* Section Title */}
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
