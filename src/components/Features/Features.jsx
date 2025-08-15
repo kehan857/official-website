@@ -22,7 +22,7 @@ const Features = () => {
         <div className="section-header">
           <h2 className="section-title">
             {t.features.header1}
-            <span className="block text-accent mt-2">{t.features.header2}</span>
+            <span className="block text-primary mt-4">{t.features.header2}</span>
           </h2>
           <p className="section-subtitle">{t.features.desc}</p>
         </div>
@@ -37,7 +37,7 @@ const Features = () => {
               </div>
               
               {/* Content */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">
                 {feature.title}
               </h3>
               <p className="text-gray-600 leading-relaxed text-lg">
@@ -46,7 +46,7 @@ const Features = () => {
               
               {/* Learn More Link */}
               <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                <div className="flex items-center text-accent font-medium">
+                <div className="flex items-center text-primary font-medium">
                   <span className="text-sm">了解更多</span>
                   <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </div>

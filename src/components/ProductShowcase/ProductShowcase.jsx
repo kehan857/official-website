@@ -13,13 +13,13 @@ const ProductShowcase = () => {
   ]
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-white">
       <div className="container-content">
         {/* Section Header */}
         <div className="section-header">
           <h2 className="section-title">
             {t.product.title1}
-            <span className="block text-accent mt-2">{t.product.title2}</span>
+            <span className="block text-primary mt-4">{t.product.title2}</span>
           </h2>
           <p className="section-subtitle">{t.product.subtitle}</p>
         </div>
@@ -96,7 +96,7 @@ const ProductShowcase = () => {
             <div className="space-y-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-5">
-                  <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
                     {feature.icon}
                   </div>
                   <div className="flex-1">
@@ -114,7 +114,7 @@ const ProductShowcase = () => {
                   <Check className="w-5 h-5 text-green-500" />
                   <span>{t.product.cta.note}</span>
                 </div>
-                <button className="btn-accent">{t.product.cta.primary}</button>
+                <button className="btn-primary">{t.product.cta.primary}</button>
               </div>
             </div>
           </div>
