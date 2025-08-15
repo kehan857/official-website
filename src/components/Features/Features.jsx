@@ -1,104 +1,76 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../../context/AppContext';
-import { Brain, Shield, Zap, Users, BarChart3, Globe } from 'lucide-react';
+import React, { useMemo } from 'react'
+import { BookOpen, Brain, FileText, Globe, Palette, Shield } from 'lucide-react'
+import { translations } from '../../i18n/translations'
+import { useApp } from '../../context/AppContext'
 
 const Features = () => {
-  const { currentLang, translations } = useContext(AppContext);
-  const t = translations[currentLang];
-
+  const { lang } = useApp()
+  const t = useMemo(() => translations[lang], [lang])
   const features = [
-    {
-      icon: Brain,
-      title: t.features.feature1.title,
-      description: t.features.feature1.description,
-      color: 'text-blue-600'
-    },
-    {
-      icon: Shield,
-      title: t.features.feature2.title,
-      description: t.features.feature2.description,
-      color: 'text-green-600'
-    },
-    {
-      icon: Zap,
-      title: t.features.feature3.title,
-      description: t.features.feature3.description,
-      color: 'text-purple-600'
-    },
-    {
-      icon: Users,
-      title: t.features.feature4.title,
-      description: t.features.feature4.description,
-      color: 'text-orange-600'
-    },
-    {
-      icon: BarChart3,
-      title: t.features.feature5.title,
-      description: t.features.feature5.description,
-      color: 'text-red-600'
-    },
-    {
-      icon: Globe,
-      title: t.features.feature6.title,
-      description: t.features.feature6.description,
-      color: 'text-indigo-600'
-    }
-  ];
+    { icon: <FileText className="w-8 h-8" />, title: t.features.items[0].title, description: t.features.items[0].desc, color: "from-blue-500 to-cyan-500" },
+    { icon: <Brain className="w-8 h-8" />, title: t.features.items[1].title, description: t.features.items[1].desc, color: "from-purple-500 to-pink-500" },
+    { icon: <Palette className="w-8 h-8" />, title: t.features.items[2].title, description: t.features.items[2].desc, color: "from-green-500 to-emerald-500" },
+    { icon: <Globe className="w-8 h-8" />, title: t.features.items[3].title, description: t.features.items[3].desc, color: "from-orange-500 to-red-500" },
+    { icon: <BookOpen className="w-8 h-8" />, title: t.features.items[4].title, description: t.features.items[4].desc, color: "from-indigo-500 to-purple-500" },
+    { icon: <Shield className="w-8 h-8" />, title: t.features.items[5].title, description: t.features.items[5].desc, color: "from-gray-500 to-slate-500" }
+  ]
 
   return (
-    <section className="section-padding bg-white">
-      <div className="container-max">
+    <section id="features" className="section-padding bg-white">
+      <div className="container-content">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="section-header">
           <h2 className="section-title">
-            {t.features.title}
+            {t.features.header1}
+            <span className="block text-accent mt-2">{t.features.header2}</span>
           </h2>
-          <p className="section-subtitle">
-            {t.features.subtitle}
-          </p>
+          <p className="section-subtitle">{t.features.desc}</p>
         </div>
-
+        
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <div key={index} className="feature-card group">
-                <div className="flex items-start space-x-4">
-                  <div className={`p-3 rounded-xl bg-gray-50 group-hover:bg-accent/10 transition-colors duration-300 ${feature.color}`}>
-                    <IconComponent className="w-8 h-8" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="feature-title">
-                      {feature.title}
-                    </h3>
-                    <p className="feature-description">
-                      {feature.description}
-                    </p>
-                  </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {features.map((feature, index) => (
+            <div key={index} className="card-feature group cursor-pointer">
+              {/* Icon */}
+              <div className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                {feature.icon}
+              </div>
+              
+              {/* Content */}
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-accent transition-colors duration-300">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                {feature.description}
+              </p>
+              
+              {/* Learn More Link */}
+              <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                <div className="flex items-center text-accent font-medium">
+                  <span className="text-sm">了解更多</span>
+                  <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-20">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
-              {t.features.ctaTitle}
-            </h3>
-            <p className="text-gray-600 mb-8 text-lg">
-              {t.features.ctaDescription}
-            </p>
-            <button className="btn-primary">
-              {t.features.ctaButton}
-            </button>
+        
+        {/* Call to Action Section */}
+        <div className="mt-32">
+          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12 border border-gray-200 shadow-sm">
+            <div className="text-center max-w-4xl mx-auto">
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{t.features.bottomCtaTitle}</h3>
+              <p className="text-xl text-gray-600 mb-10 leading-relaxed">{t.features.bottomCtaDesc}</p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <button className="btn-primary text-lg">{t.features.bottomPrimary}</button>
+                <button className="btn-secondary text-lg">{t.features.bottomSecondary}</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features
