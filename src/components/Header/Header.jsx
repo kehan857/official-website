@@ -13,33 +13,33 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container-max">
-        <div className="flex items-center justify-between h-20 px-6 sm:px-8 lg:px-12">
+        <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-gradient">{t.brand.name}</span>
+              <span className="text-2xl font-bold text-primary">{t.brand.name}</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
-            <div className="ml-12 flex items-baseline space-x-10">
-              <a href="#hero" className="text-text-secondary hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+            <div className="ml-10 flex items-baseline space-x-8">
+              <a href="#hero" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
                 {t.nav.home}
               </a>
-              <a href="#features" className="text-text-secondary hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+              <a href="#features" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
                 {t.nav.features}
               </a>
-              <a href="#testimonials" className="text-text-secondary hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+              <a href="#testimonials" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
                 {t.nav.reviews}
               </a>
-              <a href="#resources" className="text-text-secondary hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+              <a href="#resources" className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
                 {t.nav.resources}
               </a>
-              <div className="ml-6">
-                <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-text-secondary hover:text-primary px-4 py-2 text-sm font-medium border border-gray-200 rounded-lg hover:border-accent transition-colors">
+              <div className="ml-4">
+                <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium border rounded-lg">
                   {lang==='zh'? t.lang.en : t.lang.zh}
                 </button>
               </div>
@@ -47,10 +47,10 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
             {user ? (
               <>
-                <span className="text-sm text-text-muted">{user.email}</span>
+                <span className="text-sm text-gray-600">{user.email}</span>
                 <button onClick={()=>setUser(null)} className="btn-secondary">{t.auth.logout}</button>
               </>
             ) : (
@@ -65,7 +65,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-text-secondary hover:text-primary p-2"
+              className="text-gray-700 hover:text-primary p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -75,27 +75,27 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-4 pt-4 pb-6 space-y-2 sm:px-6 bg-white border-t border-gray-100">
-              <a href="#hero" className="text-text-secondary hover:text-primary block px-3 py-3 text-base font-medium rounded-lg hover:bg-gray-50">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <a href="#hero" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.home}
               </a>
-              <a href="#features" className="text-text-secondary hover:text-primary block px-3 py-3 text-base font-medium rounded-lg hover:bg-gray-50">
+              <a href="#features" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.features}
               </a>
-              <a href="#testimonials" className="text-text-secondary hover:text-primary block px-3 py-3 text-base font-medium rounded-lg hover:bg-gray-50">
+              <a href="#testimonials" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.reviews}
               </a>
-              <a href="#resources" className="text-text-secondary hover:text-primary block px-3 py-3 text-base font-medium rounded-lg hover:bg-gray-50">
+              <a href="#resources" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.resources}
               </a>
-              <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-text-secondary hover:text-primary block px-3 py-3 text-base font-medium border border-gray-200 rounded-lg hover:border-accent w-full text-left">
+              <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium border rounded-lg">
                 {lang==='zh'? t.lang.en : t.lang.zh}
               </button>
-              <div className="px-3 py-4 border-t border-gray-100">
+              <div className="px-3 py-2">
                 {user ? (
                   <button onClick={()=>setUser(null)} className="btn-primary w-full">{t.auth.logout}</button>
                 ) : (
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-3">
                     <button onClick={()=>setAuthModal({ open: true, mode: 'login' })} className="btn-secondary w-full">{t.auth.login}</button>
                     <button onClick={()=>setAuthModal({ open: true, mode: 'register' })} className="btn-primary w-full">{t.auth.register}</button>
                   </div>
