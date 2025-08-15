@@ -32,7 +32,7 @@ const Features = () => {
           {features.map((feature, index) => (
             <div key={index} className="card-base card-hover group cursor-pointer">
               {/* Icon */}
-              <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-700 mb-6 group-hover:scale-105 transition-all duration-300">
                 {feature.icon}
               </div>
               

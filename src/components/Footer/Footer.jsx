@@ -41,16 +41,16 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-white text-black border-t border-gray-200">
       {/* Main CTA Section */}
-      <div className="section-spacing bg-gradient-to-br from-gray-800 to-gray-900">
+      <div className="section-spacing bg-gray-50">
         <div className="container-section">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
               {t.footer.topTitle1}
-              <span className="block text-white mt-2">{t.footer.topTitle2}</span>
+              <span className="block text-black mt-2">{t.footer.topTitle2}</span>
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">{t.footer.topDesc}</p>
+            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">{t.footer.topDesc}</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button className="btn-accent text-lg inline-flex items-center justify-center group">
                 {t.footer.topPrimary}

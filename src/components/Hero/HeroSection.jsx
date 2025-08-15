@@ -35,14 +35,14 @@ const HeroSection = () => {
       </div>
 
       {/* Visual Demo Section */}
-      <div className="section-spacing bg-black">
+      <div className="section-spacing bg-gray-50">
         <div className="container-section">
           {/* Section Title */}
           <div className="text-center mb-20">
-            <h2 className="heading-section text-white">
+            <h2 className="heading-section text-black">
               AI驱动的智能创作平台
             </h2>
-            <p className="text-section text-gray-300 max-w-3xl mx-auto">
+            <p className="text-section text-gray-600 max-w-3xl mx-auto">
               体验全新的智能创作流程，从想法到成品，一站式解决方案
             </p>
           </div>

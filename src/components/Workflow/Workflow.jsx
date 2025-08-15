@@ -68,7 +68,7 @@ const Workflow = () => {
                 {/* Step Content */}
                 <div className="text-center">
                   {/* Icon */}
-                  <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center text-white mx-auto mb-8">
+                  <div className="w-20 h-20 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-700 mx-auto mb-8">
                     {step.icon}
                   </div>
                   
