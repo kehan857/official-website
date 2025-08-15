@@ -40,10 +40,10 @@ const HeroSection = () => {
           {/* Section Title */}
           <div className="text-center mb-20">
             <h2 className="heading-section text-black">
-              AI驱动的智能创作平台
+              {t.hero.demoTitle}
             </h2>
             <p className="text-section text-gray-600 max-w-3xl mx-auto">
-              体验全新的智能创作流程，从想法到成品，一站式解决方案
+              {t.hero.demoSubtitle}
             </p>
           </div>
 
@@ -67,9 +67,9 @@ const HeroSection = () => {
                 <div className="grid lg:grid-cols-4 gap-8 min-h-[500px]">
                   {/* Sidebar */}
                   <div className="bg-gray-50 rounded-2xl p-6">
-                    <h3 className="font-semibold text-gray-900 mb-6">项目面板</h3>
+                    <h3 className="font-semibold text-gray-900 mb-6">{t.hero.projectPanel}</h3>
                     <div className="space-y-4">
-                      {['企业知识库', 'AI助手编排', '内容生成器', '数据分析'].map((item, i) => (
+                      {t.hero.projectItems.map((item, i) => (
                         <div key={i} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
                           <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                           <span className="text-sm text-gray-700">{item}</span>
@@ -82,10 +82,10 @@ const HeroSection = () => {
                   <div className="lg:col-span-3 space-y-6">
                     <div className="bg-gray-50 rounded-2xl p-6">
                       <div className="flex items-center justify-between mb-4">
-                        <h4 className="font-semibold text-gray-900">AI创作助手</h4>
+                        <h4 className="font-semibold text-gray-900">{t.hero.aiAssistant}</h4>
                         <div className="flex items-center space-x-2">
                           <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                          <span className="text-sm text-gray-500">在线</span>
+                          <span className="text-sm text-gray-500">{t.hero.online}</span>
                         </div>
                       </div>
                       <div className="space-y-3">
@@ -98,12 +98,12 @@ const HeroSection = () => {
                     <div className="bg-blue-500 text-white rounded-2xl p-6">
                       <div className="flex items-center space-x-3 mb-4">
                         <Sparkles className="w-6 h-6" />
-                        <span className="font-semibold">AI建议</span>
+                        <span className="font-semibold">{t.hero.aiSuggestion}</span>
                       </div>
-                      <p className="text-gray-300">基于您的内容，建议添加相关案例研究以增强说服力...</p>
+                      <p className="text-gray-300">{t.hero.aiSuggestionText}</p>
                       <div className="flex space-x-3 mt-4">
-                        <button className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">采纳建议</button>
-                        <button className="border border-gray-400 text-gray-200 hover:text-white px-4 py-2 rounded-lg text-sm transition-colors">稍后处理</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">{t.hero.adoptSuggestion}</button>
+                        <button className="border border-gray-400 text-gray-200 hover:text-white px-4 py-2 rounded-lg text-sm transition-colors">{t.hero.processLater}</button>
                       </div>
                     </div>
                   </div>
@@ -116,8 +116,8 @@ const HeroSection = () => {
               <div className="flex items-center space-x-3">
                 <PenTool className="w-6 h-6 text-blue-500" />
                 <div>
-                  <div className="font-semibold text-gray-900">智能编辑</div>
-                  <div className="text-sm text-gray-500">实时优化建议</div>
+                  <div className="font-semibold text-gray-900">{t.hero.smartEditor}</div>
+                  <div className="text-sm text-gray-500">{t.hero.realTimeOptimization}</div>
                 </div>
               </div>
             </div>

@@ -83,11 +83,11 @@ const Pricing = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="heading-section">
-            定价方案
-            <span className="block text-black">选择最适合您的计划</span>
+            {t.pricing.title1}
+            <span className="block text-black">{t.pricing.title2}</span>
           </h2>
           <p className="text-section max-w-3xl mx-auto">
-            从个人体验到企业级解决方案，我们为不同规模的用户提供灵活的定价选项
+            {t.pricing.subtitle}
           </p>
         </div>
 
@@ -102,7 +102,7 @@ const Pricing = () => {
                   : 'text-gray-600 hover:text-black'
               }`}
             >
-              按月付费
+              {t.pricing.billing.monthly}
             </button>
             <button
               onClick={() => setIsAnnual(true)}
@@ -112,9 +112,9 @@ const Pricing = () => {
                   : 'text-gray-600 hover:text-black'
               }`}
             >
-              按年付费
+              {t.pricing.billing.yearly}
               <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
-                省20%
+                {t.pricing.billing.save}
               </span>
             </button>
           </div>
@@ -134,7 +134,7 @@ const Pricing = () => {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <div className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2">
                     <Star className="w-4 h-4" />
-                    <span>最受欢迎</span>
+                    <span>{t.pricing.mostPopular}</span>
                   </div>
                 </div>
               )}
@@ -188,8 +188,8 @@ const Pricing = () => {
         {/* All Plans Include */}
         <div className="bg-gray-50 rounded-3xl p-12">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-black mb-4">所有计划均包含</h3>
-            <p className="text-xl text-gray-600">核心功能保障您的使用体验</p>
+            <h3 className="text-3xl font-bold text-black mb-4">{t.pricing.allPlansInclude}</h3>
+            <p className="text-xl text-gray-600">{t.pricing.allPlansDesc}</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -204,17 +204,17 @@ const Pricing = () => {
 
         {/* FAQ Preview */}
         <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold text-black mb-6">还有疑问？</h3>
+          <h3 className="text-3xl font-bold text-black mb-6">{t.pricing.haveQuestions}</h3>
           <p className="text-xl text-gray-600 mb-8">
-            我们的销售团队随时为您答疑解惑
+            {t.pricing.salesTeam}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="btn-primary text-lg inline-flex items-center space-x-3">
-              <span>联系销售</span>
+              <span>{t.pricing.contactSales}</span>
               <ArrowRight className="w-6 h-6" />
             </button>
             <button className="btn-secondary text-lg">
-              查看常见问题
+              {t.pricing.viewFAQ}
             </button>
           </div>
         </div>

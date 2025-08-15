@@ -93,11 +93,11 @@ const UseCases = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="heading-section text-black">
-            应用场景
-            <span className="block text-black">覆盖企业全业务流程</span>
+            {t.useCases.title1}
+            <span className="block text-black">{t.useCases.title2}</span>
           </h2>
           <p className="text-section text-gray-600 max-w-3xl mx-auto">
-            无论是内容营销、企业报告还是团队协作，熵变AI都能为您提供专业的解决方案
+            {t.useCases.subtitle}
           </p>
         </div>
 
@@ -156,25 +156,25 @@ const UseCases = () => {
 
             {/* Results */}
             <div className="bg-gray-50 rounded-3xl p-8 border border-gray-200">
-              <h4 className="text-xl font-bold text-black mb-6">应用效果</h4>
+              <h4 className="text-xl font-bold text-black mb-6">{t.useCases.applicationResults}</h4>
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-black mb-2">
                     +{useCases[activeTab].results.efficiency}
                   </div>
-                  <div className="text-gray-600">效率提升</div>
+                  <div className="text-gray-600">{t.useCases.efficiencyImprovement}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-black mb-2">
                     {useCases[activeTab].results.quality}
                   </div>
-                  <div className="text-gray-600">质量满意度</div>
+                  <div className="text-gray-600">{t.useCases.qualitySatisfaction}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-black mb-2">
                     -{useCases[activeTab].results.time}
                   </div>
-                  <div className="text-gray-600">时间节省</div>
+                  <div className="text-gray-600">{t.useCases.timeSaved}</div>
                 </div>
               </div>
             </div>
@@ -182,11 +182,11 @@ const UseCases = () => {
             {/* CTA */}
             <div className="flex space-x-4">
               <button className="btn-accent text-lg inline-flex items-center space-x-3">
-                <span>体验该场景</span>
+                <span>{t.useCases.experienceScenario}</span>
                 <ArrowRight className="w-6 h-6" />
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-medium hover:bg-white hover:text-primary transition-all duration-300 text-lg">
-                了解更多
+                {t.useCases.learnMore}
               </button>
             </div>
           </div>

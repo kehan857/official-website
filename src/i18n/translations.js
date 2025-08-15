@@ -41,7 +41,19 @@ export const translations = {
       ctaSecondary: "观看演示",
       stats1: { value: "100+", label: "项目与方案" },
       stats2: { value: "500+", label: "企业客户" },
-      stats3: { value: "99%", label: "客户满意度" }
+      stats3: { value: "99%", label: "客户满意度" },
+      demoTitle: "AI驱动的智能创作平台",
+      demoSubtitle: "体验全新的智能创作流程，从想法到成品，一站式解决方案",
+      projectPanel: "项目面板",
+      projectItems: ["企业知识库", "AI助手编排", "内容生成器", "数据分析"],
+      aiAssistant: "AI创作助手",
+      online: "在线",
+      aiSuggestion: "AI建议",
+      aiSuggestionText: "基于您的内容，建议添加相关案例研究以增强说服力...",
+      adoptSuggestion: "采纳建议",
+      processLater: "稍后处理",
+      smartEditor: "智能编辑",
+      realTimeOptimization: "实时优化建议"
     },
     product: {
       title1: "从洞察到生成",
@@ -226,7 +238,13 @@ export const translations = {
           features: ["会议纪要", "项目文档", "知识分享", "团队简报"],
           benefits: { communication: "沟通效率", knowledge: "知识共享", collaboration: "团队协作", time: "时间效率" }
         }
-      ]
+      ],
+      applicationResults: "应用效果",
+      efficiencyImprovement: "效率提升",
+      qualitySatisfaction: "质量满意度",
+      timeSaved: "时间节省",
+      experienceScenario: "体验该场景",
+      learnMore: "了解更多"
     },
     pricing: {
       title1: "定价方案",
@@ -262,6 +280,9 @@ export const translations = {
           popular: false
         }
       ],
+      mostPopular: "最受欢迎",
+      allPlansInclude: "所有计划均包含",
+      allPlansDesc: "核心功能保障您的使用体验",
       faq: {
         title: "常见问题",
         items: [
@@ -270,7 +291,11 @@ export const translations = {
           { q: "支持哪些付款方式？", a: "我们接受所有主要信用卡，并支持支付宝、微信支付。" },
           { q: "我可以取消订阅吗？", a: "是的，您可以随时取消订阅，无需支付取消费用。" }
         ]
-      }
+      },
+      haveQuestions: "还有疑问？",
+      salesTeam: "我们的销售团队随时为您答疑解惑",
+      contactSales: "联系销售",
+      viewFAQ: "查看常见问题"
     }
   },
   en: {
@@ -310,7 +335,19 @@ export const translations = {
       ctaSecondary: "Watch demo",
       stats1: { value: "100+", label: "Projects & solutions" },
       stats2: { value: "10M+", label: "Processed & generated" },
-      stats3: { value: "99%", label: "Satisfaction" }
+      stats3: { value: "99%", label: "Satisfaction" },
+      demoTitle: "AI-powered intelligent creation platform",
+      demoSubtitle: "Experience the new intelligent creation process, from idea to finished product, with a one-stop solution",
+      projectPanel: "Project Panel",
+      projectItems: ["Enterprise Knowledge Base", "AI Assistant Orchestration", "Content Generator", "Data Analysis"],
+      aiAssistant: "AI Creation Assistant",
+      online: "Online",
+      aiSuggestion: "AI Suggestion",
+      aiSuggestionText: "Based on your content, suggest adding relevant case studies to enhance persuasiveness...",
+      adoptSuggestion: "Adopt Suggestion",
+      processLater: "Process Later",
+      smartEditor: "Smart Editor",
+      realTimeOptimization: "Real-time optimization suggestions"
     },
     product: {
       title1: "From insight to output",
@@ -428,7 +465,13 @@ export const translations = {
           features: ["Meeting minutes", "Project documentation", "Knowledge sharing", "Team briefings"],
           benefits: { communication: "Communication efficiency", knowledge: "Knowledge sharing", collaboration: "Team collaboration", time: "Time efficiency" }
         }
-      ]
+      ],
+      applicationResults: "Application Results",
+      efficiencyImprovement: "Efficiency Improvement",
+      qualitySatisfaction: "Quality Satisfaction",
+      timeSaved: "Time Saved",
+      experienceScenario: "Experience the Scenario",
+      learnMore: "Learn More"
     },
     pricing: {
       title1: "Pricing plans",
@@ -464,6 +507,9 @@ export const translations = {
           popular: false
         }
       ],
+      mostPopular: "Most Popular",
+      allPlansInclude: "All plans include",
+      allPlansDesc: "Core features ensure your experience",
       faq: {
         title: "Frequently asked questions",
         items: [
@@ -472,7 +518,11 @@ export const translations = {
           { q: "What payment methods do you accept?", a: "We accept all major credit cards and support Alipay, WeChat Pay." },
           { q: "Can I cancel my subscription?", a: "Yes, you can cancel your subscription at any time. No cancellation fees." }
         ]
-      }
+      },
+      haveQuestions: "Have questions?",
+      salesTeam: "Our sales team is always ready to answer your questions",
+      contactSales: "Contact Sales",
+      viewFAQ: "View FAQ"
     },
     footer: {
       topTitle1: "Write",
