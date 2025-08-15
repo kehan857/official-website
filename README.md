@@ -1,6 +1,6 @@
 # 熵变AI 官网
 
-熵变智元(北京)科技有限公司的官方网站，基于 React + Vite + Tailwind CSS 构建。
+熵变智元的官方网站，基于 React + Vite + Tailwind CSS 构建。
 
 ## 项目特性
 

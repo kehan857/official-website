@@ -36,7 +36,7 @@ export const translations = {
       badge: "全新功能上线",
       title1: "面向企业的",
       title2: "生成式智能平台",
-      subtitle: "熵变智元(北京)科技有限公司：以“五大能力”驱动的一体化AI平台——智能交互与对话系统、知识智能与RAG、客户数据智能与超个性化、生成式AI与多模态创作、企业自动化与工作流编排。支持企业微信/飞书等生态集成，安全合规可审计。",
+      subtitle: "熵变智元：以\"五大能力\"驱动的一体化AI平台——智能交互与对话系统、知识智能与RAG、客户数据智能与超个性化、生成式AI与多模态创作、企业自动化与工作流编排。支持企业微信/飞书等生态集成，安全合规可审计。",
       ctaPrimary: "立即体验",
       ctaSecondary: "观看演示",
       stats1: { value: "100+", label: "项目与方案" },
@@ -171,7 +171,7 @@ export const translations = {
         phone: "+86 010-0000-0000",
         address: "北京"
       },
-      copyright: "© 2025 熵变智元(北京)科技有限公司"
+      copyright: "© 2025 熵变智元"
     },
     workflow: {
       title1: "创作流程",
