@@ -40,7 +40,7 @@ export const translations = {
       ctaPrimary: "立即体验",
       ctaSecondary: "观看演示",
       stats1: { value: "100+", label: "项目与方案" },
-      stats2: { value: "10M+", label: "处理与生成内容量" },
+      stats2: { value: "500+", label: "企业客户" },
       stats3: { value: "99%", label: "客户满意度" }
     },
     product: {
@@ -101,7 +101,7 @@ export const translations = {
       subtitle: "从个人到团队，熵变AI帮助他们高效产出高质量内容。",
       stats: {
         s1: "活跃创作者",
-        s2: "生成文字",
+        s2: "效率提升",
         s3: "满意度",
         s4: "技术支持"
       },

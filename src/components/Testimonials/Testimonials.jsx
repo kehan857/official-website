@@ -9,7 +9,7 @@ const Testimonials = () => {
   const testimonials = t.testimonials.items
   const stats = [
     { number: "10,000+", label: t.testimonials.stats.s1 },
-    { number: "50M+", label: t.testimonials.stats.s2 },
+    { number: "98%", label: t.testimonials.stats.s2 },
     { number: "99%", label: t.testimonials.stats.s3 },
     { number: "24/7", label: t.testimonials.stats.s4 }
   ]
