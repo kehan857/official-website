@@ -71,7 +71,7 @@ const HeroSection = () => {
                     <div className="space-y-4">
                       {['企业知识库', 'AI助手编排', '内容生成器', '数据分析'].map((item, i) => (
                         <div key={i} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                           <span className="text-sm text-gray-700">{item}</span>
                         </div>
                       ))}
@@ -95,7 +95,7 @@ const HeroSection = () => {
                       </div>
                     </div>
                     
-                    <div className="bg-primary text-white rounded-2xl p-6">
+                    <div className="bg-blue-500 text-white rounded-2xl p-6">
                       <div className="flex items-center space-x-3 mb-4">
                         <Sparkles className="w-6 h-6" />
                         <span className="font-semibold">AI建议</span>

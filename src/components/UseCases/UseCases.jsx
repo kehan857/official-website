@@ -136,10 +136,10 @@ const UseCases = () => {
           {/* Right - Content */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-4xl font-bold text-white mb-6">
+              <h3 className="text-4xl font-bold text-black mb-6">
                 {useCases[activeTab].title}
               </h3>
-              <p className="text-xl text-gray-300 leading-relaxed">
+              <p className="text-xl text-gray-600 leading-relaxed">
                 {useCases[activeTab].description}
               </p>
             </div>
@@ -147,34 +147,34 @@ const UseCases = () => {
             {/* Features Grid */}
             <div className="grid md:grid-cols-2 gap-4">
               {useCases[activeTab].features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3 bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                  <Target className="w-5 h-5 text-white flex-shrink-0" />
-                  <span className="text-white">{feature}</span>
+                <div key={index} className="flex items-center space-x-3 bg-gray-50 rounded-xl p-4">
+                  <Target className="w-5 h-5 text-gray-600 flex-shrink-0" />
+                  <span className="text-gray-700">{feature}</span>
                 </div>
               ))}
             </div>
 
             {/* Results */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-              <h4 className="text-xl font-bold text-white mb-6">应用效果</h4>
+            <div className="bg-gray-50 rounded-3xl p-8 border border-gray-200">
+              <h4 className="text-xl font-bold text-black mb-6">应用效果</h4>
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">
+                  <div className="text-3xl font-bold text-black mb-2">
                     +{useCases[activeTab].results.efficiency}
                   </div>
-                  <div className="text-gray-300">效率提升</div>
+                  <div className="text-gray-600">效率提升</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">
+                  <div className="text-3xl font-bold text-black mb-2">
                     {useCases[activeTab].results.quality}
                   </div>
-                  <div className="text-gray-300">质量满意度</div>
+                  <div className="text-gray-600">质量满意度</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">
+                  <div className="text-3xl font-bold text-black mb-2">
                     -{useCases[activeTab].results.time}
                   </div>
-                  <div className="text-gray-300">时间节省</div>
+                  <div className="text-gray-600">时间节省</div>
                 </div>
               </div>
             </div>
