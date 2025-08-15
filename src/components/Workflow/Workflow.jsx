@@ -39,15 +39,15 @@ const Workflow = () => {
   ]
 
   return (
-    <section className="section-padding bg-white">
-      <div className="container-content">
+    <section className="section-spacing bg-white">
+      <div className="container-section">
         {/* Section Header */}
-        <div className="section-header">
-          <h2 className="section-title">
+        <div className="text-center mb-20">
+          <h2 className="heading-section">
             创作流程
-            <span className="block text-primary mt-4">四步完成专业内容</span>
+            <span className="block text-black">四步完成专业内容</span>
           </h2>
-          <p className="section-subtitle">
+          <p className="text-section max-w-3xl mx-auto">
             从素材导入到内容发布，熵变AI为您提供完整的创作流程支持，让每一步都更高效
           </p>
         </div>

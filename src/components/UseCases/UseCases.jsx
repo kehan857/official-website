@@ -88,8 +88,8 @@ const UseCases = () => {
   ]
 
   return (
-    <section className="section-padding dark-bg">
-      <div className="container-content">
+    <section className="section-spacing dark-bg">
+      <div className="container-section">
         {/* Section Header */}
         <div className="section-header-lg">
           <h2 className="section-title-dark">

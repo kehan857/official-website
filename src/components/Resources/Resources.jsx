@@ -20,15 +20,15 @@ const Resources = () => {
   ]
 
   return (
-    <section id="resources" className="section-padding bg-white">
-      <div className="container-content">
+    <section id="resources" className="section-spacing bg-white">
+      <div className="container-section">
         {/* Section Header */}
-        <div className="section-header">
-          <h2 className="section-title">
+        <div className="text-center mb-20">
+          <h2 className="heading-section">
             {t.resources.header1}
-            <span className="block text-primary mt-4">{t.resources.header2}</span>
+            <span className="block text-black">{t.resources.header2}</span>
           </h2>
-          <p className="section-subtitle">{t.resources.desc}</p>
+          <p className="text-section max-w-3xl mx-auto">{t.resources.desc}</p>
         </div>
         
         {/* Category Filter */}

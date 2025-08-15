@@ -43,8 +43,8 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main CTA Section */}
-      <div className="section-padding bg-gradient-to-br from-gray-800 to-gray-900">
-        <div className="container-content">
+      <div className="section-spacing bg-gradient-to-br from-gray-800 to-gray-900">
+        <div className="container-section">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               {t.footer.topTitle1}
@@ -63,8 +63,8 @@ const Footer = () => {
       </div>
       
       {/* Footer Links */}
-      <div className="container-content">
-        <div className="section-padding border-t border-gray-800">
+      <div className="container-section">
+        <div className="section-spacing border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2">

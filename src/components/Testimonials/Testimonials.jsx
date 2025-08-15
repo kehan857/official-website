@@ -15,15 +15,15 @@ const Testimonials = () => {
   ]
 
   return (
-    <section id="testimonials" className="section-padding bg-gray-50">
-      <div className="container-content">
+    <section id="testimonials" className="section-spacing bg-gray-50">
+      <div className="container-section">
         {/* Section Header */}
-        <div className="section-header">
-          <h2 className="section-title">
+        <div className="text-center mb-20">
+          <h2 className="heading-section">
             {t.testimonials.header1}
-            <span className="block text-primary mt-4">{t.testimonials.header2}</span>
+            <span className="block text-black">{t.testimonials.header2}</span>
           </h2>
-          <p className="section-subtitle">{t.testimonials.subtitle}</p>
+          <p className="text-section max-w-3xl mx-auto">{t.testimonials.subtitle}</p>
         </div>
         
         {/* Stats Section */}

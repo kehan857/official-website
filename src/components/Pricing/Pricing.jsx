@@ -78,15 +78,15 @@ const Pricing = () => {
   ]
 
   return (
-    <section className="section-padding bg-white">
-      <div className="container-content">
+    <section className="section-spacing bg-white">
+      <div className="container-section">
         {/* Section Header */}
-        <div className="section-header">
-          <h2 className="section-title">
+        <div className="text-center mb-20">
+          <h2 className="heading-section">
             定价方案
-            <span className="block text-primary mt-4">选择最适合您的计划</span>
+            <span className="block text-black">选择最适合您的计划</span>
           </h2>
-          <p className="section-subtitle">
+          <p className="text-section max-w-3xl mx-auto">
             从个人体验到企业级解决方案，我们为不同规模的用户提供灵活的定价选项
           </p>
         </div>
