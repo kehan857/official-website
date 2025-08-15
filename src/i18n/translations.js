@@ -172,6 +172,105 @@ export const translations = {
         address: "北京"
       },
       copyright: "© 2025 熵变智元(北京)科技有限公司"
+    },
+    workflow: {
+      title1: "创作流程",
+      title2: "四步完成专业内容",
+      subtitle: "从素材导入到内容发布，熵变AI为您提供完整的创作流程支持，让每一步都更高效",
+      steps: [
+        {
+          title: "导入素材",
+          description: "支持文档、图片、音频等多种格式，一键批量导入",
+          details: ["PDF、Word、Excel文档", "图片、视频素材", "音频文件转录", "网页内容抓取"]
+        },
+        {
+          title: "AI智能分析",
+          description: "深度理解内容结构，提取关键信息和洞察",
+          details: ["内容结构分析", "关键信息提取", "情感倾向识别", "主题标签生成"]
+        },
+        {
+          title: "协作创作",
+          description: "人机协作，实时优化和调整内容质量",
+          details: ["实时编辑建议", "语法风格优化", "逻辑结构调整", "多人协作编辑"]
+        },
+        {
+          title: "发布分享",
+          description: "一键生成多种格式，支持多平台发布",
+          details: ["多格式导出", "社交媒体适配", "SEO优化", "版权水印添加"]
+        }
+      ],
+      ctaTitle: "体验完整创作流程",
+      ctaDesc: "从想法到成品，智能创作让一切变得简单",
+      ctaPrimary: "立即体验"
+    },
+    useCases: {
+      title1: "应用场景",
+      title2: "覆盖企业全业务流程",
+      subtitle: "无论是内容营销、企业报告还是团队协作，熵变AI都能为您提供专业的解决方案",
+      cases: [
+        {
+          title: "内容营销",
+          description: "创作引人入胜的营销内容，提升品牌影响力",
+          features: ["品牌故事叙述", "社交媒体内容", "邮件营销", "产品描述"],
+          benefits: { quality: "内容质量", efficiency: "创作效率", engagement: "用户参与度", conversion: "转化率" }
+        },
+        {
+          title: "企业报告", 
+          description: "快速生成专业的商业报告",
+          features: ["数据分析报告", "市场调研", "项目总结", "绩效报告"],
+          benefits: { accuracy: "数据准确性", speed: "报告速度", insights: "商业洞察", time: "节省时间" }
+        },
+        {
+          title: "团队协作",
+          description: "提升团队沟通和协作效率",
+          features: ["会议纪要", "项目文档", "知识分享", "团队简报"],
+          benefits: { communication: "沟通效率", knowledge: "知识共享", collaboration: "团队协作", time: "时间效率" }
+        }
+      ]
+    },
+    pricing: {
+      title1: "定价方案",
+      title2: "选择最适合您的计划", 
+      subtitle: "从个人体验到企业级解决方案，我们为不同规模的用户提供灵活的定价选项",
+      billing: { monthly: "按月付费", yearly: "按年付费", save: "节省20%" },
+      plans: [
+        {
+          name: "入门版",
+          price: "免费",
+          period: "永久免费",
+          description: "适合个人用户体验AI创作",
+          features: ["每月5个项目", "基础AI生成", "标准模板", "社区支持"],
+          cta: "免费开始",
+          popular: false
+        },
+        {
+          name: "专业版",
+          price: { monthly: "¥199", yearly: "¥1,990" },
+          period: "每月",
+          description: "适合内容创作者和小团队",
+          features: ["无限项目", "高级AI能力", "高级模板", "优先支持", "团队协作", "多格式导出"],
+          cta: "选择专业版",
+          popular: true
+        },
+        {
+          name: "企业版",
+          price: "定制",
+          period: "联系销售",
+          description: "为大型企业定制的解决方案",
+          features: ["自定义部署", "企业级安全", "专属客户经理", "API访问", "自定义集成", "SLA保障"],
+          cta: "联系销售",
+          popular: false
+        }
+      ],
+      faq: {
+        title: "常见问题",
+        items: [
+          { q: "我可以随时更改计划吗？", a: "是的，您可以随时升级或降级您的计划。" },
+          { q: "有免费试用吗？", a: "是的，我们提供免费的入门版计划，包含基础功能。" },
+          { q: "支持哪些付款方式？", a: "我们接受所有主要信用卡，并支持支付宝、微信支付。" },
+          { q: "我可以取消订阅吗？", a: "是的，您可以随时取消订阅，无需支付取消费用。" }
+        ]
+      }
     }
   },
   en: {
@@ -275,6 +374,105 @@ export const translations = {
         { name: "Amy", role: "Head of Marketing", company: "SaaS", content: "Templates + AI speed up content while keeping brand.", rating: 5 },
         { name: "Daniel", role: "Creator", company: "Indie", content: "Boards unify materials and notes. Frictionless experience.", rating: 5 }
       ]
+    },
+    workflow: {
+      title1: "Creation workflow",
+      title2: "Professional content in four steps",
+      subtitle: "From material import to content publishing, Entropy AI provides complete workflow support to make every step more efficient",
+      steps: [
+        {
+          title: "Import Materials",
+          description: "Support multiple file formats for one-click batch import",
+          details: ["PDF, Word, Excel documents", "Images, video materials", "Audio file transcription", "Web content crawling"]
+        },
+        {
+          title: "AI Intelligent Analysis", 
+          description: "Deep understanding of content structure, extracting key information and insights",
+          details: ["Content structure analysis", "Key information extraction", "Sentiment analysis", "Topic tagging"]
+        },
+        {
+          title: "Collaborative Creation",
+          description: "Human-AI collaboration, real-time optimization and content quality adjustment",
+          details: ["Real-time editing suggestions", "Grammar and style optimization", "Logic structure adjustment", "Multi-user collaborative editing"]
+        },
+        {
+          title: "Publish & Share",
+          description: "One-click generation of multiple formats, supporting multi-platform publishing",
+          details: ["Multi-format export", "Social media adaptation", "SEO optimization", "Copyright watermark addition"]
+        }
+      ],
+      ctaTitle: "Experience the complete creation workflow",
+      ctaDesc: "From idea to finished product, intelligent creation makes it simple",
+      ctaPrimary: "Try now"
+    },
+    useCases: {
+      title1: "Use cases",
+      title2: "Wide application scenarios", 
+      subtitle: "Whether content marketing, enterprise reports or team collaboration, Entropy AI provides professional solutions",
+      cases: [
+        {
+          title: "Content Marketing",
+          description: "Create compelling marketing content to boost brand influence",
+          features: ["Brand storytelling", "Social media content", "Email marketing", "Product descriptions"],
+          benefits: { quality: "Content quality", efficiency: "Creation efficiency", engagement: "User engagement", conversion: "Conversion rate" }
+        },
+        {
+          title: "Enterprise Reports", 
+          description: "Generate professional business reports quickly",
+          features: ["Data analysis reports", "Market research", "Project summaries", "Performance reports"],
+          benefits: { accuracy: "Data accuracy", speed: "Report speed", insights: "Business insights", time: "Time saved" }
+        },
+        {
+          title: "Team Collaboration",
+          description: "Improve team communication and collaboration efficiency", 
+          features: ["Meeting minutes", "Project documentation", "Knowledge sharing", "Team briefings"],
+          benefits: { communication: "Communication efficiency", knowledge: "Knowledge sharing", collaboration: "Team collaboration", time: "Time efficiency" }
+        }
+      ]
+    },
+    pricing: {
+      title1: "Pricing plans",
+      title2: "Choose the plan that fits you best",
+      subtitle: "From individual experience to enterprise-level solutions, we provide flexible pricing options for users of all scales",
+      billing: { monthly: "Monthly", yearly: "Yearly", save: "Save 20%" },
+      plans: [
+        {
+          name: "Starter",
+          price: "Free",
+          period: "forever",
+          description: "Perfect for individual users to experience AI creation",
+          features: ["5 projects per month", "Basic AI generation", "Standard templates", "Community support"],
+          cta: "Start free",
+          popular: false
+        },
+        {
+          name: "Professional", 
+          price: { monthly: "¥199", yearly: "¥1,990" },
+          period: "per month",
+          description: "Suitable for content creators and small teams",
+          features: ["Unlimited projects", "Advanced AI capabilities", "Premium templates", "Priority support", "Team collaboration", "Export multiple formats"],
+          cta: "Choose Professional",
+          popular: true
+        },
+        {
+          name: "Enterprise",
+          price: "Custom",
+          period: "contact sales",
+          description: "Customized solutions for large enterprises",
+          features: ["Custom deployment", "Enterprise-level security", "Dedicated account manager", "API access", "Custom integrations", "SLA guarantee"],
+          cta: "Contact sales",
+          popular: false
+        }
+      ],
+      faq: {
+        title: "Frequently asked questions",
+        items: [
+          { q: "Can I change plans anytime?", a: "Yes, you can upgrade or downgrade your plan at any time." },
+          { q: "Is there a free trial?", a: "Yes, we offer a free Starter plan with basic features." },
+          { q: "What payment methods do you accept?", a: "We accept all major credit cards and support Alipay, WeChat Pay." },
+          { q: "Can I cancel my subscription?", a: "Yes, you can cancel your subscription at any time. No cancellation fees." }
+        ]
+      }
     },
     footer: {
       topTitle1: "Write",

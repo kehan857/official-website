@@ -7,36 +7,36 @@ const Workflow = () => {
   const { lang } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   
-  const steps = [
+  const steps = t.workflow?.steps ? [
     {
       icon: <Upload className="w-8 h-8" />,
-      title: "导入素材",
-      description: "支持文档、图片、音频等多种格式，一键批量导入",
-      details: ["PDF、Word、Excel文档", "图片、视频素材", "音频文件转录", "网页内容抓取"],
+      title: t.workflow.steps[0].title,
+      description: t.workflow.steps[0].description,
+      details: t.workflow.steps[0].details,
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "AI智能分析",
-      description: "深度理解内容结构，提取关键信息和洞察",
-      details: ["内容结构分析", "关键信息提取", "情感倾向识别", "主题标签生成"],
+      title: t.workflow.steps[1].title,
+      description: t.workflow.steps[1].description,
+      details: t.workflow.steps[1].details,
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: <Edit className="w-8 h-8" />,
-      title: "协作创作",
-      description: "人机协作，实时优化和调整内容质量",
-      details: ["实时编辑建议", "语法风格优化", "逻辑结构调整", "多人协作编辑"],
+      title: t.workflow.steps[2].title,
+      description: t.workflow.steps[2].description,
+      details: t.workflow.steps[2].details,
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: <Share2 className="w-8 h-8" />,
-      title: "发布分享",
-      description: "一键生成多种格式，支持多平台发布",
-      details: ["多格式导出", "社交媒体适配", "SEO优化", "版权水印添加"],
+      title: t.workflow.steps[3].title,
+      description: t.workflow.steps[3].description,
+      details: t.workflow.steps[3].details,
       color: "from-orange-500 to-red-500"
     }
-  ]
+  ] : []
 
   return (
     <section className="section-spacing bg-white">
@@ -44,47 +44,47 @@ const Workflow = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="heading-section">
-            创作流程
-            <span className="block text-black">四步完成专业内容</span>
+            {t.workflow?.title1 || "创作流程"}
+            <span className="block text-black">{t.workflow?.title2 || "四步完成专业内容"}</span>
           </h2>
           <p className="text-section max-w-3xl mx-auto">
-            从素材导入到内容发布，熵变AI为您提供完整的创作流程支持，让每一步都更高效
+            {t.workflow?.subtitle || "从素材导入到内容发布，熵变AI为您提供完整的创作流程支持，让每一步都更高效"}
           </p>
         </div>
 
         {/* Workflow Steps */}
         <div className="relative">
-          {/* Connection Lines */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 transform -translate-y-1/2"></div>
+          {/* Connection Lines - 移动到更下面的位置 */}
+          <div className="hidden lg:block absolute top-32 left-0 right-0 h-0.5 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200"></div>
           
-          <div className="grid lg:grid-cols-4 gap-12">
+          <div className="grid lg:grid-cols-4 gap-16">
             {steps.map((step, index) => (
               <div key={index} className="relative">
-                {/* Step Number */}
-                <div className="flex items-center justify-center w-16 h-16 bg-white border-4 border-gray-200 rounded-full mx-auto mb-8 relative z-10">
-                  <span className="text-2xl font-bold text-primary">{index + 1}</span>
+                {/* Step Number - 增加上边距 */}
+                <div className="flex items-center justify-center w-16 h-16 bg-white border-4 border-gray-200 rounded-full mx-auto mb-12 relative z-10">
+                  <span className="text-2xl font-bold text-black">{index + 1}</span>
                 </div>
                 
                 {/* Step Content */}
                 <div className="text-center">
                   {/* Icon */}
-                  <div className={`w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center text-white mx-auto mb-6 shadow-lg`}>
+                  <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center text-white mx-auto mb-8">
                     {step.icon}
                   </div>
                   
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-primary mb-4">{step.title}</h3>
+                  {/* Title - 增加底部间距 */}
+                  <h3 className="heading-card mb-6">{step.title}</h3>
                   
-                  {/* Description */}
-                  <p className="text-gray-600 mb-6 leading-relaxed">{step.description}</p>
+                  {/* Description - 增加底部间距 */}
+                  <p className="text-body mb-8">{step.description}</p>
                   
-                  {/* Details */}
-                  <div className="bg-gray-50 rounded-2xl p-6">
-                    <ul className="space-y-3 text-left">
+                  {/* Details - 增加内边距 */}
+                  <div className="bg-gray-50 rounded-2xl p-8">
+                    <ul className="space-y-4 text-left">
                       {step.details.map((detail, i) => (
-                        <li key={i} className="flex items-center space-x-3">
+                        <li key={i} className="flex items-center space-x-4">
                           <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                          <span className="text-gray-700">{detail}</span>
+                          <span className="text-gray-700 text-sm">{detail}</span>
                         </li>
                       ))}
                     </ul>

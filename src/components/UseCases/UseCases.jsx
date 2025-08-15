@@ -88,29 +88,29 @@ const UseCases = () => {
   ]
 
   return (
-    <section className="section-spacing dark-bg">
+    <section className="section-spacing bg-black">
       <div className="container-section">
         {/* Section Header */}
-        <div className="section-header-lg">
-          <h2 className="section-title-dark">
+        <div className="text-center mb-20">
+          <h2 className="heading-section text-white">
             应用场景
-            <span className="block text-white mt-4">覆盖企业全业务流程</span>
+            <span className="block text-white">覆盖企业全业务流程</span>
           </h2>
-          <p className="section-subtitle-dark">
+          <p className="text-section text-gray-300 max-w-3xl mx-auto">
             无论是内容营销、企业报告还是团队协作，熵变AI都能为您提供专业的解决方案
           </p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-6 mb-16">
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
           {useCases.map((useCase, index) => (
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`flex items-center space-x-3 px-8 py-4 rounded-2xl font-medium transition-all duration-300 ${
+              className={`flex items-center space-x-3 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeTab === index
-                  ? 'bg-white text-primary shadow-lg scale-105'
-                  : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+                  ? 'bg-white text-black shadow-lg transform scale-105'
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-600'
               }`}
             >
               {useCase.icon}
