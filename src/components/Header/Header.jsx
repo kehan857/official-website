@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { useApp } from '../../context/AppContext'
 import { translations } from '../../i18n/translations'
+import Logo from '../Logo/Logo'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -19,7 +20,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-black">{t.brand.name}</span>
+              <Logo className="h-10 w-auto" />
             </div>
           </div>
 
