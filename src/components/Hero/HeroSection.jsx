@@ -125,17 +125,17 @@ const HeroSection = () => {
           
           {/* Stats Cards */}
           <div className="grid md:grid-cols-3 gap-8 mt-20">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 text-center border border-white/20">
-              <div className="text-4xl font-bold text-white mb-2">{t.hero.stats1.value}</div>
-              <div className="text-gray-300">{t.hero.stats1.label}</div>
+            <div className="bg-white rounded-3xl p-8 text-center border border-gray-200 shadow-lg">
+              <div className="text-4xl font-bold text-black mb-2">{t.hero.stats1.value}</div>
+              <div className="text-gray-600">{t.hero.stats1.label}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 text-center border border-white/20">
-              <div className="text-4xl font-bold text-white mb-2">{t.hero.stats2.value}</div>
-              <div className="text-gray-300">{t.hero.stats2.label}</div>
+            <div className="bg-white rounded-3xl p-8 text-center border border-gray-200 shadow-lg">
+              <div className="text-4xl font-bold text-black mb-2">{t.hero.stats2.value}</div>
+              <div className="text-gray-600">{t.hero.stats2.label}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 text-center border border-white/20">
-              <div className="text-4xl font-bold text-white mb-2">{t.hero.stats3.value}</div>
-              <div className="text-gray-300">{t.hero.stats3.label}</div>
+            <div className="bg-white rounded-3xl p-8 text-center border border-gray-200 shadow-lg">
+              <div className="text-4xl font-bold text-black mb-2">{t.hero.stats3.value}</div>
+              <div className="text-gray-600">{t.hero.stats3.label}</div>
             </div>
           </div>
         </div>
