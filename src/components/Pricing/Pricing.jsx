@@ -45,7 +45,7 @@ const Pricing = () => {
       limitations: [],
       buttonText: "立即购买",
       popular: true,
-      color: "border-primary"
+      color: "border-blue-500"
     },
     {
       name: "企业版",
@@ -98,8 +98,8 @@ const Pricing = () => {
               onClick={() => setIsAnnual(false)}
               className={`px-8 py-3 rounded-xl font-medium transition-all duration-300 ${
                 !isAnnual 
-                  ? 'bg-white text-primary shadow-md' 
-                  : 'text-gray-600 hover:text-primary'
+                  ? 'bg-white text-black shadow-md' 
+                  : 'text-gray-600 hover:text-black'
               }`}
             >
               按月付费
@@ -108,8 +108,8 @@ const Pricing = () => {
               onClick={() => setIsAnnual(true)}
               className={`px-8 py-3 rounded-xl font-medium transition-all duration-300 relative ${
                 isAnnual 
-                  ? 'bg-white text-primary shadow-md' 
-                  : 'text-gray-600 hover:text-primary'
+                  ? 'bg-white text-black shadow-md' 
+                  : 'text-gray-600 hover:text-black'
               }`}
             >
               按年付费
@@ -132,7 +132,7 @@ const Pricing = () => {
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-primary text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2">
+                  <div className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2">
                     <Star className="w-4 h-4" />
                     <span>最受欢迎</span>
                   </div>
@@ -141,9 +141,9 @@ const Pricing = () => {
 
               {/* Plan Header */}
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-primary mb-4">{plan.name}</h3>
+                <h3 className="text-2xl font-bold text-black mb-4">{plan.name}</h3>
                 <div className="mb-4">
-                  <span className="text-5xl font-bold text-primary">
+                  <span className="text-5xl font-bold text-black">
                     ¥{isAnnual ? plan.price.annual : plan.price.monthly}
                   </span>
                   <span className="text-gray-600 ml-2">
@@ -175,8 +175,8 @@ const Pricing = () => {
               <button 
                 className={`w-full py-4 rounded-2xl font-medium text-lg transition-all duration-300 ${
                   plan.popular 
-                    ? 'bg-primary text-white hover:bg-gray-900 shadow-lg hover:shadow-xl'
-                    : 'border-2 border-primary text-primary hover:bg-primary hover:text-white'
+                    ? 'bg-black text-white hover:bg-gray-800 shadow-lg hover:shadow-xl'
+                    : 'border-2 border-black text-black hover:bg-black hover:text-white'
                 }`}
               >
                 {plan.buttonText}
@@ -188,14 +188,14 @@ const Pricing = () => {
         {/* All Plans Include */}
         <div className="bg-gray-50 rounded-3xl p-12">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-primary mb-4">所有计划均包含</h3>
+            <h3 className="text-3xl font-bold text-black mb-4">所有计划均包含</h3>
             <p className="text-xl text-gray-600">核心功能保障您的使用体验</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white rounded-xl p-4 shadow-sm">
-                <Sparkles className="w-6 h-6 text-primary flex-shrink-0" />
+                <Sparkles className="w-6 h-6 text-blue-500 flex-shrink-0" />
                 <span className="font-medium text-gray-700">{feature}</span>
               </div>
             ))}
@@ -204,7 +204,7 @@ const Pricing = () => {
 
         {/* FAQ Preview */}
         <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold text-primary mb-6">还有疑问？</h3>
+          <h3 className="text-3xl font-bold text-black mb-6">还有疑问？</h3>
           <p className="text-xl text-gray-600 mb-8">
             我们的销售团队随时为您答疑解惑
           </p>
