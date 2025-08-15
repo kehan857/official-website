@@ -102,8 +102,8 @@ const HeroSection = () => {
                       </div>
                       <p className="text-gray-300">基于您的内容，建议添加相关案例研究以增强说服力...</p>
                       <div className="flex space-x-3 mt-4">
-                        <button className="bg-white text-primary px-4 py-2 rounded-lg text-sm font-medium">采纳建议</button>
-                        <button className="border border-gray-400 text-gray-300 px-4 py-2 rounded-lg text-sm">稍后处理</button>
+                        <button className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors">采纳建议</button>
+                        <button className="border border-gray-400 text-gray-200 hover:text-white px-4 py-2 rounded-lg text-sm transition-colors">稍后处理</button>
                       </div>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ const HeroSection = () => {
             {/* Floating Elements */}
             <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-xl">
               <div className="flex items-center space-x-3">
-                <PenTool className="w-6 h-6 text-primary" />
+                <PenTool className="w-6 h-6 text-blue-500" />
                 <div>
                   <div className="font-semibold text-gray-900">智能编辑</div>
                   <div className="text-sm text-gray-500">实时优化建议</div>
