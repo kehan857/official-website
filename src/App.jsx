@@ -5,7 +5,7 @@ import ProductShowcase from './components/ProductShowcase/ProductShowcase'
 import Workflow from './components/Workflow/Workflow'
 import Features from './components/Features/Features'
 import UseCases from './components/UseCases/UseCases'
-
+import CaseStudies from './components/CaseStudies/CaseStudies'
 import Pricing from './components/Pricing/Pricing'
 import Testimonials from './components/Testimonials/Testimonials'
 import Resources from './components/Resources/Resources'
@@ -22,7 +22,7 @@ function App() {
         <Workflow />
         <Features />
         <UseCases />
-
+        <CaseStudies />
         <Pricing />
         <Testimonials />
         <Resources />
