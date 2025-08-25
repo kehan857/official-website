@@ -30,9 +30,9 @@ const Features = () => {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="card-base card-hover group cursor-pointer">
+            <div key={index} className={`card-base card-hover group cursor-pointer animate-on-scroll stagger-${(index % 5) + 1}`}>
               {/* Icon */}
-              <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-700 mb-6 group-hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center text-gray-700 mb-6 group-hover:scale-110 transition-all duration-500 hover-scale">
                 {feature.icon}
               </div>
               
@@ -45,10 +45,10 @@ const Features = () => {
               </p>
               
               {/* Learn More Link */}
-              <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                <div className="flex items-center text-primary font-medium">
+              <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                <div className="flex items-center text-black font-medium hover:text-blue-600 transition-colors duration-300">
                   <span className="text-sm">了解更多</span>
-                  <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  <span className="ml-2 transform group-hover:translate-x-2 transition-transform duration-300">→</span>
                 </div>
               </div>
             </div>

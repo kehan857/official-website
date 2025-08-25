@@ -96,13 +96,16 @@ const CaseStudies = () => {
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-8 py-4 mx-2 mb-4 rounded-2xl font-medium transition-all duration-300 ${
+              className={`px-8 py-4 mx-2 mb-4 rounded-2xl font-medium transition-all duration-500 hover-lift relative overflow-hidden ${
                 activeTab === index
-                  ? 'bg-black text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-black text-white shadow-lg transform scale-105'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md'
               }`}
             >
-              {study.title}
+              <span className="relative z-10">{study.title}</span>
+              {activeTab === index && (
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-black opacity-90"></div>
+              )}
             </button>
           ))}
         </div>

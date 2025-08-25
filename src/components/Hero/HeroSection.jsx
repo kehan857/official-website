@@ -13,8 +13,8 @@ const HeroSection = () => {
         <div className="container-hero text-center">
           {/* Main Headline */}
           <h1 className="heading-hero">
-            {t.hero.title1}
-            <span className="block">{t.hero.title2}</span>
+            <span className="inline-block">{t.hero.title1}</span>
+            <span className="block gradient-text">{t.hero.title2}</span>
           </h1>
           
           {/* Subtitle */}
@@ -26,7 +26,7 @@ const HeroSection = () => {
           <div className="mb-24">
             <button 
               onClick={()=>setAuthModal({ open: true, mode: 'register' })} 
-              className="btn-primary text-lg px-12 py-5"
+              className="btn-primary text-lg px-12 py-5 hover-lift"
             >
               {t.hero.ctaPrimary}
             </button>
