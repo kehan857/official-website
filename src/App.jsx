@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './components/Header/Header'
-import HeroSection from './components/Hero/HeroSection'
 import ProductShowcase from './components/ProductShowcase/ProductShowcase'
 import Workflow from './components/Workflow/Workflow'
 import Features from './components/Features/Features'
@@ -16,7 +15,6 @@ function App() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <HeroSection />
         <ProductShowcase />
         <Workflow />
         <Features />
