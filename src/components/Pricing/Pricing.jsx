@@ -59,8 +59,8 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative bg-white rounded-3xl shadow-lg border-2 ${plan.color} p-8 hover:shadow-2xl transition-all duration-500 ${
-                plan.popular ? 'scale-105 shadow-2xl' : ''
+              className={`relative bg-white rounded-3xl shadow-lg border-2 ${plan.color} p-8 hover:shadow-2xl hover:-translate-y-2 card-glow group transition-all duration-500 ${
+                plan.popular ? 'scale-105 shadow-2xl gradient-bg-dynamic' : ''
               }`}
             >
               {/* Popular Badge */}
@@ -115,13 +115,16 @@ const Pricing = () => {
 
               {/* CTA Button */}
               <button 
-                className={`w-full py-4 rounded-2xl font-medium text-lg transition-all duration-300 ${
+                className={`w-full py-4 rounded-2xl font-medium text-lg transition-all duration-500 transform hover:scale-105 relative overflow-hidden group ${
                   plan.popular 
-                    ? 'bg-black text-white hover:bg-gray-800 shadow-lg hover:shadow-xl'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
                     : 'border-2 border-black text-black hover:bg-black hover:text-white'
                 }`}
+                onMouseEnter={(e) => e.target.classList.add('fast-bounce')}
+                onAnimationEnd={(e) => e.target.classList.remove('fast-bounce')}
               >
-                {plan.buttonText}
+                <span className="relative z-10">{plan.buttonText}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </button>
             </div>
           ))}

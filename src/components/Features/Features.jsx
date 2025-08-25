@@ -2,10 +2,12 @@ import React, { useMemo } from 'react'
 import { MessageSquare, Database, Users, Sparkles, Zap, Shield } from 'lucide-react'
 import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
+import { useStaggeredAnimation } from '../../hooks/useScrollAnimation'
 
 const Features = () => {
   const { lang } = useApp()
   const t = useMemo(() => translations[lang], [lang])
+  const { getRef, isAnimated } = useStaggeredAnimation(6, 150)
   const features = [
     { icon: <MessageSquare className="w-8 h-8" />, title: t.features.items[0]?.title || "智能交互与对话系统", description: t.features.items[0]?.desc || "长程上下文对话引擎", color: "from-blue-500 to-cyan-500" },
     { icon: <Database className="w-8 h-8" />, title: t.features.items[1]?.title || "知识智能与RAG", description: t.features.items[1]?.desc || "动态知识库管理", color: "from-purple-500 to-pink-500" },
@@ -27,12 +29,20 @@ const Features = () => {
           <p className="text-section max-w-3xl mx-auto">{t.features.desc}</p>
         </div>
         
-        {/* Features Grid */}
+        {/* Features Grid - 参考Wispr Flow的错位动画 */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="card-base card-hover group cursor-pointer">
-              {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center text-gray-700 mb-6 group-hover:scale-110 transition-all duration-500">
+            <div 
+              key={index} 
+              ref={getRef(index)}
+              className={`card-base card-hover card-glow group cursor-pointer transform transition-all duration-800 ${
+                isAnimated(index) 
+                  ? 'opacity-100 translate-y-0 scale-100' 
+                  : 'opacity-0 translate-y-8 scale-95'
+              }`}
+            >
+              {/* Icon with gradient background */}
+              <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 floating-element`}>
                 {feature.icon}
               </div>
               
@@ -44,11 +54,12 @@ const Features = () => {
                 {feature.description}
               </p>
               
-              {/* Learn More Link */}
+              {/* Learn More Link with glow effect */}
               <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                <div className="flex items-center text-black font-medium hover:text-blue-600 transition-colors duration-300">
+                <div className="flex items-center text-black font-medium hover:text-blue-600 transition-colors duration-300 relative">
                   <span className="text-sm">了解更多</span>
                   <span className="ml-2 transform group-hover:translate-x-2 transition-transform duration-300">→</span>
+                  <div className="absolute inset-0 bg-blue-100 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10"></div>
                 </div>
               </div>
             </div>

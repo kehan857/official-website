@@ -227,7 +227,7 @@
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   }
   
-  /* 动画关键帧 */
+  /* 高级动画关键帧 - 参考Wispr Flow */
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -250,6 +250,28 @@
     }
   }
   
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
   @keyframes pulse {
     0%, 100% {
       opacity: 1;
@@ -259,23 +281,89 @@
     }
   }
   
-  /* 通用动效类 */
+  /* YouMind风格的背景动画 */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* 高级滚动动画类 - 参考Wispr Flow和YouMind */
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px) scale(0.95);
     transition: all 0.8s var(--ease-out-cubic);
   }
   
   .animate-on-scroll.in-view {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
   
-  .stagger-1 { animation-delay: 0.1s; }
-  .stagger-2 { animation-delay: 0.2s; }
-  .stagger-3 { animation-delay: 0.3s; }
-  .stagger-4 { animation-delay: 0.4s; }
-  .stagger-5 { animation-delay: 0.5s; }
+  .animate-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s var(--ease-out-cubic);
+  }
+  
+  .animate-slide-left.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .animate-slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s var(--ease-out-cubic);
+  }
+  
+  .animate-slide-right.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .animate-scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s var(--ease-out-cubic);
+  }
+  
+  .animate-scale-in.in-view {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* 错位动画延迟 */
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
+  .stagger-6 { transition-delay: 0.6s; }
   
   /* 悬停效果增强 */
   .hover-lift {
@@ -294,12 +382,69 @@
     transform: scale(1.05);
   }
   
-  /* 文字渐变效果 */
+  /* YouMind风格的动态背景和文字渐变 */
   .gradient-text {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  
+  .gradient-bg-dynamic {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  .gradient-bg-hero {
+    background: linear-gradient(135deg, 
+      rgba(102, 126, 234, 0.05) 0%, 
+      rgba(118, 75, 162, 0.05) 100%);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Wispr Flow风格的快速响应动画 */
+  .fast-bounce {
+    animation: fastBounce 0.6s var(--ease-out-cubic);
+  }
+  
+  @keyframes fastBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  /* 高级卡片悬停效果 */
+  .card-glow {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.2), 
+      transparent);
+    transition: left 0.5s;
+  }
+  
+  .card-glow:hover::before {
+    left: 100%;
   }
   
   /* 加载动画 */
