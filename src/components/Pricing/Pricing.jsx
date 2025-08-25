@@ -77,9 +77,9 @@ const Pricing = () => {
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-black mb-4">{plan.name}</h3>
                 <div className="mb-4">
-                  {plan.name === "企业版" ? (
+                  {plan.name === "企业版" || plan.name === "企业旗舰版" ? (
                     <span className="text-4xl font-bold text-black">
-                      定制开发
+                      {plan.name === "企业版" ? "定制开发" : "定制报价"}
                     </span>
                   ) : (
                     <>
