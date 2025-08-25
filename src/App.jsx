@@ -7,7 +7,6 @@ import Features from './components/Features/Features'
 import UseCases from './components/UseCases/UseCases'
 import CaseStudies from './components/CaseStudies/CaseStudies'
 import Pricing from './components/Pricing/Pricing'
-import Testimonials from './components/Testimonials/Testimonials'
 import Resources from './components/Resources/Resources'
 import Footer from './components/Footer/Footer'
 import AuthModal from './components/Auth/AuthModal'
@@ -24,7 +23,6 @@ function App() {
         <UseCases />
         <CaseStudies />
         <Pricing />
-        <Testimonials />
         <Resources />
       </main>
       <Footer />
