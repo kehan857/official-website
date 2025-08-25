@@ -29,7 +29,7 @@ const UseCases = () => {
   }))
 
   return (
-    <section className="section-spacing bg-white">
+    <section id="useCases" className="section-spacing bg-white">
       <div className="container-section">
         {/* Section Header */}
         <div className="text-center mb-20">

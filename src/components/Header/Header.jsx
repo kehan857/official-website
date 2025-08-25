@@ -13,6 +13,21 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault()
+    setIsMenuOpen(false) // 关闭移动端菜单
+    
+    const targetId = href.substring(1) // 移除 # 符号
+    const targetElement = document.getElementById(targetId)
+    
+    if (targetElement) {
+      targetElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm bg-white/90">
       <div className="container-section">
@@ -27,16 +42,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <div className="flex items-center space-x-12">
-              <a href="#hero" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
+              <a href="#hero" onClick={(e) => handleNavClick(e, '#hero')} className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.home}
               </a>
-              <a href="#features" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
+              <a href="#features" onClick={(e) => handleNavClick(e, '#features')} className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.features}
               </a>
-              <a href="#useCases" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
+              <a href="#useCases" onClick={(e) => handleNavClick(e, '#useCases')} className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.solutions}
               </a>
-              <a href="#pricing" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
+              <a href="#pricing" onClick={(e) => handleNavClick(e, '#pricing')} className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.pricing}
               </a>
               <button 
@@ -83,16 +98,16 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <a href="#hero" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
+              <a href="#hero" onClick={(e) => handleNavClick(e, '#hero')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.home}
               </a>
-              <a href="#features" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
+              <a href="#features" onClick={(e) => handleNavClick(e, '#features')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.features}
               </a>
-              <a href="#useCases" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
+              <a href="#useCases" onClick={(e) => handleNavClick(e, '#useCases')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.solutions}
               </a>
-              <a href="#pricing" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
+              <a href="#pricing" onClick={(e) => handleNavClick(e, '#pricing')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.pricing}
               </a>
               <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium border rounded-lg">

@@ -48,6 +48,11 @@
     scroll-behavior: smooth;
   }
   
+  /* 为锚点导航添加偏移，避免被固定头部遮挡 */
+  section[id] {
+    scroll-margin-top: 100px;
+  }
+  
   body {
     font-family: 'Source Sans Pro', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     line-height: 1.6;

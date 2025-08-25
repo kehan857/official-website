@@ -12,7 +12,7 @@ const Pricing = () => {
   const features = t.pricing.features
 
   return (
-    <section className="section-spacing bg-white">
+    <section id="pricing" className="section-spacing bg-white">
       <div className="container-section">
         {/* Section Header */}
         <div className="text-center mb-20">
