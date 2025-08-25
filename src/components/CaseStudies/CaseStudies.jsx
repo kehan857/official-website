@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import { ArrowRight, TrendingUp, Users, Target, Shield } from 'lucide-react'
 import { useApp } from '../../context/AppContext'
 import { translations } from '../../i18n/translations'
@@ -6,6 +6,7 @@ import { translations } from '../../i18n/translations'
 const CaseStudies = () => {
   const { lang } = useApp()
   const t = useMemo(() => translations[lang], [lang])
+  const [activeTab, setActiveTab] = useState(0)
 
   const caseStudies = [
     {
@@ -89,78 +90,89 @@ const CaseStudies = () => {
           </p>
         </div>
 
-        {/* Case Studies */}
-        <div className="space-y-24">
+        {/* Tab Navigation */}
+        <div className="flex flex-wrap justify-center mb-16">
           {caseStudies.map((study, index) => (
-            <div key={study.id} className={`grid lg:grid-cols-2 gap-16 items-center ${
-              index % 2 === 1 ? 'lg:grid-cols-2 lg:flex-row-reverse' : ''
-            }`}>
-              {/* Content Side */}
-              <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                <div className="bg-white rounded-3xl p-8 shadow-lg">
-                  <div className="mb-6">
-                    <h3 className="heading-card text-black mb-2">{study.title}</h3>
-                    <p className="text-lg font-medium text-blue-600 mb-4">{study.subtitle}</p>
-                  </div>
+            <button
+              key={index}
+              onClick={() => setActiveTab(index)}
+              className={`px-8 py-4 mx-2 mb-4 rounded-2xl font-medium transition-all duration-300 ${
+                activeTab === index
+                  ? 'bg-black text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              {study.title}
+            </button>
+          ))}
+        </div>
 
-                  {/* Challenge & Solution */}
-                  <div className="space-y-6 mb-8">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">挑战</h4>
-                      <p className="text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">解决方案</h4>
-                      <p className="text-gray-600 mb-4">{study.solution}</p>
-                      <div className="grid grid-cols-2 gap-2">
-                        {study.capabilities.map((capability, i) => (
-                          <div key={i} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                            <span className="text-sm text-gray-700">{capability}</span>
-                          </div>
-                        ))}
+        {/* Active Case Study */}
+        <div className="bg-white rounded-3xl shadow-lg p-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Content Side */}
+            <div>
+              <div className="mb-6">
+                <h3 className="heading-card text-black mb-2">{caseStudies[activeTab].title}</h3>
+                <p className="text-lg font-medium text-blue-600 mb-4">{caseStudies[activeTab].subtitle}</p>
+              </div>
+
+              {/* Challenge & Solution */}
+              <div className="space-y-6 mb-8">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">挑战</h4>
+                  <p className="text-gray-600">{caseStudies[activeTab].challenge}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">解决方案</h4>
+                  <p className="text-gray-600 mb-4">{caseStudies[activeTab].solution}</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {caseStudies[activeTab].capabilities.map((capability, i) => (
+                      <div key={i} className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                        <span className="text-sm text-gray-700">{capability}</span>
                       </div>
-                    </div>
+                    ))}
                   </div>
-
-                  {/* Quote */}
-                  <div className="bg-gray-50 rounded-2xl p-6 mb-6">
-                    <p className="text-gray-700 italic mb-3">"{study.quote}"</p>
-                    <p className="text-sm font-medium text-gray-900">— {study.author}</p>
-                  </div>
-
-                  {/* CTA */}
-                  <button className="btn-secondary text-sm px-6 py-3 inline-flex items-center space-x-2">
-                    <span>了解详情</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
                 </div>
               </div>
 
-              {/* Results Side */}
-              <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                <div className="space-y-6">
-                  <h4 className="text-2xl font-bold text-black mb-8">关键成果指标</h4>
-                  {study.results.map((result, i) => {
-                    const IconComponent = result.icon
-                    return (
-                      <div key={i} className="bg-white rounded-2xl p-6 shadow-lg">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <IconComponent className="w-6 h-6 text-blue-600" />
-                          </div>
-                          <div>
-                            <div className="text-3xl font-bold text-black">{result.value}</div>
-                            <div className="text-gray-600">{result.metric}</div>
-                          </div>
+              {/* Quote */}
+              <div className="bg-gray-50 rounded-2xl p-6 mb-6">
+                <p className="text-gray-700 italic mb-3">"{caseStudies[activeTab].quote}"</p>
+                <p className="text-sm font-medium text-gray-900">— {caseStudies[activeTab].author}</p>
+              </div>
+
+              {/* CTA */}
+              <button className="btn-secondary text-sm px-6 py-3 inline-flex items-center space-x-2">
+                <span>了解详情</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Results Side */}
+            <div>
+              <div className="space-y-6">
+                <h4 className="text-2xl font-bold text-black mb-8">关键成果指标</h4>
+                {caseStudies[activeTab].results.map((result, i) => {
+                  const IconComponent = result.icon
+                  return (
+                    <div key={i} className="bg-gray-50 rounded-2xl p-6">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                          <IconComponent className="w-6 h-6 text-blue-600" />
+                        </div>
+                        <div>
+                          <div className="text-3xl font-bold text-black">{result.value}</div>
+                          <div className="text-gray-600">{result.metric}</div>
                         </div>
                       </div>
-                    )
-                  })}
-                </div>
+                    </div>
+                  )
+                })}
               </div>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Bottom CTA */}
