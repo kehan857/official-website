@@ -59,13 +59,20 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative bg-white rounded-3xl shadow-lg border-2 ${plan.color} p-8 hover:shadow-2xl hover:-translate-y-2 card-glow group transition-all duration-500 ${
-                plan.popular ? 'scale-105 shadow-2xl gradient-bg-dynamic' : ''
+              className={`relative bg-white rounded-3xl shadow-lg border-2 p-8 hover:shadow-2xl hover:-translate-y-2 card-glow group transition-all duration-500 ${
+                plan.popular 
+                  ? 'scale-105 shadow-2xl border-blue-500 ring-2 ring-blue-200 ring-opacity-50' 
+                  : plan.color
               }`}
             >
+              {/* Popular Card Background Decoration */}
+              {plan.popular && (
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-blue-50 rounded-3xl opacity-30"></div>
+              )}
+              
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-20">
                   <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center space-x-2 shadow-lg whitespace-nowrap">
                     <Star className="w-4 h-4 flex-shrink-0" />
                     <span>{t.pricing.mostPopular}</span>
@@ -74,7 +81,7 @@ const Pricing = () => {
               )}
 
               {/* Plan Header */}
-              <div className="text-center mb-8">
+              <div className="text-center mb-8 relative z-10">
                 <h3 className="text-2xl font-bold text-black mb-4">{plan.name}</h3>
                 <div className="mb-4">
                   {plan.name === "企业版" || plan.name === "企业旗舰版" ? (
@@ -96,7 +103,7 @@ const Pricing = () => {
               </div>
 
               {/* Features */}
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-8 relative z-10">
                 {plan.features.map((feature, i) => (
                   <div key={i} className="flex items-center space-x-3">
                     <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -115,7 +122,7 @@ const Pricing = () => {
 
               {/* CTA Button */}
               <button 
-                className={`w-full py-4 rounded-2xl font-medium text-lg transition-all duration-500 transform hover:scale-105 relative overflow-hidden group ${
+                className={`w-full py-4 rounded-2xl font-medium text-lg transition-all duration-500 transform hover:scale-105 relative overflow-hidden group z-10 ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
                     : 'border-2 border-black text-black hover:bg-black hover:text-white'
