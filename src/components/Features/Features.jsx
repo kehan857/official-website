@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { BookOpen, Brain, FileText, Globe, Palette, Shield } from 'lucide-react'
+import { MessageSquare, Database, Users, Sparkles, Zap, Shield } from 'lucide-react'
 import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 
@@ -7,11 +7,11 @@ const Features = () => {
   const { lang } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const features = [
-    { icon: <FileText className="w-8 h-8" />, title: t.features.items[0].title, description: t.features.items[0].desc, color: "from-blue-500 to-cyan-500" },
-    { icon: <Brain className="w-8 h-8" />, title: t.features.items[1].title, description: t.features.items[1].desc, color: "from-purple-500 to-pink-500" },
-    { icon: <Palette className="w-8 h-8" />, title: t.features.items[2].title, description: t.features.items[2].desc, color: "from-green-500 to-emerald-500" },
-    { icon: <Globe className="w-8 h-8" />, title: t.features.items[3].title, description: t.features.items[3].desc, color: "from-orange-500 to-red-500" },
-    { icon: <BookOpen className="w-8 h-8" />, title: t.features.items[4].title, description: t.features.items[4].desc, color: "from-indigo-500 to-purple-500" },
+    { icon: <MessageSquare className="w-8 h-8" />, title: t.features.items[0].title, description: t.features.items[0].desc, color: "from-blue-500 to-cyan-500" },
+    { icon: <Database className="w-8 h-8" />, title: t.features.items[1].title, description: t.features.items[1].desc, color: "from-purple-500 to-pink-500" },
+    { icon: <Users className="w-8 h-8" />, title: t.features.items[2].title, description: t.features.items[2].desc, color: "from-green-500 to-emerald-500" },
+    { icon: <Sparkles className="w-8 h-8" />, title: t.features.items[3].title, description: t.features.items[3].desc, color: "from-orange-500 to-red-500" },
+    { icon: <Zap className="w-8 h-8" />, title: t.features.items[4].title, description: t.features.items[4].desc, color: "from-indigo-500 to-purple-500" },
     { icon: <Shield className="w-8 h-8" />, title: t.features.items[5].title, description: t.features.items[5].desc, color: "from-gray-500 to-slate-500" }
   ]
 

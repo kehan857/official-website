@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { ArrowRight, Upload, Brain, Edit, Share2, CheckCircle } from 'lucide-react'
+import { ArrowRight, Upload, Cpu, Edit3, Rocket, CheckCircle, Database, Sparkles, Users, Zap } from 'lucide-react'
 import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 
@@ -9,28 +9,28 @@ const Workflow = () => {
   
   const steps = t.workflow?.steps ? [
     {
-      icon: <Upload className="w-8 h-8" />,
+      icon: <Database className="w-8 h-8" />,
       title: t.workflow.steps[0].title,
       description: t.workflow.steps[0].description,
       details: t.workflow.steps[0].details,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Cpu className="w-8 h-8" />,
       title: t.workflow.steps[1].title,
       description: t.workflow.steps[1].description,
       details: t.workflow.steps[1].details,
       color: "from-purple-500 to-pink-500"
     },
     {
-      icon: <Edit className="w-8 h-8" />,
+      icon: <Edit3 className="w-8 h-8" />,
       title: t.workflow.steps[2].title,
       description: t.workflow.steps[2].description,
       details: t.workflow.steps[2].details,
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: <Share2 className="w-8 h-8" />,
+      icon: <Rocket className="w-8 h-8" />,
       title: t.workflow.steps[3].title,
       description: t.workflow.steps[3].description,
       details: t.workflow.steps[3].details,
