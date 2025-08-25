@@ -4,7 +4,7 @@ import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 
 const Footer = () => {
-  const { lang } = useApp()
+  const { lang, setLeadForm } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const footerLinks = {
     product: [
@@ -51,12 +51,18 @@ const Footer = () => {
               <span className="block text-black mt-2">{t.footer.topTitle2}</span>
             </h2>
             <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">{t.footer.topDesc}</p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="btn-accent text-lg inline-flex items-center justify-center group">
+            <div className="flex justify-center">
+              <button 
+                onClick={() => setLeadForm({ 
+                  open: true, 
+                  title: "获取专业方案", 
+                  subtitle: "资深顾问为您提供定制化AI解决方案" 
+                })}
+                className="btn-primary text-lg inline-flex items-center justify-center group px-12 py-4"
+              >
                 {t.footer.topPrimary}
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-200 text-lg">{t.footer.topSecondary}</button>
             </div>
           </div>
         </div>

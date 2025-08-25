@@ -11,6 +11,11 @@ export const AppProvider = ({ children }) => {
     return raw ? JSON.parse(raw) : null
   })
   const [authModal, setAuthModal] = useState({ open: false, mode: 'login' })
+  const [leadForm, setLeadForm] = useState({ 
+    open: false, 
+    title: '预约产品演示', 
+    subtitle: '我们将在24小时内与您联系' 
+  })
 
   useEffect(() => {
     localStorage.setItem('lang', lang)
@@ -27,8 +32,10 @@ export const AppProvider = ({ children }) => {
     user,
     setUser,
     authModal,
-    setAuthModal
-  }), [lang, user, authModal])
+    setAuthModal,
+    leadForm,
+    setLeadForm
+  }), [lang, user, authModal, leadForm])
 
   return (
     <AppContext.Provider value={value}>{children}</AppContext.Provider>

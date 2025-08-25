@@ -66,19 +66,7 @@ const Features = () => {
           ))}
         </div>
         
-        {/* Call to Action Section */}
-        <div className="mt-32">
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12 border border-gray-200 shadow-sm">
-            <div className="text-center max-w-4xl mx-auto">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{t.features.bottomCtaTitle}</h3>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">{t.features.bottomCtaDesc}</p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className="btn-primary text-lg">{t.features.bottomPrimary}</button>
-                <button className="btn-secondary text-lg">{t.features.bottomSecondary}</button>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   )

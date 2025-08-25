@@ -37,7 +37,7 @@ export const translations = {
       title1: "构建可持续的",
       title2: "生成式智能体系",
       subtitle: "熵变智元以五大核心能力为引擎：智能交互与顾问式对话、知识智能与企业级RAG、客户数据智能与超个性化、生成式AI与风险管控、企业自动化与工作流编排。实现从运营效率提升到专家能力规模化复制，从个性化服务到可持续内容生产的完整闭环。",
-      ctaPrimary: "立即体验",
+      ctaPrimary: "免费试用",
       ctaSecondary: "观看演示",
       stats1: { value: "100+", label: "企业级解决方案" },
       stats2: { value: "500+", label: "规模化部署" },

@@ -5,7 +5,7 @@ import { translations } from '../../i18n/translations'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const HeroSection = () => {
-  const { lang, setAuthModal } = useApp()
+  const { lang, setLeadForm } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const [titleRef, titleVisible] = useScrollAnimation({ delay: 200 })
   const [subtitleRef, subtitleVisible] = useScrollAnimation({ delay: 400 })
@@ -52,7 +52,11 @@ const HeroSection = () => {
             }`}
           >
             <button 
-              onClick={()=>setAuthModal({ open: true, mode: 'register' })} 
+              onClick={() => setLeadForm({ 
+                open: true, 
+                title: "申请免费试用", 
+                subtitle: "填写信息，立即获取产品试用权限" 
+              })} 
               className="btn-primary text-lg px-12 py-5 hover-lift relative group"
               onMouseEnter={(e) => e.target.classList.add('fast-bounce')}
               onAnimationEnd={(e) => e.target.classList.remove('fast-bounce')}

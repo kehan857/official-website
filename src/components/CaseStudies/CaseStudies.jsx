@@ -178,23 +178,7 @@ const CaseStudies = () => {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-20">
-          <h3 className="text-2xl font-bold text-black mb-4">
-            准备开启您的AI转型之旅？
-          </h3>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            联系我们的解决方案专家，了解熵变智元如何为您的企业创造可衡量的价值
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary">
-              免费咨询
-            </button>
-            <button className="btn-secondary">
-              预约演示
-            </button>
-          </div>
-        </div>
+
       </div>
     </section>
   )

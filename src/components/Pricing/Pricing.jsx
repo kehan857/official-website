@@ -4,7 +4,7 @@ import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 
 const Pricing = () => {
-  const { lang } = useApp()
+  const { lang, setLeadForm } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const [isAnnual, setIsAnnual] = useState(true)
   
@@ -122,6 +122,11 @@ const Pricing = () => {
 
               {/* CTA Button */}
               <button 
+                onClick={() => setLeadForm({ 
+                  open: true, 
+                  title: plan.name === "能力体验版" ? "申请免费体验" : "获取定制方案",
+                  subtitle: plan.name === "能力体验版" ? "立即体验五大核心能力" : "专业顾问为您定制解决方案" 
+                })}
                 className={`w-full py-4 rounded-2xl font-medium text-lg transition-all duration-500 transform hover:scale-105 relative overflow-hidden group z-10 ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
@@ -154,22 +159,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        {/* FAQ Preview */}
-        <div className="mt-20 text-center">
-          <h3 className="text-3xl font-bold text-black mb-6">{t.pricing.haveQuestions}</h3>
-          <p className="text-xl text-gray-600 mb-8">
-            {t.pricing.salesTeam}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary text-lg inline-flex items-center space-x-3">
-              <span>{t.pricing.contactSales}</span>
-              <ArrowRight className="w-6 h-6" />
-            </button>
-            <button className="btn-secondary text-lg">
-              {t.pricing.viewFAQ}
-            </button>
-          </div>
-        </div>
+
       </div>
     </section>
   )
