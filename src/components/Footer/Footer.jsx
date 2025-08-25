@@ -71,7 +71,6 @@ const Footer = () => {
               <div className="mb-8">
                 <span className="text-3xl font-bold text-black">{t.brand.name}</span>
               </div>
-              <p className="text-gray-600 mb-8 leading-relaxed text-lg">{t.hero.subtitle}</p>
               
               {/* Contact Info */}
               <div className="space-y-4 text-gray-600">
