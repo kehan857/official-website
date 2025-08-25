@@ -149,8 +149,8 @@ export const translations = {
       ]
     },
     footer: {
-      topTitle1: "以数据资产为底座",
-      topTitle2: "驱动生成式智能",
+      topTitle1: "构建企业级",
+      topTitle2: "AI解决方案",
       topDesc: "熵变智元以五大能力为引擎，助力企业规模化、安全地使用生成式AI。",
       topPrimary: "免费开始",
       topSecondary: "联系销售",
