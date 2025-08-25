@@ -64,32 +64,32 @@ const Footer = () => {
       
       {/* Footer Links */}
       <div className="container-section">
-        <div className="section-spacing border-t border-gray-800">
+        <div className="section-spacing border-t border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="mb-8">
-                <span className="text-3xl font-bold text-white">{t.brand.name}</span>
+                <span className="text-3xl font-bold text-black">{t.brand.name}</span>
               </div>
-              <p className="text-gray-300 mb-8 leading-relaxed text-lg">{t.hero.subtitle}</p>
+              <p className="text-gray-600 mb-8 leading-relaxed text-lg">{t.hero.subtitle}</p>
               
               {/* Contact Info */}
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-gray-600">
                 <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
-                    <Mail className="w-5 h-5" />
+                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-gray-600" />
                   </div>
                   <span>{t.footer.contact.email}</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
-                    <Phone className="w-5 h-5" />
+                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-gray-600" />
                   </div>
                   <span>{t.footer.contact.phone}</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-5 h-5" />
+                  <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-gray-600" />
                   </div>
                   <span>{t.footer.contact.address}</span>
                 </div>
@@ -98,11 +98,11 @@ const Footer = () => {
             
             {/* Product Links */}
             <div>
-              <h3 className="font-bold text-white mb-6 text-lg">{t.footer.product}</h3>
+              <h3 className="font-bold text-black mb-6 text-lg">{t.footer.product}</h3>
               <ul className="space-y-4">
                 {footerLinks.product.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    <a href={link.href} className="text-gray-600 hover:text-black transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -112,11 +112,11 @@ const Footer = () => {
             
             {/* Company Links */}
             <div>
-              <h3 className="font-bold text-white mb-6 text-lg">{t.footer.company}</h3>
+              <h3 className="font-bold text-black mb-6 text-lg">{t.footer.company}</h3>
               <ul className="space-y-4">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    <a href={link.href} className="text-gray-600 hover:text-black transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -126,11 +126,11 @@ const Footer = () => {
             
             {/* Resources Links */}
             <div>
-              <h3 className="font-bold text-white mb-6 text-lg">{t.footer.resources}</h3>
+              <h3 className="font-bold text-black mb-6 text-lg">{t.footer.resources}</h3>
               <ul className="space-y-4">
                 {footerLinks.resources.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    <a href={link.href} className="text-gray-600 hover:text-black transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -140,11 +140,11 @@ const Footer = () => {
             
             {/* Legal Links */}
             <div>
-              <h3 className="font-bold text-white mb-6 text-lg">{t.footer.legal}</h3>
+              <h3 className="font-bold text-black mb-6 text-lg">{t.footer.legal}</h3>
               <ul className="space-y-4">
                 {footerLinks.legal.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                    <a href={link.href} className="text-gray-600 hover:text-black transition-colors">
                       {link.name}
                     </a>
                   </li>
@@ -155,10 +155,10 @@ const Footer = () => {
         </div>
         
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 py-8">
+        <div className="border-t border-gray-200 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             {/* Copyright */}
-            <div className="text-gray-400">{t.footer.copyright}</div>
+            <div className="text-gray-500">{t.footer.copyright}</div>
             
             {/* Social Links */}
             <div className="flex items-center space-x-4">
@@ -166,7 +166,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
+                  className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-gray-600 hover:text-black hover:bg-gray-200 transition-all duration-200"
                   aria-label={social.name}
                 >
                   {social.icon}
