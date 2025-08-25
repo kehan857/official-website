@@ -23,13 +23,6 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="section-spacing-lg relative z-10">
         <div className="container-hero text-center">
-          {/* Badge - Wispr Flow风格 */}
-          <div className="mb-8">
-            <span className="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium bg-white bg-opacity-80 backdrop-blur-sm text-gray-800 hover:bg-opacity-90 transition-all duration-300 shadow-sm">
-              ✨ {t.hero.badge}
-            </span>
-          </div>
-          
           {/* Main Headline */}
           <h1 
             ref={titleRef}

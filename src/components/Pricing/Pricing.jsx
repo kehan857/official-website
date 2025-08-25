@@ -55,7 +55,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid lg:grid-cols-3 gap-8 mb-20 mt-8">
           {plans.map((plan, index) => (
             <div 
               key={index} 
@@ -65,9 +65,9 @@ const Pricing = () => {
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2">
-                    <Star className="w-4 h-4" />
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center space-x-2 shadow-lg whitespace-nowrap">
+                    <Star className="w-4 h-4 flex-shrink-0" />
                     <span>{t.pricing.mostPopular}</span>
                   </div>
                 </div>
