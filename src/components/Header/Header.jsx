@@ -33,11 +33,11 @@ const Header = () => {
               <a href="#features" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
                 {t.nav.features}
               </a>
-              <a href="#testimonials" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
-                {t.nav.reviews}
+              <a href="#useCases" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
+                {t.nav.solutions}
               </a>
-              <a href="#resources" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
-                {t.nav.resources}
+              <a href="#pricing" className="text-gray-600 hover:text-black transition-colors duration-200" style={{fontSize: 'var(--text-base)'}}>
+                {t.nav.pricing}
               </a>
               <button 
                 onClick={()=>setLang(lang==='zh'?'en':'zh')} 
@@ -89,11 +89,11 @@ const Header = () => {
               <a href="#features" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.features}
               </a>
-              <a href="#testimonials" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
-                {t.nav.reviews}
+              <a href="#useCases" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
+                {t.nav.solutions}
               </a>
-              <a href="#resources" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
-                {t.nav.resources}
+              <a href="#pricing" className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
+                {t.nav.pricing}
               </a>
               <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium border rounded-lg">
                 {lang==='zh'? t.lang.en : t.lang.zh}

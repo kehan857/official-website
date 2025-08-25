@@ -6,8 +6,8 @@ export const translations = {
     nav: {
       home: "首页",
       features: "能力",
-      reviews: "案例与口碑",
-      resources: "资源",
+      solutions: "解决方案",
+      pricing: "定价",
       getStarted: "开始使用"
     },
     auth: {
@@ -389,8 +389,8 @@ export const translations = {
     nav: {
       home: "Home",
       features: "Features",
-      reviews: "Reviews",
-      resources: "Resources",
+      solutions: "Solutions",
+      pricing: "Pricing",
       getStarted: "Get Started"
     },
     auth: {
