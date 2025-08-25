@@ -77,12 +77,20 @@ const Pricing = () => {
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-black mb-4">{plan.name}</h3>
                 <div className="mb-4">
-                  <span className="text-5xl font-bold text-black">
-                    ¥{isAnnual ? plan.price.annual : plan.price.monthly}
-                  </span>
-                  <span className="text-gray-600 ml-2">
-                    /{isAnnual ? '年' : '月'}
-                  </span>
+                  {plan.name === "企业版" ? (
+                    <span className="text-4xl font-bold text-black">
+                      定制开发
+                    </span>
+                  ) : (
+                    <>
+                      <span className="text-5xl font-bold text-black">
+                        ¥{isAnnual ? plan.price.annual : plan.price.monthly}
+                      </span>
+                      <span className="text-gray-600 ml-2">
+                        /{isAnnual ? '年' : '月'}
+                      </span>
+                    </>
+                  )}
                 </div>
                 <p className="text-gray-600">{plan.description}</p>
               </div>
