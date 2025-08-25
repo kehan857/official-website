@@ -4,7 +4,7 @@ import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 
 const UseCases = () => {
-  const { lang } = useApp()
+  const { lang, setLeadForm } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const [activeTab, setActiveTab] = useState(0)
   
@@ -122,12 +122,16 @@ const UseCases = () => {
 
             {/* CTA */}
             <div className="flex space-x-4">
-              <button className="btn-accent text-lg inline-flex items-center space-x-3">
-                <span>{t.useCases.experienceScenario}</span>
+              <button 
+                onClick={() => setLeadForm({ 
+                  open: true, 
+                  title: "体验解决方案", 
+                  subtitle: "了解如何将AI能力应用到您的业务场景" 
+                })}
+                className="btn-primary text-lg inline-flex items-center space-x-3"
+              >
+                <span>立即体验</span>
                 <ArrowRight className="w-6 h-6" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-2xl font-medium hover:bg-white hover:text-primary transition-all duration-300 text-lg">
-                {t.useCases.learnMore}
               </button>
             </div>
           </div>

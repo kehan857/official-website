@@ -4,7 +4,7 @@ import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 
 const Workflow = () => {
-  const { lang } = useApp()
+  const { lang, setLeadForm } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   
   const steps = t.workflow?.steps ? [
@@ -106,8 +106,15 @@ const Workflow = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               {t.workflow?.ctaDesc || "立即开始您的第一个项目，感受AI驱动的创作体验"}
             </p>
-            <button className="btn-primary text-lg inline-flex items-center space-x-3">
-              <span>{t.workflow?.ctaPrimary || "开始创作"}</span>
+            <button 
+              onClick={() => setLeadForm({ 
+                open: true, 
+                title: "开始创作体验", 
+                subtitle: "体验完整的AI创作工作流程" 
+              })}
+              className="btn-primary text-lg inline-flex items-center space-x-3"
+            >
+              <span>立即体验</span>
               <ArrowRight className="w-6 h-6" />
             </button>
           </div>

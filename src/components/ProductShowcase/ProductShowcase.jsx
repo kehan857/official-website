@@ -4,7 +4,7 @@ import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 
 const ProductShowcase = () => {
-  const { lang } = useApp()
+  const { lang, setLeadForm } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const features = [
     { icon: <Zap className="w-5 h-5" />, title: t.product.features[0].title, description: t.product.features[0].desc },
@@ -114,7 +114,16 @@ const ProductShowcase = () => {
                   <Check className="w-5 h-5 text-green-500" />
                   <span>{t.product.cta.note}</span>
                 </div>
-                <button className="btn-primary">{t.product.cta.primary}</button>
+                <button 
+                  onClick={() => setLeadForm({ 
+                    open: true, 
+                    title: "体验产品功能", 
+                    subtitle: "立即体验五大核心能力，开启AI转型之旅" 
+                  })}
+                  className="btn-primary"
+                >
+                  {t.product.cta.primary}
+                </button>
               </div>
             </div>
           </div>
