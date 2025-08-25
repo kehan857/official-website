@@ -7,12 +7,12 @@ const Features = () => {
   const { lang } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const features = [
-    { icon: <MessageSquare className="w-8 h-8" />, title: t.features.items[0].title, description: t.features.items[0].desc, color: "from-blue-500 to-cyan-500" },
-    { icon: <Database className="w-8 h-8" />, title: t.features.items[1].title, description: t.features.items[1].desc, color: "from-purple-500 to-pink-500" },
-    { icon: <Users className="w-8 h-8" />, title: t.features.items[2].title, description: t.features.items[2].desc, color: "from-green-500 to-emerald-500" },
-    { icon: <Sparkles className="w-8 h-8" />, title: t.features.items[3].title, description: t.features.items[3].desc, color: "from-orange-500 to-red-500" },
-    { icon: <Zap className="w-8 h-8" />, title: t.features.items[4].title, description: t.features.items[4].desc, color: "from-indigo-500 to-purple-500" },
-    { icon: <Shield className="w-8 h-8" />, title: t.features.items[5].title, description: t.features.items[5].desc, color: "from-gray-500 to-slate-500" }
+    { icon: <MessageSquare className="w-8 h-8" />, title: t.features.items[0]?.title || "智能交互与对话系统", description: t.features.items[0]?.desc || "长程上下文对话引擎", color: "from-blue-500 to-cyan-500" },
+    { icon: <Database className="w-8 h-8" />, title: t.features.items[1]?.title || "知识智能与RAG", description: t.features.items[1]?.desc || "动态知识库管理", color: "from-purple-500 to-pink-500" },
+    { icon: <Users className="w-8 h-8" />, title: t.features.items[2]?.title || "客户数据智能", description: t.features.items[2]?.desc || "端到端客户画像系统", color: "from-green-500 to-emerald-500" },
+    { icon: <Sparkles className="w-8 h-8" />, title: t.features.items[3]?.title || "生成式AI", description: t.features.items[3]?.desc || "AI驱动的创意编排", color: "from-orange-500 to-red-500" },
+    { icon: <Zap className="w-8 h-8" />, title: t.features.items[4]?.title || "企业自动化", description: t.features.items[4]?.desc || "低代码AI工作流", color: "from-indigo-500 to-purple-500" },
+    { icon: <Shield className="w-8 h-8" />, title: t.features.items[5]?.title || "安全与合规", description: t.features.items[5]?.desc || "企业级安全治理体系", color: "from-gray-500 to-slate-500" }
   ]
 
   return (
@@ -30,9 +30,9 @@ const Features = () => {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className={`card-base card-hover group cursor-pointer animate-on-scroll stagger-${(index % 5) + 1}`}>
+            <div key={index} className="card-base card-hover group cursor-pointer">
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center text-gray-700 mb-6 group-hover:scale-110 transition-all duration-500 hover-scale">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl flex items-center justify-center text-gray-700 mb-6 group-hover:scale-110 transition-all duration-500">
                 {feature.icon}
               </div>
               
