@@ -26,7 +26,12 @@ export const translations = {
       successRegister: "注册成功",
       passwordMismatch: "两次输入的密码不一致",
       invalidEmail: "请输入有效邮箱",
-      required: "必填项"
+      required: "必填项",
+      agreeRequired: "请先同意用户协议和隐私政策",
+      agreeText: "我已阅读并同意",
+      userAgreement: "《用户服务协议》",
+      privacyPolicy: "《隐私政策》",
+      and: "和"
     },
     lang: {
       zh: "中文版",
@@ -430,7 +435,12 @@ export const translations = {
       successRegister: "Signed up",
       passwordMismatch: "Passwords do not match",
       invalidEmail: "Please enter a valid email",
-      required: "Required"
+      required: "Required",
+      agreeRequired: "Please agree to the Terms of Service and Privacy Policy",
+      agreeText: "I have read and agree to the",
+      userAgreement: "Terms of Service",
+      privacyPolicy: "Privacy Policy",
+      and: "and"
     },
     lang: { zh: "中文版", en: "English" },
     hero: {
