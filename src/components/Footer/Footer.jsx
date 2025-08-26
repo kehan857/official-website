@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import { ArrowRight, Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
 import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
+import Logo from '../Logo/Logo'
 
 const Footer = () => {
   const { lang, setLeadForm } = useApp()
@@ -74,6 +75,11 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
+              {/* Logo */}
+              <div className="mb-6">
+                <Logo size="normal" className="" />
+              </div>
+              
               <div className="mb-8">
                 <span className="text-3xl font-bold text-black">{t.brand.name}</span>
               </div>

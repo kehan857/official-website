@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 蓝色背景圆形 -->
+  <circle cx="60" cy="60" r="60" fill="#1E6EFF"/>
+  
+  <!-- 白色几何图标 -->
+  <g transform="translate(30, 30)">
+    <!-- 复杂的几何图形，类似熵变智元的S型设计 -->
+    <path d="M15 5 L45 5 L45 20 L30 20 L30 35 L45 35 L45 50 L15 50 L15 35 L30 35 L30 20 L15 20 Z" fill="white"/>
+    <path d="M5 15 L20 15 L20 30 L35 30 L35 45 L20 45 L20 60 L5 60 L5 45 L20 45 L20 30 L5 30 Z" fill="white"/>
+    <path d="M25 25 L40 25 L40 40 L55 40 L55 55 L40 55 L40 60 L25 60 L25 45 L40 45 L40 40 L25 40 Z" fill="white"/>
+  </g>
+  
+  <!-- 文字部分 -->
+  <text x="60" y="95" text-anchor="middle" fill="white" font-family="PingFang SC, Helvetica, Arial, sans-serif" font-size="14" font-weight="600">熵变智元</text>
+  <text x="60" y="110" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="400" letter-spacing="1px">SHANG BIAN ZHI YUAN</text>
+</svg>
