@@ -70,7 +70,7 @@ export const translations = {
       }
     },
     features: {
-      header1: "五大核心能力支柱",
+      header1: "六大核心能力支柱",
       header2: "构建AI生态系统",
       desc: "以可复用的能力栈构建端到端AI解决方案，从智能交互到自动化执行，形成协同增效的技术生态。",
       items: [

@@ -23,10 +23,10 @@ function App() {
       <main>
         <HeroSection />
         <ProductMatrix />
+        <Features />
         <ProductShowcase />
         <ServiceProcess />
         <Workflow />
-        <Features />
         <UseCases />
         <CaseStudies />
         <Pricing />

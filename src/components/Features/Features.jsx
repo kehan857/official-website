@@ -29,39 +29,60 @@ const Features = () => {
           <p className="text-section max-w-3xl mx-auto">{t.features.desc}</p>
         </div>
         
-        {/* Features Grid - 参考Wispr Flow的错位动画 */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        {/* Features Grid - 3列主要能力展示 */}
+        <div className="grid lg:grid-cols-3 gap-12 mb-16">
+          {features.slice(0, 3).map((feature, index) => (
             <div 
               key={index} 
               ref={getRef(index)}
-              className={`card-base card-hover card-glow group cursor-pointer transform transition-all duration-800 ${
+              className={`text-center group transform transition-all duration-800 ${
                 isAnimated(index) 
-                  ? 'opacity-100 translate-y-0 scale-100' 
-                  : 'opacity-0 translate-y-8 scale-95'
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
               }`}
             >
-              {/* Icon with gradient background */}
-              <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 floating-element`}>
+              {/* Large Icon */}
+              <div className={`w-24 h-24 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center text-white mb-8 mx-auto group-hover:scale-110 transition-all duration-500 shadow-lg`}>
+                {React.cloneElement(feature.icon, { className: "w-12 h-12" })}
+              </div>
+              
+              {/* Title */}
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                {feature.title}
+              </h3>
+              
+              {/* Description */}
+              <p className="text-gray-600 leading-relaxed text-lg">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional 3 Features - 2行3列展示 */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {features.slice(3).map((feature, index) => (
+            <div 
+              key={index + 3} 
+              ref={getRef(index + 3)}
+              className={`bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl group cursor-pointer transform transition-all duration-800 ${
+                isAnimated(index + 3) 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+            >
+              {/* Icon */}
+              <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-all duration-500`}>
                 {feature.icon}
               </div>
               
               {/* Content */}
-              <h3 className="heading-card group-hover:text-black transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                 {feature.title}
               </h3>
-              <p className="text-body">
+              <p className="text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
-              
-              {/* Learn More Link with glow effect */}
-              <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
-                <div className="flex items-center text-black font-medium hover:text-blue-600 transition-colors duration-300 relative">
-                  <span className="text-sm">了解更多</span>
-                  <span className="ml-2 transform group-hover:translate-x-2 transition-transform duration-300">→</span>
-                  <div className="absolute inset-0 bg-blue-100 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10"></div>
-                </div>
-              </div>
             </div>
           ))}
         </div>
