@@ -147,7 +147,7 @@ const ProductMatrix = () => {
                       </div>
                     </div>
                     <div className="text-center text-gray-500 text-sm">
-                      平均响应时间 < 1秒 | 问题解决率 98%
+                      平均响应时间 &lt; 1秒 | 问题解决率 98%
                     </div>
                   </div>
                 </div>
