@@ -6,7 +6,7 @@ import { translations } from '../../i18n/translations'
 const CaseStudies = () => {
   const { lang } = useApp()
   const t = useMemo(() => translations[lang], [lang])
-  const [activeTab, setActiveTab] = useState(0)
+  const [activeTab, setActiveTab] = useState(2) // 默认选中"企业级RAG知识体系"
 
   const caseStudies = [
     {
@@ -86,26 +86,25 @@ const CaseStudies = () => {
             客户成功案例
           </h2>
           <p className="text-section text-gray-600 max-w-3xl mx-auto">
-            深入了解熵变智元五大核心能力如何为不同行业客户创造可衡量的业务价值
+            深入了解熵变智元六大核心能力如何为不同行业客户创造可衡量的业务价值
           </p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center mb-16">
+        <div className="flex flex-wrap justify-center items-center gap-4 mb-16">
           {caseStudies.map((study, index) => (
             <button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-8 py-4 mx-2 mb-4 rounded-2xl font-medium transition-all duration-500 hover-lift relative overflow-hidden ${
-                activeTab === index
-                  ? 'bg-black text-white shadow-lg transform scale-105'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md'
-              }`}
+              className={`
+                px-8 py-4 rounded-full font-medium transition-all duration-300 border-2
+                ${activeTab === index 
+                  ? 'bg-black text-white border-black shadow-lg' 
+                  : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                }
+              `}
             >
-              <span className="relative z-10">{study.title}</span>
-              {activeTab === index && (
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-black opacity-90"></div>
-              )}
+              {study.title}
             </button>
           ))}
         </div>

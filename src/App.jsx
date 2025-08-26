@@ -24,11 +24,11 @@ function App() {
         <HeroSection />
         <ProductMatrix />
         <Features />
+        <CaseStudies />
         <ProductShowcase />
         <ServiceProcess />
         <Workflow />
         <UseCases />
-        <CaseStudies />
         <Pricing />
       </main>
       <Footer />
