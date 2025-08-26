@@ -56,10 +56,11 @@ const Header = () => {
               </a>
               <button 
                 onClick={()=>setLang(lang==='zh'?'en':'zh')} 
-                className="text-gray-600 hover:text-black px-3 py-1 border border-gray-200 rounded-full transition-colors duration-200"
+                className="text-gray-600 hover:text-black px-4 py-2 border border-gray-200 rounded-full transition-all duration-200 hover:border-gray-300 hover:bg-gray-50 flex items-center space-x-1"
                 style={{fontSize: 'var(--text-sm)'}}
               >
-                {lang==='zh'? t.lang.en : t.lang.zh}
+                <span className="w-4 h-4">🌐</span>
+                <span>{lang==='zh'? t.lang.en : t.lang.zh}</span>
               </button>
             </div>
           </nav>
@@ -110,8 +111,9 @@ const Header = () => {
               <a href="#pricing" onClick={(e) => handleNavClick(e, '#pricing')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium">
                 {t.nav.pricing}
               </a>
-              <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium border rounded-lg">
-                {lang==='zh'? t.lang.en : t.lang.zh}
+              <button onClick={()=>setLang(lang==='zh'?'en':'zh')} className="text-gray-700 hover:text-primary block px-3 py-2 text-base font-medium border rounded-lg flex items-center space-x-2">
+                <span>🌐</span>
+                <span>{lang==='zh'? t.lang.en : t.lang.zh}</span>
               </button>
               <div className="px-3 py-2">
                 {user ? (

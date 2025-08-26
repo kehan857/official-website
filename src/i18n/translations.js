@@ -29,8 +29,8 @@ export const translations = {
       required: "必填项"
     },
     lang: {
-      zh: "中文",
-      en: "EN"
+      zh: "中文版",
+      en: "English"
     },
     hero: {
       badge: "AI智能化部署专家",
@@ -432,7 +432,7 @@ export const translations = {
       invalidEmail: "Please enter a valid email",
       required: "Required"
     },
-    lang: { zh: "中文", en: "EN" },
+    lang: { zh: "中文版", en: "English" },
     hero: {
       badge: "New features",
       title1: "Enterprise",
