@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from 'react'
-import { Check, Star, ArrowRight, Sparkles } from 'lucide-react'
+import React, { useMemo, useState, useRef } from 'react'
+import { Check, Star, ArrowRight, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react'
 import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 
@@ -7,9 +7,22 @@ const Pricing = () => {
   const { lang, setLeadForm } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const [isAnnual, setIsAnnual] = useState(true)
+  const scrollContainerRef = useRef(null)
   
   const plans = t.pricing.plans
   const features = t.pricing.features
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -320, behavior: 'smooth' })
+    }
+  }
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 320, behavior: 'smooth' })
+    }
+  }
 
   return (
     <section id="pricing" className="section-spacing bg-white">
@@ -54,14 +67,40 @@ const Pricing = () => {
           </div>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 gap-6 mb-20 mt-8">
+        {/* Pricing Cards Container */}
+        <div className="relative mb-20 mt-8">
+          {/* Navigation Buttons */}
+          <div className="hidden md:block">
+            <button 
+              onClick={scrollLeft}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-600" />
+            </button>
+            <button 
+              onClick={scrollRight}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
+            >
+              <ChevronRight className="w-5 h-5 text-gray-600" />
+            </button>
+          </div>
+          
+          {/* Scrollable Cards Container */}
+          <div 
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide snap-x snap-mandatory"
+            style={{ 
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              WebkitScrollbar: { display: 'none' }
+            }}
+          >
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative bg-white rounded-3xl shadow-lg border-2 p-8 hover:shadow-2xl hover:-translate-y-2 card-glow group transition-all duration-500 ${
+              className={`relative bg-white rounded-3xl shadow-lg border-2 p-6 hover:shadow-2xl hover:-translate-y-2 card-glow group transition-all duration-500 flex-shrink-0 w-80 snap-center ${
                 plan.popular 
-                  ? 'scale-105 shadow-2xl border-blue-500 ring-2 ring-blue-200 ring-opacity-50' 
+                  ? 'shadow-2xl border-blue-500 ring-2 ring-blue-200 ring-opacity-50 transform scale-105' 
                   : plan.color
               }`}
             >

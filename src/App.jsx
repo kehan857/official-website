@@ -27,8 +27,8 @@ function App() {
         <Features />
         <CaseStudies />
         <Pricing />
-        <ProductShowcase />
         <ServiceProcess />
+        <ProductShowcase />
         <Workflow />
         <UseCases />
       </main>
