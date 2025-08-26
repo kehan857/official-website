@@ -25,11 +25,11 @@ function App() {
         <ProductMatrix />
         <Features />
         <CaseStudies />
+        <Pricing />
         <ProductShowcase />
         <ServiceProcess />
         <Workflow />
         <UseCases />
-        <Pricing />
       </main>
       <Footer />
       <AuthModal />

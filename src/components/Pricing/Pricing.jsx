@@ -55,7 +55,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-20 mt-8">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 gap-6 mb-20 mt-8">
           {plans.map((plan, index) => (
             <div 
               key={index} 
@@ -82,24 +82,41 @@ const Pricing = () => {
 
               {/* Plan Header */}
               <div className="text-center mb-8 relative z-10">
-                <h3 className="text-2xl font-bold text-black mb-4">{plan.name}</h3>
+                <h3 className="text-xl font-bold text-black mb-4">{plan.name}</h3>
+                
+                {/* Discount Badge for VIP */}
+                {plan.discount && isAnnual && (
+                  <div className="mb-2">
+                    <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                      {plan.discount}
+                    </span>
+                  </div>
+                )}
+                
                 <div className="mb-4">
-                  {plan.name === "企业版" || plan.name === "企业旗舰版" ? (
-                    <span className="text-4xl font-bold text-black">
-                      {plan.name === "企业版" ? "定制开发" : "定制报价"}
+                  {/* Handle different price types */}
+                  {typeof (isAnnual ? plan.price.annual : plan.price.monthly) === 'string' ? (
+                    <span className="text-3xl font-bold text-black">
+                      {isAnnual ? plan.price.annual : plan.price.monthly}
                     </span>
                   ) : (
-                    <>
-                      <span className="text-5xl font-bold text-black">
-                        ¥{isAnnual ? plan.price.annual : plan.price.monthly}
+                    <div>
+                      {/* Show original price with strikethrough for VIP annual */}
+                      {plan.originalPrice && isAnnual && (
+                        <div className="text-sm text-gray-400 line-through mb-1">
+                          ¥{plan.originalPrice.annual}
+                        </div>
+                      )}
+                      <span className="text-4xl font-bold text-black">
+                        {plan.pricePrefix || '¥'}{isAnnual ? plan.price.annual : plan.price.monthly}
                       </span>
                       <span className="text-gray-600 ml-2">
-                        /{isAnnual ? '年' : '月'}
+                        {plan.priceSuffix || (isAnnual ? '/年' : '/月')}
                       </span>
-                    </>
+                    </div>
                   )}
                 </div>
-                <p className="text-gray-600">{plan.description}</p>
+                <p className="text-gray-600 text-sm">{plan.description}</p>
               </div>
 
               {/* Features */}
@@ -124,13 +141,19 @@ const Pricing = () => {
               <button 
                 onClick={() => setLeadForm({ 
                   open: true, 
-                  title: plan.name === "能力体验版" ? "申请免费体验" : "获取定制方案",
-                  subtitle: plan.name === "能力体验版" ? "立即体验五大核心能力" : "专业顾问为您定制解决方案" 
+                  title: plan.name === "7天免费体验版" ? "申请免费体验" : 
+                         plan.name === "VIP版本" ? "购买VIP版本" :
+                         "获取定制方案",
+                  subtitle: plan.name === "7天免费体验版" ? "立即体验六大核心能力" : 
+                           plan.name === "VIP版本" ? "升级VIP享受完整功能" :
+                           "专业顾问为您定制解决方案" 
                 })}
-                className={`w-full py-4 rounded-2xl font-medium text-lg transition-all duration-500 transform hover:scale-105 relative overflow-hidden group z-10 ${
+                className={`w-full py-3 rounded-2xl font-medium text-sm transition-all duration-500 transform hover:scale-105 relative overflow-hidden group z-10 ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
-                    : 'border-2 border-black text-black hover:bg-black hover:text-white'
+                    : plan.name === "7天免费体验版"
+                      ? 'border-2 border-red-300 text-red-600 hover:bg-red-500 hover:text-white'
+                      : 'border-2 border-black text-black hover:bg-black hover:text-white'
                 }`}
                 onMouseEnter={(e) => e.target.classList.add('fast-bounce')}
                 onAnimationEnd={(e) => e.target.classList.remove('fast-bounce')}

@@ -301,9 +301,9 @@ export const translations = {
       billing: { monthly: "按月付费", yearly: "按年付费", save: "节省20%" },
       plans: [
         {
-          name: "能力体验版",
+          name: "7天免费体验版",
           price: { monthly: 0, annual: 0 },
-          description: "体验五大核心能力的基础功能",
+          description: "体验六大核心能力的基础功能",
           features: [
             "智能对话体验",
             "基础RAG检索",
@@ -315,16 +315,18 @@ export const translations = {
             "功能体验限制",
             "不支持商业化部署"
           ],
-          buttonText: "免费体验",
+          buttonText: "立即体验",
           popular: false,
-          color: "border-gray-200"
+          color: "border-red-300"
         },
         {
-          name: "企业标准版",
-          price: { monthly: 2999, annual: 29999 },
-          description: "中小企业AI转型的完整解决方案",
+          name: "VIP版本",
+          price: { monthly: 388, annual: 3888 },
+          originalPrice: { annual: 4860 },
+          discount: "节省20%",
+          description: "为中小企业AI转型的完整解决方案",
           features: [
-            "五大核心能力完整访问",
+            "六大核心能力完整访问",
             "销售AI助手生态系统",
             "企业级RAG知识库",
             "客户画像与超个性化",
@@ -334,28 +336,47 @@ export const translations = {
             "ROI效果分析"
           ],
           limitations: [],
-          buttonText: "开始转型",
+          buttonText: "立即购买",
           popular: true,
           color: "border-blue-500"
         },
         {
-          name: "企业旗舰版",
-          price: { monthly: 9999, annual: 99999 },
+          name: "企业版",
+          price: { monthly: "定制", annual: 29999 },
+          pricePrefix: "¥",
+          priceSuffix: "元起",
           description: "大型企业定制化AI生态构建",
           features: [
-            "所有标准版功能",
+            "所有VIP版功能",
             "AI视频创作平台",
             "高级风险管控系统",
             "私有化部署选项",
             "定制化能力开发",
             "专属解决方案架构师",
-            "7x24小时SLA保障",
-            "深度培训与咨询服务"
+            "7x24小时SLA保障"
           ],
           limitations: [],
-          buttonText: "定制方案",
+          buttonText: "联系销售",
           popular: false,
-          color: "border-gray-800"
+          color: "border-gray-500"
+        },
+        {
+          name: "企业定制版",
+          price: { monthly: "定制报价", annual: "定制报价" },
+          description: "超大型企业专属定制解决方案",
+          features: [
+            "所有企业版功能",
+            "专属技术团队",
+            "独立部署环境",
+            "24/7专属支持",
+            "定制开发服务",
+            "专属培训计划",
+            "长期技术顾问"
+          ],
+          limitations: [],
+          buttonText: "获取报价",
+          popular: false,
+          color: "border-purple-500"
         }
       ],
       mostPopular: "最受欢迎",
