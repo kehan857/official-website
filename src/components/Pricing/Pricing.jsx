@@ -202,6 +202,7 @@ const Pricing = () => {
               </button>
             </div>
           ))}
+          </div>
         </div>
 
         {/* All Plans Include */}
