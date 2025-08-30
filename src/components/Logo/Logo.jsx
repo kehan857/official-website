@@ -2,10 +2,10 @@ import React from 'react'
 
 const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
   const logoSrc = size === "small" ? "/images/logo-small.jpg" : "/images/logo-small.jpg"
-  const logoSize = size === "small" ? "h-10 w-10" : "h-12 w-12"
+  const logoSize = size === "small" ? "h-20 w-20" : "h-24 w-24"
   
   return (
-    <div className={`flex items-center ${size === "small" ? "" : "space-x-3"} ${className}`}>
+    <div className={`flex items-center ${className}`}>
       {/* Logo图片 */}
       <img 
         src={logoSrc}
@@ -23,29 +23,15 @@ const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
         }}
       />
       
-      {/* 文字部分 - 只在非small尺寸时显示 */}
-      {size !== "small" && (
-        <div className="flex flex-col">
-          <div className="text-lg font-bold text-black tracking-tight">
-            熵变智元
-          </div>
-          <div className="text-xs text-gray-600 tracking-wider -mt-1">
-            SHANG BIAN ZHI YUAN
-          </div>
+      {/* 文字fallback（图片加载失败时显示） */}
+      <div className="hidden flex-col logo-fallback">
+        <div className="text-lg font-bold text-black tracking-tight">
+          熵变智元
         </div>
-      )}
-      
-      {/* 文字fallback（图片加载失败时显示） - 只在small尺寸时显示 */}
-      {size === "small" && (
-        <div className="hidden flex-col logo-fallback">
-          <div className="text-lg font-bold text-black tracking-tight">
-            熵变智元
-          </div>
-          <div className="text-xs text-gray-600 tracking-wider -mt-1">
-            SHANG BIAN ZHI YUAN
-          </div>
+        <div className="text-xs text-gray-600 tracking-wider -mt-1">
+          SHANG BIAN ZHI YUAN
         </div>
-      )}
+      </div>
     </div>
   )
 }
