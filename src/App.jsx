@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header/Header'
 import HeroSection from './components/Hero/HeroSection'
-
+import ProductMatrix from './components/ProductMatrix/ProductMatrix'
 import ProductShowcase from './components/ProductShowcase/ProductShowcase'
 import ServiceProcess from './components/ServiceProcess/ServiceProcess'
 import Workflow from './components/Workflow/Workflow'
@@ -23,10 +23,11 @@ function App() {
       <Header />
       <main>
         <HeroSection />
+        <ProductMatrix />
         <Features />
         <CaseStudies />
-        <ProductShowcase />
         <Pricing />
+        <ProductShowcase />
         <ServiceProcess />
         <Workflow />
         <UseCases />
