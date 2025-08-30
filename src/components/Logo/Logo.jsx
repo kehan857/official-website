@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
-  const logoSrc = size === "small" ? "/images/logo-small.png" : "/images/logo.svg"
+  const logoSrc = size === "small" ? "/images/logo-small.jpg" : "/images/logo.svg"
   const logoSize = size === "small" ? "h-8 w-8" : "h-10 w-10"
   
   return (
@@ -12,7 +12,7 @@ const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
         alt="熵变智元 SHANG BIAN ZHI YUAN"
         className={`${logoSize} object-contain`}
         onError={(e) => {
-          // 如果图片加载失败，隐藏图片并显示文字
+          console.error('Logo image failed to load:', logoSrc);
           e.target.style.display = 'none';
           const parent = e.target.parentElement;
           const fallback = parent.querySelector('.logo-fallback');
@@ -23,7 +23,7 @@ const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
         }}
       />
       
-      {/* 文字部分 */}
+      {/* 文字部分 - 只在非small尺寸时显示 */}
       {size !== "small" && (
         <div className="flex flex-col">
           <div className="text-lg font-bold text-black tracking-tight">
@@ -35,15 +35,17 @@ const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
         </div>
       )}
       
-      {/* 文字fallback（图片加载失败时显示） */}
-      <div className="hidden flex-col logo-fallback">
-        <div className="text-lg font-bold text-black tracking-tight">
-          熵变智元
+      {/* 文字fallback（图片加载失败时显示） - 只在small尺寸时显示 */}
+      {size === "small" && (
+        <div className="hidden flex-col logo-fallback">
+          <div className="text-lg font-bold text-black tracking-tight">
+            熵变智元
+          </div>
+          <div className="text-xs text-gray-600 tracking-wider -mt-1">
+            SHANG BIAN ZHI YUAN
+          </div>
         </div>
-        <div className="text-xs text-gray-600 tracking-wider -mt-1">
-          SHANG BIAN ZHI YUAN
-        </div>
-      </div>
+      )}
     </div>
   )
 }
