@@ -35,7 +35,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Logo size="normal" className="h-24 w-auto" />
+              <Logo size="normal" className="h-32 w-auto" />
             </div>
           </div>
 

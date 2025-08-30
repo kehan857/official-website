@@ -12,7 +12,7 @@ import Pricing from './components/Pricing/Pricing'
 import Footer from './components/Footer/Footer'
 import AuthModal from './components/Auth/AuthModal'
 import LeadForm from './components/LeadForm/LeadForm'
-import CornerLogos from './components/CornerLogos/CornerLogos'
+
 import { useApp } from './context/AppContext'
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
         title={leadForm.title}
         subtitle={leadForm.subtitle}
       />
-      <CornerLogos />
+
     </div>
   )
 }
