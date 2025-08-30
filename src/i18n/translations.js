@@ -257,8 +257,8 @@ export const translations = {
         gdpr: "GDPR"
       },
       contact: {
-        email: "contact@entropy-ai.example",
-        phone: "+86 010-0000-0000",
+        email: "shangbianai@sbzytech.cn",
+        website: "https://www.shangbianai.com",
         address: "北京"
       },
       copyright: "© 2025 熵变智元"
@@ -1095,8 +1095,8 @@ export const translations = {
         gdpr: "GDPR"
       },
       contact: {
-        email: "contact@entropy-ai.example",
-        phone: "+86 010-0000-0000",
+        email: "shangbianai@sbzytech.cn",
+        website: "https://www.shangbianai.com",
         address: "Beijing"
       },
       copyright: "© 2025 Entropy Intelligence (Beijing) Co., Ltd."

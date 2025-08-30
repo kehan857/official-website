@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { ArrowRight, Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react'
+import { ArrowRight, Facebook, Twitter, Linkedin, Instagram, Mail, Globe, MapPin } from 'lucide-react'
 import { translations } from '../../i18n/translations'
 import { useApp } from '../../context/AppContext'
 import Logo from '../Logo/Logo'
@@ -90,9 +90,11 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-gray-600" />
+                    <Globe className="w-5 h-5 text-gray-600" />
                   </div>
-                  <span>{t.footer.contact.phone}</span>
+                  <a href={t.footer.contact.website} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                    {t.footer.contact.website}
+                  </a>
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
