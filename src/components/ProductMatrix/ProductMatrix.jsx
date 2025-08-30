@@ -13,25 +13,25 @@ const ProductMatrix = () => {
   const products = [
     {
       id: 'ai-service',
-      title: 'AI客服系统',
+      title: t.product.features[0].title,
       icon: <Building2 className="w-6 h-6" />,
       isActive: true
     },
     {
       id: 'smart-marketing',
-      title: '智能营销平台',
+      title: t.product.features[1].title,
       icon: <MessageSquare className="w-6 h-6" />,
       isActive: false
     },
     {
       id: 'data-analysis',
-      title: '数据分析工具',
+      title: t.product.features[2].title,
       icon: <BarChart3 className="w-6 h-6" />,
       isActive: false
     },
     {
       id: 'enterprise-management',
-      title: '企业管理系统',
+      title: 'Enterprise Management',
       icon: <Users className="w-6 h-6" />,
       isActive: false
     }
@@ -48,11 +48,11 @@ const ProductMatrix = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            AI智能营销
-            <span className="block text-blue-600">产品应用矩阵</span>
+            {t.product.title1}
+            <span className="block text-blue-600">{t.product.title2}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            覆盖客服、营销、分析、管理等多个场景，为企业提供全方位的AI智能化解决方案
+            {t.product.subtitle}
           </p>
         </div>
 

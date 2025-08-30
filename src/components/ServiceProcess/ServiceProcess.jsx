@@ -48,11 +48,11 @@ const ServiceProcess = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="heading-section">
-            AI智能化部署
-            <span className="block text-blue-600">产品交付与实施流程</span>
+            {lang === 'zh' ? 'AI智能化部署' : 'AI Intelligent Deployment'}
+            <span className="block text-blue-600">{lang === 'zh' ? '产品交付与实施流程' : 'Product Delivery & Implementation Process'}</span>
           </h2>
           <p className="text-section max-w-4xl mx-auto text-gray-600">
-            专业的AI智能化部署服务流程，从POC验证到正式实施，确保每个项目都能成功落地并创造业务价值
+            {lang === 'zh' ? '专业的AI智能化部署服务流程，从POC验证到正式实施，确保每个项目都能成功落地并创造业务价值' : 'Professional AI intelligent deployment service process, from POC verification to formal implementation, ensuring every project can be successfully implemented and create business value'}
           </p>
         </div>
 

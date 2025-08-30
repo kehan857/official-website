@@ -74,6 +74,81 @@ export const translations = {
         note: "专业AI部署服务"
       }
     },
+    productMatrix: {
+      title1: "AI智能营销",
+      title2: "产品应用矩阵",
+      subtitle: "覆盖客服、营销、分析、管理等多个场景，为企业提供全方位的AI智能化解决方案",
+      products: [
+        {
+          id: 'ai-service',
+          title: 'AI客服系统',
+          description: '智能客户服务解决方案，通过AI技术提升客户服务效率和满意度，实现24/7全天候智能响应。',
+          features: [
+            '智能问答系统',
+            '多轮对话管理',
+            '情感分析识别',
+            '知识库自动更新',
+            '多渠道集成',
+            '实时监控分析'
+          ],
+          metrics: [
+            { label: '响应时间', value: '< 1秒' },
+            { label: '问题解决率', value: '98%' }
+          ]
+        },
+        {
+          id: 'smart-marketing',
+          title: '智能营销平台',
+          description: 'AI驱动的精准营销平台，通过数据分析和智能算法，实现个性化营销策略和自动化执行。',
+          features: [
+            '客户画像分析',
+            '智能推荐引擎',
+            '自动化营销流程',
+            '多渠道触达',
+            '效果实时监控',
+            'ROI优化分析'
+          ],
+          metrics: [
+            { label: '转化率提升', value: '300%' },
+            { label: '营销效率', value: '500%' }
+          ]
+        },
+        {
+          id: 'data-analysis',
+          title: '数据分析工具',
+          description: '智能数据分析与洞察平台，为企业提供全面的数据分析和决策支持。',
+          features: [
+            '实时数据监控',
+            '智能报表生成',
+            '预测分析模型',
+            '异常检测预警',
+            '可视化仪表板',
+            'API数据接口'
+          ],
+          metrics: [
+            { label: '分析效率', value: '800%' },
+            { label: '准确率', value: '99%' }
+          ]
+        },
+        {
+          id: 'enterprise-management',
+          title: '企业管理系统',
+          description: '集成化的企业管理平台，提供全面的业务流程管理和智能化决策支持。',
+          features: [
+            '流程自动化',
+            '智能审批系统',
+            '资源调度优化',
+            '绩效分析评估',
+            '风险管控预警',
+            '协同办公平台'
+          ],
+          metrics: [
+            { label: '管理效率', value: '400%' },
+            { label: '成本节约', value: '60%' }
+          ]
+        }
+      ]
+    },
     features: {
       header1: "六大核心能力支柱",
       header2: "构建AI生态系统",
@@ -476,6 +551,270 @@ export const translations = {
         { title: "Personalization at scale", desc: "Profiles, labels and A/B loops for one-to-one experiences" }
       ],
       cta: { primary: "Start free", note: "No credit card required" }
+    },
+    productMatrix: {
+      title1: "AI Smart Marketing",
+      title2: "Product Application Matrix",
+      subtitle: "Covering customer service, marketing, analysis, management and other scenarios, providing comprehensive AI intelligent solutions for enterprises",
+      products: [
+        {
+          id: 'ai-service',
+          title: 'AI Customer Service System',
+          description: 'Intelligent customer service solution that improves customer service efficiency and satisfaction through AI technology, achieving 24/7 intelligent response.',
+          features: [
+            'Intelligent Q&A System',
+            'Multi-turn Dialogue Management',
+            'Sentiment Analysis Recognition',
+            'Knowledge Base Auto-update',
+            'Multi-channel Integration',
+            'Real-time Monitoring Analysis'
+          ],
+          metrics: [
+            { label: 'Response Time', value: '< 1s' },
+            { label: 'Problem Resolution Rate', value: '98%' }
+          ]
+        },
+        {
+          id: 'smart-marketing',
+          title: 'Smart Marketing Platform',
+          description: 'AI-driven precision marketing platform that achieves personalized marketing strategies and automated execution through data analysis and intelligent algorithms.',
+          features: [
+            'Customer Profile Analysis',
+            'Intelligent Recommendation Engine',
+            'Automated Marketing Workflows',
+            'Multi-channel Outreach',
+            'Real-time Performance Monitoring',
+            'ROI Optimization Analysis'
+          ],
+          metrics: [
+            { label: 'Conversion Rate Increase', value: '300%' },
+            { label: 'Marketing Efficiency', value: '500%' }
+          ]
+        },
+        {
+          id: 'data-analysis',
+          title: 'Data Analysis Tools',
+          description: 'Intelligent data analysis and insights platform that provides comprehensive data analysis and decision support for enterprises.',
+          features: [
+            'Real-time Data Monitoring',
+            'Intelligent Report Generation',
+            'Predictive Analysis Models',
+            'Anomaly Detection Alerts',
+            'Visualization Dashboards',
+            'API Data Interfaces'
+          ],
+          metrics: [
+            { label: 'Analysis Efficiency', value: '800%' },
+            { label: 'Accuracy Rate', value: '99%' }
+          ]
+        },
+        {
+          id: 'enterprise-management',
+          title: 'Enterprise Management System',
+          description: 'Integrated enterprise management platform that provides comprehensive business process management and intelligent decision support.',
+          features: [
+            'Process Automation',
+            'Intelligent Approval System',
+            'Resource Scheduling Optimization',
+            'Performance Analysis Assessment',
+            'Risk Control Alerts',
+            'Collaborative Office Platform'
+          ],
+          metrics: [
+            { label: 'Management Efficiency', value: '400%' },
+            { label: 'Cost Savings', value: '60%' }
+          ]
+        }
+      ]
+    },
+    caseStudies: {
+      title: "Customer Success Stories",
+      subtitle: "Deep dive into how Entropy Intelligence's six core capabilities create measurable business value for customers across different industries",
+      studies: [
+        {
+          id: 'sales-ai-ecosystem',
+          title: 'Sales AI Assistant Ecosystem',
+          subtitle: 'Tech Services Company - 300% Conversion Rate Increase',
+          challenge: 'Traditional sales processes are inefficient, slow customer response, unable to achieve personalized service',
+          solution: 'Deploy sales AI assistant ecosystem based on five core capabilities',
+          capabilities: [
+            'Long-context Dialogue Engine',
+            'Advisory Marketing Talk Tracks',
+            'Dynamic Knowledge Base & Intelligent Retrieval',
+            'Customer Profiles & Hyper-personalization',
+            'Automated Marketing Outreach',
+            'WeChat Ecosystem Deep Integration'
+          ],
+          results: [
+            { metric: 'Conversion Rate Increase', value: '300%' },
+            { metric: 'Response Time Reduction', value: '80%' },
+            { metric: 'Customer Satisfaction', value: '95%' }
+          ],
+          quote: '"The advisory dialogue of Sales AI Assistant increased our conversion rate by 3x, and the customer profile system achieved true one-to-one service."',
+          author: 'Zhang - Sales Director'
+        },
+        {
+          id: 'video-creation-platform',
+          title: 'AI Video Creation Platform',
+          subtitle: 'Content Marketing Company - 500% Production Efficiency Increase',
+          challenge: 'Large-scale video content production has high costs, unstable quality, and platform risks',
+          solution: 'Adopt AI video creation platform with Perception-Decision-Execution three-layer architecture',
+          capabilities: [
+            'Intelligent Material Analysis & Slicing',
+            'AI-driven Creative Orchestration',
+            'Homogenization Detection Risk Management',
+            'Batch Video Intelligent Synthesis',
+            'Multi-platform Distribution Adaptation',
+            'Sustainable Operations Support'
+          ],
+          results: [
+            { metric: 'Production Efficiency Increase', value: '500%' },
+            { metric: 'Production Cost Reduction', value: '70%' },
+            { metric: 'Content Security Assurance', value: '100%' }
+          ],
+          quote: '"The homogenization risk management of AI Video Creation Platform allows us to produce content at scale with complete business security."',
+          author: 'Li - Marketing Manager'
+        },
+        {
+          id: 'enterprise-rag-system',
+          title: 'Enterprise RAG Knowledge System',
+          subtitle: 'E-commerce Company - 400% Knowledge Retrieval Efficiency Increase',
+          challenge: 'Enterprise knowledge is scattered, employees find it difficult to search for information, low knowledge asset utilization',
+          solution: 'Build enterprise RAG system with dynamic knowledge base management',
+          capabilities: [
+            'Dynamic Knowledge Base Management',
+            'High-precision Information Retrieval',
+            'Personalized Style Synthesis',
+            'Citable Verification',
+            'Multi-source Data Integration',
+            'Intelligent Knowledge Association'
+          ],
+          results: [
+            { metric: 'Retrieval Efficiency Increase', value: '400%' },
+            { metric: 'Knowledge Utilization Rate', value: '85%' },
+            { metric: 'Employee Satisfaction', value: '92%' }
+          ],
+          quote: '"The enterprise RAG system brought our knowledge assets to life, employees can quickly access accurate information, work efficiency improved significantly."',
+          author: 'Wang - Operations Manager'
+        }
+      ]
+    },
+      title: "客户成功案例",
+      subtitle: "深入了解熵变智元六大核心能力如何为不同行业客户创造可衡量的业务价值",
+      studies: [
+        {
+          id: 'sales-ai-ecosystem',
+          title: '销售AI助手生态系统',
+          subtitle: '科技服务企业 - 转化率提升300%',
+          challenge: '传统销售过程效率低下，客户响应慢，无法实现个性化服务',
+          solution: '部署基于五大核心能力的销售AI助手生态系统',
+          capabilities: [
+            '长程上下文对话引擎',
+            '顾问式营销话术模型',
+            '动态知识库与智能检索',
+            '客户画像与超个性化服务',
+            '自动化营销触达',
+            '微信生态深度集成'
+          ],
+          results: [
+            { metric: '转化率提升', value: '300%' },
+            { metric: '响应时间缩短', value: '80%' },
+            { metric: '客户满意度', value: '95%' }
+          ],
+          quote: '"销售AI助手的顾问式对话让我们的转化率提升了3倍，客户画像系统实现了真正的千人千面服务。"',
+          author: '张总 - 销售总监'
+        },
+        {
+          id: 'video-creation-platform',
+          title: 'AI视频创作平台',
+          subtitle: '内容营销公司 - 生产效率提升500%',
+          challenge: '大规模视频内容生产成本高，质量不稳定，存在平台风险',
+          solution: '采用感知-决策-执行三层架构的AI视频创作平台',
+          capabilities: [
+            '智能素材分析与切片',
+            'AI驱动的创意编排',
+            '同质化检测风险管理',
+            '批量视频智能合成',
+            '多平台分发适配',
+            '可持续运营保障'
+          ],
+          results: [
+            { metric: '生产效率提升', value: '500%' },
+            { metric: '制作成本降低', value: '70%' },
+            { metric: '内容安全保障', value: '100%' }
+          ],
+          quote: '"AI视频创作平台的同质化风险管理让我们敢于大规模生产内容，业务安全得到完全保障。"',
+          author: '李经理 - 市场营销负责人'
+        },
+        {
+          id: 'enterprise-rag-system',
+          title: '企业级RAG知识体系',
+          subtitle: '电商企业 - 知识检索效率提升400%',
+          challenge: '企业知识分散，员工查找信息困难，知识资产利用率低',
+          solution: '构建动态知识库管理的企业级RAG系统',
+          capabilities: [
+            '动态知识库管理',
+            '高精度信息检索',
+            '个性化风格合成',
+            '引用可追溯核验',
+            '多源数据整合',
+            '知识关联智能补充'
+          ],
+          results: [
+            { metric: '检索效率提升', value: '400%' },
+            { metric: '知识利用率', value: '85%' },
+            { metric: '员工满意度', value: '92%' }
+          ],
+          quote: '"企业级RAG系统让我们的知识资产活了起来，员工能快速获取准确信息，工作效率提升显著。"',
+          author: '王主管 - 运营主管'
+        }
+      ]
+    },
+    serviceProcess: {
+      title1: "AI智能化部署",
+      title2: "产品交付与实施流程",
+      subtitle: "专业的AI智能化部署服务流程，从POC验证到正式实施，确保每个项目都能成功落地并创造业务价值",
+      implementation: {
+        stage: "实施阶段：",
+        stageDesc: "本SOP涵盖POC验证、实施阶段、项目上线及后续维护工作，确保您的需求得到全面满足",
+        cycle: "实施周期：",
+        cycleDesc: "从POC验证到正式上线大约2-3个月，具体根据项目规模调整。"
+      },
+      steps: [
+        {
+          id: "01",
+          title: "POC验证阶段",
+          subtitle: "(可选)",
+          description: "验证业务中的疑难问题是否可以解决",
+          details: "本SOP涵盖POC验证、实施阶段、项目上线及后续维护工作，确保您的需求得到全面满足"
+        },
+        {
+          id: "02",
+          title: "正式实施阶段",
+          subtitle: "",
+          description: "进行系统开发与交付确保解决方案满足需求",
+          details: "从POC验证到正式上线大约2-3个月，具体根据项目规模调整"
+        },
+        {
+          id: "03",
+          title: "上线及验收阶段",
+          subtitle: "",
+          description: "确保项目交付符合预期收集，并顺利上线",
+          details: "确保解决方案满足业务需求，顺利完成项目交付"
+        },
+        {
+          id: "04",
+          title: "后维护与优化阶段",
+          subtitle: "",
+          description: "持续监控与优化确保系统长期稳定",
+          details: "提供持续的技术支持和系统优化，确保长期价值"
+        }
+      ],
+      cta: {
+        title: "开始您的AI智能化部署之旅",
+        subtitle: "专业的团队为您提供从咨询到实施的全流程服务",
+        button: "免费咨询"
+      }
     },
     features: {
       header1: "Five core pillars",

@@ -83,10 +83,10 @@ const CaseStudies = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="heading-section text-black">
-            客户成功案例
+            {lang === 'zh' ? '客户成功案例' : 'Customer Success Stories'}
           </h2>
           <p className="text-section text-gray-600 max-w-3xl mx-auto">
-            深入了解熵变智元六大核心能力如何为不同行业客户创造可衡量的业务价值
+            {lang === 'zh' ? '深入了解熵变智元六大核心能力如何为不同行业客户创造可衡量的业务价值' : 'Deep dive into how Entropy Intelligence creates measurable business value for customers across different industries'}
           </p>
         </div>
 
