@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
-  const logoSrc = size === "small" ? "/images/logo-small.jpg" : "/images/logo.svg"
-  const logoSize = size === "small" ? "h-8 w-8" : "h-10 w-10"
+  const logoSrc = size === "small" ? "/images/logo-small.jpg" : "/images/logo-small.jpg"
+  const logoSize = size === "small" ? "h-10 w-10" : "h-12 w-12"
   
   return (
-    <div className={`flex items-center space-x-3 ${className}`}>
+    <div className={`flex items-center ${size === "small" ? "" : "space-x-3"} ${className}`}>
       {/* Logo图片 */}
       <img 
         src={logoSrc}
