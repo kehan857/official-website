@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
-  const logoSrc = size === "small" ? "/images/logo-small.svg" : "/images/logo.svg"
+  const logoSrc = size === "small" ? "/images/logo-small.png" : "/images/logo.svg"
   const logoSize = size === "small" ? "h-8 w-8" : "h-10 w-10"
   
   return (
