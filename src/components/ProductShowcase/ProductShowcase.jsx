@@ -7,9 +7,9 @@ const ProductShowcase = () => {
   const { lang, setLeadForm } = useApp()
   const t = useMemo(() => translations[lang], [lang])
   const features = [
-    { icon: <Zap className="w-5 h-5" />, title: t.product.features[0].title, description: t.product.features[0].desc },
-    { icon: <Users className="w-5 h-5" />, title: t.product.features[1].title, description: t.product.features[1].desc },
-    { icon: <Star className="w-5 h-5" />, title: t.product.features[2].title, description: t.product.features[2].desc }
+    { icon: <Zap className="w-5 h-5" />, title: lang === 'zh' ? '智能内容生成' : 'Intelligent Content Generation', description: lang === 'zh' ? 'AI驱动的智能内容创作，自动生成高质量文案和素材' : 'AI-driven intelligent content creation, automatically generating high-quality copy and materials' },
+    { icon: <Users className="w-5 h-5" />, title: lang === 'zh' ? '多模态创作' : 'Multimodal Creation', description: lang === 'zh' ? '支持文本、图像、视频等多种内容形式的智能创作' : 'Support for intelligent creation of multiple content forms including text, images, and videos' },
+    { icon: <Star className="w-5 h-5" />, title: lang === 'zh' ? '智能优化建议' : 'Intelligent Optimization Suggestions', description: lang === 'zh' ? '实时提供内容优化建议，提升创作质量和效果' : 'Real-time content optimization suggestions to improve creation quality and effectiveness' }
   ]
 
   return (
@@ -18,10 +18,10 @@ const ProductShowcase = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="heading-section">
-            {t.product.title1}
-            <span className="block text-black">{t.product.title2}</span>
+            {lang === 'zh' ? 'AI驱动的智能创作平台' : 'AI-Powered Intelligent Creation Platform'}
+            <span className="block text-black">{lang === 'zh' ? '从想法到成品的智能创作流程' : 'Intelligent Creation Process from Idea to Finished Product'}</span>
           </h2>
-          <p className="text-section max-w-3xl mx-auto">{t.product.subtitle}</p>
+          <p className="text-section max-w-3xl mx-auto">{lang === 'zh' ? '体验全新的智能创作流程，从想法到成品，一站式解决方案' : 'Experience the new intelligent creation process, from idea to finished product, with a one-stop solution'}</p>
         </div>
 
         {/* Main Content Grid */}
@@ -112,7 +112,7 @@ const ProductShowcase = () => {
               <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
                 <div className="flex items-center space-x-3 text-gray-600" style={{fontSize: 'var(--text-sm)'}}>
                   <Check className="w-5 h-5 text-green-500" />
-                  <span>{t.product.cta.note}</span>
+                  <span>{lang === 'zh' ? '专业AI创作服务' : 'Professional AI Creation Service'}</span>
                 </div>
                 <button 
                   onClick={() => setLeadForm({ 
@@ -122,7 +122,7 @@ const ProductShowcase = () => {
                   })}
                   className="btn-primary"
                 >
-                  {t.product.cta.primary}
+                  {lang === 'zh' ? '免费试用' : 'Try Free'}
                 </button>
               </div>
             </div>
