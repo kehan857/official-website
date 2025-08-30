@@ -558,76 +558,76 @@ export const translations = {
       ctaPrimary: "Try now"
     },
     useCases: {
-      title1: "Use cases",
-      title2: "Wide application scenarios", 
-      subtitle: "Whether content marketing, enterprise reports or team collaboration, Entropy AI provides professional solutions",
+      title1: "AI Intelligent Marketing",
+      title2: "Product Application Matrix", 
+      subtitle: "Covering customer service, marketing, analysis, management and other scenarios, providing comprehensive AI intelligent solutions for enterprises",
       cases: [
         {
-          title: "Enterprise Content Marketing",
-          description: "Help enterprises build professional brand content systems",
+          title: "AI Customer Service System",
+          description: "Intelligent customer service solutions to improve service efficiency and customer satisfaction",
           features: [
-            "Brand Story Creation",
-            "Product Introduction Copy",
-            "Social Media Content",
-            "Marketing Email Copy",
-            "White Paper Production",
-            "Case Study Reports"
+            "Intelligent Chatbot",
+            "Multi-channel Customer Service Integration", 
+            "Knowledge Base Intelligent Retrieval",
+            "Customer Emotion Recognition",
+            "Ticket Intelligent Assignment",
+            "Service Quality Monitoring"
           ],
           results: {
-            efficiency: "80%",
+            efficiency: "400%",
+            quality: "98%",
+            time: "85%"
+          }
+        },
+        {
+          title: "Intelligent Marketing Platform",
+          description: "AI-driven precision marketing solutions for personalized customer engagement",
+          features: [
+            "Customer Profile Intelligent Analysis",
+            "Marketing Content Auto-generation",
+            "Precision Targeting Strategy Optimization",
+            "Multi-channel Marketing Automation",
+            "Conversion Effect Real-time Monitoring",
+            "ROI Intelligent Prediction Analysis"
+          ],
+          results: {
+            efficiency: "350%",
             quality: "95%",
-            time: "70%"
-          }
-        },
-        {
-          title: "Education & Training",
-          description: "Provide course content and training material production for educational institutions",
-          features: [
-            "Course Outline Design",
-            "Teaching Material Production",
-            "Exercise Generation",
-            "Training Manual Writing",
-            "Learning Assessment Reports",
-            "Online Course Content"
-          ],
-          results: {
-            efficiency: "75%",
-            quality: "90%",
-            time: "65%"
-          }
-        },
-        {
-          title: "Enterprise Reports",
-          description: "Quickly generate various enterprise reports and analysis documents",
-          features: [
-            "Financial Analysis Reports",
-            "Market Research Reports",
-            "Project Summary Reports",
-            "Annual Work Summaries",
-            "Competitive Analysis Reports",
-            "Investment Proposals"
-          ],
-          results: {
-            efficiency: "85%",
-            quality: "92%",
             time: "75%"
           }
         },
         {
-          title: "Team Collaboration",
-          description: "Improve team collaboration efficiency and unify content standards",
+          title: "Data Analysis Tools",
+          description: "Intelligent data analysis and insights for scientific business decision-making",
           features: [
-            "Team Knowledge Base",
-            "Collaborative Document Writing",
-            "Content Review Process",
-            "Version Control Management",
-            "Template Standardization",
-            "Team Training Materials"
+            "Multi-dimensional Data Visualization",
+            "Intelligent Trend Prediction",
+            "Anomaly Detection Alerts",
+            "Automatic Report Generation",
+            "Business Metrics Monitoring",
+            "Decision Recommendation Output"
           ],
           results: {
-            efficiency: "70%",
-            quality: "88%",
-            time: "60%"
+            efficiency: "300%",
+            quality: "96%",
+            time: "80%"
+          }
+        },
+        {
+          title: "Enterprise Management System",
+          description: "AI-driven enterprise management solutions to improve operational efficiency and management level",
+          features: [
+            "Intelligent Process Optimization",
+            "Performance Automatic Analysis",
+            "Risk Warning Management",
+            "Resource Allocation Optimization",
+            "Decision Support System",
+            "Operational Data Insights"
+          ],
+          results: {
+            efficiency: "280%",
+            quality: "93%",
+            time: "70%"
           }
         }
       ],
@@ -639,43 +639,45 @@ export const translations = {
       learnMore: "Learn More"
     },
     pricing: {
-      title1: "Pricing plans",
-      title2: "Choose the plan that fits you best",
-      subtitle: "From individual experience to enterprise-level solutions, we provide flexible pricing options for users of all scales",
+      title1: "ROI-Driven",
+      title2: "Enterprise AI Solutions", 
+      subtitle: "Based on five core capabilities, providing measurable ROI AI transformation paths for enterprises of different scales",
       billing: { monthly: "Monthly", yearly: "Yearly", save: "Save 20%" },
       plans: [
         {
-          name: "Free Trial",
+          name: "7-Day Free Trial",
           price: { monthly: 0, annual: 0 },
-          description: "Perfect for individual users to try out",
+          description: "Experience basic features of six core capabilities",
           features: [
-            "5 AI creations per month",
-            "Basic template library",
-            "Standard export formats",
-            "Community support",
-            "Basic tutorials"
+            "Smart Dialogue Experience",
+            "Basic RAG Retrieval",
+            "Simple Automation Workflows",
+            "Standard Security Protection",
+            "Community Technical Support"
           ],
           limitations: [
-            "More feature limitations",
-            "Cannot be used for commercial purposes"
+            "Feature experience limitations",
+            "No commercial deployment support"
           ],
-          buttonText: "Start for Free",
+          buttonText: "Try Now",
           popular: false,
-          color: "border-gray-200"
+          color: "border-red-300"
         },
         {
-          name: "Professional Edition",
-          price: { monthly: 299, annual: 2399 },
-          description: "Suitable for small and medium-sized enterprises and teams",
+          name: "VIP Version",
+          price: { monthly: 388, annual: 3888 },
+          originalPrice: { annual: 4860 },
+          discount: "Save 20%",
+          description: "Complete solution for SME AI transformation",
           features: [
-            "Unlimited AI creation times",
-            "Advanced template library",
-            "Multiple export formats",
-            "Team collaboration features",
-            "Priority technical support",
-            "Custom branding",
-            "API interface access",
-            "Data analysis reports"
+            "Full access to six core capabilities",
+            "Sales AI Assistant Ecosystem",
+            "Enterprise RAG Knowledge Base",
+            "Customer Profiles & Hyper-personalization",
+            "Basic Risk Management",
+            "WeCom/Feishu Integration",
+            "Professional Technical Support",
+            "ROI Effect Analysis"
           ],
           limitations: [],
           buttonText: "Buy Now",
@@ -684,38 +686,57 @@ export const translations = {
         },
         {
           name: "Enterprise Edition",
-          price: { monthly: 999, annual: 9999 },
-          description: "Suitable for large enterprises with customized needs",
+          price: { monthly: "Custom", annual: 29999 },
+          pricePrefix: "¥",
+          priceSuffix: " starting",
+          description: "Customized AI ecosystem for large enterprises",
           features: [
-            "All Professional Edition features",
-            "Private deployment",
-            "Customized development",
-            "Dedicated account manager",
-            "SLA service guarantee",
-            "Enterprise-grade security",
-            "Unlimited users",
-            "Training and consulting"
+            "All VIP features",
+            "AI Video Creation Platform",
+            "Advanced Risk Management System",
+            "Private Deployment Options",
+            "Custom Capability Development",
+            "Dedicated Solution Architect",
+            "7x24 SLA Guarantee"
           ],
           limitations: [],
           buttonText: "Contact Sales",
           popular: false,
-          color: "border-gray-800"
+          color: "border-gray-500"
+        },
+        {
+          name: "Enterprise Custom",
+          price: { monthly: "Custom Quote", annual: "Custom Quote" },
+          description: "Exclusive custom solutions for ultra-large enterprises",
+          features: [
+            "All Enterprise features",
+            "Dedicated Technical Team",
+            "Independent Deployment Environment",
+            "24/7 Dedicated Support",
+            "Custom Development Services",
+            "Exclusive Training Programs",
+            "Long-term Technical Consulting"
+          ],
+          limitations: [],
+          buttonText: "Get Quote",
+          popular: false,
+          color: "border-purple-500"
         }
       ],
       mostPopular: "Most Popular",
-      allPlansInclude: "All plans include",
-      allPlansDesc: "Core features ensure your experience",
+      allPlansInclude: "All enterprise plans include",
+      allPlansDesc: "Five core capabilities ensure your AI transformation success",
       faq: {
-        title: "Frequently asked questions",
+        title: "Enterprise Concerns",
         items: [
-          { q: "Can I change plans anytime?", a: "Yes, you can upgrade or downgrade your plan at any time." },
-          { q: "Is there a free trial?", a: "Yes, we offer a free Starter plan with basic features." },
-          { q: "What payment methods do you accept?", a: "We accept all major credit cards and support Alipay, WeChat Pay." },
-          { q: "Can I cancel my subscription?", a: "Yes, you can cancel your subscription at any time. No cancellation fees." }
+          { q: "How do the five core capabilities work together?", a: "Smart interaction provides frontend experience, RAG builds knowledge foundation, customer data intelligence drives personalization, generative AI produces content, automation ensures implementation, forming a complete loop." },
+          { q: "How to ensure AI-generated content security?", a: "We have built-in homogenization detection and risk management systems, proactively avoiding platform risks, ensuring enterprise business security and sustainable operations." },
+          { q: "Which enterprise ecosystems are supported?", a: "Native support for WeCom, Feishu and other mainstream office platforms, quickly integrate existing business systems through low-code workflows." },
+          { q: "How to measure AI investment ROI?", a: "We provide detailed ROI effect analysis, including operational efficiency improvements, cost savings, conversion rate improvements and other quantifiable metrics." }
         ]
       },
-      haveQuestions: "Have questions?",
-      salesTeam: "Our sales team is always ready to answer your questions",
+      haveQuestions: "Need customized solutions?",
+      salesTeam: "Our solution experts are ready to plan your AI transformation path",
       contactSales: "Contact Sales",
       viewFAQ: "View FAQ",
       features: [
