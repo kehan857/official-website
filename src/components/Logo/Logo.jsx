@@ -12,9 +12,14 @@ const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
         alt="熵变智元 SHANG BIAN ZHI YUAN"
         className={`${logoSize} object-contain`}
         onError={(e) => {
-          // 如果图片加载失败，显示文字fallback
+          // 如果图片加载失败，隐藏图片并显示文字
           e.target.style.display = 'none';
-          e.target.nextElementSibling.style.display = 'flex';
+          const parent = e.target.parentElement;
+          const fallback = parent.querySelector('.logo-fallback');
+          if (fallback) {
+            fallback.classList.remove('hidden');
+            fallback.classList.add('flex');
+          }
         }}
       />
       
@@ -31,7 +36,7 @@ const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
       )}
       
       {/* 文字fallback（图片加载失败时显示） */}
-      <div className="hidden flex-col">
+      <div className="hidden flex-col logo-fallback">
         <div className="text-lg font-bold text-black tracking-tight">
           熵变智元
         </div>
