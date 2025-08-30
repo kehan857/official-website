@@ -22,13 +22,13 @@ function App() {
       <Header />
       <main>
         <HeroSection />
+        <UseCases />
         <Features />
         <CaseStudies />
         <Pricing />
         <ProductShowcase />
         <ServiceProcess />
         <Workflow />
-        <UseCases />
       </main>
       <Footer />
       <AuthModal />
