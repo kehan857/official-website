@@ -44,7 +44,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-black border-t border-gray-200">
       {/* Main CTA Section */}
-      <div className="section-spacing bg-gray-50">
+      <div className="py-16 bg-gray-50">
         <div className="container-section">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black">
@@ -71,17 +71,13 @@ const Footer = () => {
       
       {/* Footer Links */}
       <div className="container-section">
-        <div className="section-spacing border-t border-gray-200">
+        <div className="py-12 border-t border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
               {/* Logo */}
-              <div className="mb-6">
-                <Logo size="normal" className="" />
-              </div>
-              
               <div className="mb-8">
-                <span className="text-3xl font-bold text-black">{t.brand.name}</span>
+                <Logo size="normal" className="" />
               </div>
               
               {/* Contact Info */}
@@ -166,7 +162,7 @@ const Footer = () => {
         </div>
         
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 py-8">
+        <div className="border-t border-gray-200 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             {/* Copyright */}
             <div className="text-gray-500">{t.footer.copyright}</div>
