@@ -1,7 +1,8 @@
 import React from 'react'
 
 const Logo = ({ className = "h-8 w-auto", size = "normal" }) => {
-  const logoSrc = size === "small" ? "/images/logo-small.jpg" : "/images/logo-small.jpg"
+  const basePath = import.meta.env.BASE_URL || '/'
+  const logoSrc = size === "small" ? `${basePath}images/logo-small.jpg` : `${basePath}images/logo-small.jpg`
   const logoSize = size === "small" ? "h-20 w-20" : "h-32 w-32"
   
   return (
