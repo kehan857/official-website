@@ -26,7 +26,6 @@ function App() {
         <ProductMatrix />
         <Features />
         <CaseStudies />
-        <ProductShowcase />
         <Pricing />
         <ServiceProcess />
         <Workflow />
