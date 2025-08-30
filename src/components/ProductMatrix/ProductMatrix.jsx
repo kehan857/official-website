@@ -91,38 +91,38 @@ const ProductMatrix = () => {
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                       <Building2 className="w-6 h-6 text-blue-600" />
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900">AI客服系统</h3>
+                    <h3 className="text-3xl font-bold text-gray-900">{t.productMatrix.products[0].title}</h3>
                   </div>
                   <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                    智能客户服务解决方案，通过AI技术提升客户服务效率和满意度，实现24/7全天候智能响应。
+                    {t.productMatrix.products[0].description}
                   </p>
                   <div className="grid md:grid-cols-2 gap-4 mb-8">
                     <div className="bg-gray-50 rounded-xl p-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">智能对话</h4>
-                      <p className="text-gray-600 text-sm">自然语言理解与多轮对话</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">{lang === 'zh' ? '智能对话' : 'Intelligent Dialogue'}</h4>
+                      <p className="text-gray-600 text-sm">{lang === 'zh' ? '自然语言理解与多轮对话' : 'Natural language understanding and multi-turn dialogue'}</p>
                     </div>
                     <div className="bg-gray-50 rounded-xl p-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">多渠道集成</h4>
-                      <p className="text-gray-600 text-sm">支持网站、微信、APP等渠道</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">{lang === 'zh' ? '多渠道集成' : 'Multi-channel Integration'}</h4>
+                      <p className="text-gray-600 text-sm">{lang === 'zh' ? '支持网站、微信、APP等渠道' : 'Supports websites, WeChat, APP and other channels'}</p>
                     </div>
                     <div className="bg-gray-50 rounded-xl p-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">知识库检索</h4>
-                      <p className="text-gray-600 text-sm">智能知识匹配与推荐</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">{lang === 'zh' ? '知识库检索' : 'Knowledge Base Retrieval'}</h4>
+                      <p className="text-gray-600 text-sm">{lang === 'zh' ? '智能知识匹配与推荐' : 'Intelligent knowledge matching and recommendation'}</p>
                     </div>
                     <div className="bg-gray-50 rounded-xl p-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">情绪识别</h4>
-                      <p className="text-gray-600 text-sm">客户情绪分析与处理</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">{lang === 'zh' ? '情绪识别' : 'Emotion Recognition'}</h4>
+                      <p className="text-gray-600 text-sm">{lang === 'zh' ? '客户情绪分析与处理' : 'Customer emotion analysis and processing'}</p>
                     </div>
                   </div>
                   <button 
                     onClick={() => setLeadForm({ 
                       open: true, 
-                      title: "体验AI客服系统", 
-                      subtitle: "了解智能客服如何提升您的服务效率" 
+                      title: lang === 'zh' ? "体验AI客服系统" : "Experience AI Customer Service System", 
+                      subtitle: lang === 'zh' ? "了解智能客服如何提升您的服务效率" : "Learn how intelligent customer service can improve your service efficiency" 
                     })}
                     className="btn-primary"
                   >
-                    立即体验
+                    {t.productMatrix.ctaPrimary}
                   </button>
                 </div>
                 <div className="relative">
@@ -132,22 +132,22 @@ const ProductMatrix = () => {
                         <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                           <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         </div>
-                        <span className="font-medium">AI客服在线</span>
+                        <span className="font-medium">{lang === 'zh' ? 'AI客服在线' : 'AI Customer Service Online'}</span>
                       </div>
                       <div className="space-y-3">
                         <div className="bg-blue-500 text-white p-3 rounded-lg rounded-bl-none">
-                          您好！我是AI智能客服，有什么可以帮助您的吗？
+                          {lang === 'zh' ? '您好！我是AI智能客服，有什么可以帮助您的吗？' : 'Hello! I am AI intelligent customer service, how can I help you?'}
                         </div>
                         <div className="bg-gray-100 p-3 rounded-lg rounded-br-none">
-                          我想了解你们的营销解决方案
+                          {lang === 'zh' ? '我想了解你们的营销解决方案' : 'I want to know about your marketing solutions'}
                         </div>
                         <div className="bg-blue-500 text-white p-3 rounded-lg rounded-bl-none">
-                          我为您推荐几个热门的营销解决方案...
+                          {lang === 'zh' ? '我为您推荐几个热门的营销解决方案...' : 'I recommend several popular marketing solutions for you...'}
                         </div>
                       </div>
                     </div>
                     <div className="text-center text-gray-500 text-sm">
-                      平均响应时间 &lt; 1秒 | 问题解决率 98%
+                      {lang === 'zh' ? '平均响应时间 < 1秒 | 问题解决率 98%' : 'Average response time < 1s | Problem resolution rate 98%'}
                     </div>
                   </div>
                 </div>

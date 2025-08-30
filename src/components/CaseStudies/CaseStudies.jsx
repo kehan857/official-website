@@ -8,74 +8,7 @@ const CaseStudies = () => {
   const t = useMemo(() => translations[lang], [lang])
   const [activeTab, setActiveTab] = useState(2) // 默认选中"企业级RAG知识体系"
 
-  const caseStudies = [
-    {
-      id: 'sales-ai-ecosystem',
-      title: '销售AI助手生态系统',
-      subtitle: '科技服务企业 - 转化率提升300%',
-      challenge: '传统销售过程效率低下，客户响应慢，无法实现个性化服务',
-      solution: '部署基于五大核心能力的销售AI助手生态系统',
-      capabilities: [
-        '长程上下文对话引擎',
-        '顾问式营销话术模型',
-        '动态知识库与智能检索',
-        '客户画像与超个性化服务',
-        '自动化营销触达',
-        '微信生态深度集成'
-      ],
-      results: [
-        { metric: '转化率提升', value: '300%', icon: TrendingUp },
-        { metric: '响应时间缩短', value: '80%', icon: Target },
-        { metric: '客户满意度', value: '95%', icon: Users }
-      ],
-      quote: '"销售AI助手的顾问式对话让我们的转化率提升了3倍，客户画像系统实现了真正的千人千面服务。"',
-      author: '张总 - 销售总监'
-    },
-    {
-      id: 'video-creation-platform',
-      title: 'AI视频创作平台',
-      subtitle: '内容营销公司 - 生产效率提升500%',
-      challenge: '大规模视频内容生产成本高，质量不稳定，存在平台风险',
-      solution: '采用感知-决策-执行三层架构的AI视频创作平台',
-      capabilities: [
-        '智能素材分析与切片',
-        'AI驱动的创意编排',
-        '同质化检测风险管理',
-        '批量视频智能合成',
-        '多平台分发适配',
-        '可持续运营保障'
-      ],
-      results: [
-        { metric: '生产效率提升', value: '500%', icon: TrendingUp },
-        { metric: '制作成本降低', value: '70%', icon: Target },
-        { metric: '内容安全保障', value: '100%', icon: Shield }
-      ],
-      quote: '"AI视频创作平台的同质化风险管理让我们敢于大规模生产内容，业务安全得到完全保障。"',
-      author: '李经理 - 市场营销负责人'
-    },
-    {
-      id: 'enterprise-rag-system',
-      title: '企业级RAG知识体系',
-      subtitle: '电商企业 - 知识检索效率提升400%',
-      challenge: '企业知识分散，员工查找信息困难，知识资产利用率低',
-      solution: '构建动态知识库管理的企业级RAG系统',
-      capabilities: [
-        '动态知识库管理',
-        '高精度信息检索',
-        '个性化风格合成',
-        '引用可追溯核验',
-        '多源数据整合',
-        '知识关联智能补充'
-      ],
-      results: [
-        { metric: '检索效率提升', value: '400%', icon: TrendingUp },
-        { metric: '知识利用率', value: '85%', icon: Target },
-        { metric: '员工满意度', value: '92%', icon: Users }
-      ],
-      quote: '"企业级RAG系统让我们的知识资产活了起来，员工能快速获取准确信息，工作效率提升显著。"',
-      author: '王主管 - 运营主管'
-    }
-  ]
+  const caseStudies = t.caseStudies.studies
 
   return (
     <section id="case-studies" className="section-spacing bg-gray-50">
@@ -83,10 +16,10 @@ const CaseStudies = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="heading-section text-black">
-            {lang === 'zh' ? '客户成功案例' : 'Customer Success Stories'}
+            {t.caseStudies.title}
           </h2>
           <p className="text-section text-gray-600 max-w-3xl mx-auto">
-            {lang === 'zh' ? '深入了解熵变智元六大核心能力如何为不同行业客户创造可衡量的业务价值' : 'Deep dive into how Entropy Intelligence creates measurable business value for customers across different industries'}
+            {t.caseStudies.subtitle}
           </p>
         </div>
 
@@ -122,11 +55,11 @@ const CaseStudies = () => {
               {/* Challenge & Solution */}
               <div className="space-y-6 mb-8">
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">挑战</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">{lang === 'zh' ? '挑战' : 'Challenge'}</h4>
                   <p className="text-gray-600">{caseStudies[activeTab].challenge}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">解决方案</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">{lang === 'zh' ? '解决方案' : 'Solution'}</h4>
                   <p className="text-gray-600 mb-4">{caseStudies[activeTab].solution}</p>
                   <div className="grid grid-cols-2 gap-2">
                     {caseStudies[activeTab].capabilities.map((capability, i) => (
@@ -147,7 +80,7 @@ const CaseStudies = () => {
 
               {/* CTA */}
               <button className="btn-secondary text-sm px-6 py-3 inline-flex items-center space-x-2">
-                <span>了解详情</span>
+                <span>{lang === 'zh' ? '了解详情' : 'Learn More'}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -155,9 +88,10 @@ const CaseStudies = () => {
             {/* Results Side */}
             <div>
               <div className="space-y-6">
-                <h4 className="text-2xl font-bold text-black mb-8">关键成果指标</h4>
+                <h4 className="text-2xl font-bold text-black mb-8">{lang === 'zh' ? '关键成果指标' : 'Key Performance Indicators'}</h4>
                 {caseStudies[activeTab].results.map((result, i) => {
-                  const IconComponent = result.icon
+                  const icons = [TrendingUp, Target, Users, Shield]
+                  const IconComponent = icons[i % icons.length]
                   return (
                     <div key={i} className="bg-gray-50 rounded-2xl p-6">
                       <div className="flex items-center space-x-4">

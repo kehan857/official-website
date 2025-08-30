@@ -74,6 +74,154 @@ export const translations = {
         note: "专业AI部署服务"
       }
     },
+    productMatrix: {
+      title1: "AI智能营销",
+      title2: "产品应用矩阵",
+      subtitle: "覆盖客服、营销、分析、管理等多个场景，为企业提供全方位的AI智能化解决方案",
+      products: [
+        {
+          id: 'ai-service',
+          title: 'AI客服系统',
+          description: '智能客户服务解决方案，通过AI技术提升客户服务效率和满意度，实现24/7全天候智能响应。',
+          features: [
+            '智能问答系统',
+            '多轮对话管理',
+            '情感分析识别',
+            '知识库自动更新',
+            '多渠道集成',
+            '实时监控分析'
+          ],
+          metrics: [
+            { label: '响应时间', value: '< 1秒' },
+            { label: '问题解决率', value: '98%' }
+          ]
+        },
+        {
+          id: 'smart-marketing',
+          title: '智能营销平台',
+          description: 'AI驱动的精准营销平台，通过数据分析和智能算法，实现个性化营销策略和自动化执行。',
+          features: [
+            '客户画像分析',
+            '智能推荐引擎',
+            '自动化营销流程',
+            '多渠道触达',
+            '效果实时监控',
+            'ROI优化分析'
+          ],
+          metrics: [
+            { label: '转化率提升', value: '300%' },
+            { label: '营销效率', value: '500%' }
+          ]
+        },
+        {
+          id: 'data-analysis',
+          title: '数据分析工具',
+          description: '智能数据分析与洞察平台，为企业决策提供科学依据和可视化分析。',
+          features: [
+            '多维数据可视化',
+            '智能趋势预测',
+            '异常检测告警',
+            '自动报表生成',
+            '业务指标监控',
+            '决策建议输出'
+          ],
+          metrics: [
+            { label: '分析效率', value: '300%' },
+            { label: '决策准确率', value: '96%' }
+          ]
+        },
+        {
+          id: 'enterprise-management',
+          title: '企业管理系统',
+          description: 'AI驱动的企业管理解决方案，提升运营效率和管理水平。',
+          features: [
+            '智能流程优化',
+            '绩效自动分析',
+            '风险预警管理',
+            '资源配置优化',
+            '决策支持系统',
+            '运营数据洞察'
+          ],
+          metrics: [
+            { label: '运营效率', value: '280%' },
+            { label: '管理满意度', value: '93%' }
+          ]
+        }
+      ],
+      ctaPrimary: "立即体验"
+    },
+    caseStudies: {
+      title: "客户成功案例",
+      subtitle: "深入了解熵变智元六大核心能力如何为不同行业客户创造可衡量的业务价值",
+      studies: [
+        {
+          id: 'sales-ai-ecosystem',
+          title: '销售AI助手生态系统',
+          subtitle: '科技服务企业 - 转化率提升300%',
+          challenge: '传统销售过程效率低下，客户响应慢，无法实现个性化服务',
+          solution: '部署基于五大核心能力的销售AI助手生态系统',
+          capabilities: [
+            '长程上下文对话引擎',
+            '顾问式营销话术模型',
+            '动态知识库与智能检索',
+            '客户画像与超个性化服务',
+            '自动化营销触达',
+            '微信生态深度集成'
+          ],
+          results: [
+            { metric: '转化率提升', value: '300%' },
+            { metric: '响应时间缩短', value: '80%' },
+            { metric: '客户满意度', value: '95%' }
+          ],
+          quote: '"销售AI助手的顾问式对话让我们的转化率提升了3倍，客户画像系统实现了真正的千人千面服务。"',
+          author: '张总 - 销售总监'
+        },
+        {
+          id: 'video-creation-platform',
+          title: 'AI视频创作平台',
+          subtitle: '内容营销公司 - 生产效率提升500%',
+          challenge: '大规模视频内容生产成本高，质量不稳定，存在平台风险',
+          solution: '采用感知-决策-执行三层架构的AI视频创作平台',
+          capabilities: [
+            '智能素材分析与切片',
+            'AI驱动的创意编排',
+            '同质化检测风险管理',
+            '批量视频智能合成',
+            '多平台分发适配',
+            '可持续运营保障'
+          ],
+          results: [
+            { metric: '生产效率提升', value: '500%' },
+            { metric: '制作成本降低', value: '70%' },
+            { metric: '内容安全保障', value: '100%' }
+          ],
+          quote: '"AI视频创作平台的同质化风险管理让我们敢于大规模生产内容，业务安全得到完全保障。"',
+          author: '李经理 - 市场营销负责人'
+        },
+        {
+          id: 'enterprise-rag-system',
+          title: '企业级RAG知识体系',
+          subtitle: '电商企业 - 知识检索效率提升400%',
+          challenge: '企业知识分散，员工查找信息困难，知识资产利用率低',
+          solution: '构建动态知识库管理的企业级RAG系统',
+          capabilities: [
+            '动态知识库管理',
+            '高精度信息检索',
+            '个性化风格合成',
+            '引用可追溯核验',
+            '多源数据整合',
+            '知识关联智能补充'
+          ],
+          results: [
+            { metric: '检索效率提升', value: '400%' },
+            { metric: '知识利用率', value: '85%' },
+            { metric: '员工满意度', value: '92%' }
+          ],
+          quote: '"企业级RAG系统让我们的知识资产活了起来，员工能快速获取准确信息，工作效率提升显著。"',
+          author: '王主管 - 运营主管'
+        }
+      ]
+    },
     features: {
       header1: "六大核心能力支柱",
       header2: "构建AI生态系统",
@@ -476,6 +624,154 @@ export const translations = {
         { title: "Personalization at scale", desc: "Profiles, labels and A/B loops for one-to-one experiences" }
       ],
       cta: { primary: "Start free", note: "No credit card required" }
+    },
+    productMatrix: {
+      title1: "AI Intelligent Marketing",
+      title2: "Product Application Matrix",
+      subtitle: "Covering customer service, marketing, analysis, management and other scenarios, providing comprehensive AI intelligent solutions for enterprises",
+      products: [
+        {
+          id: 'ai-service',
+          title: 'AI Customer Service System',
+          description: 'Intelligent customer service solution that improves customer service efficiency and satisfaction through AI technology, achieving 24/7 intelligent response.',
+          features: [
+            'Intelligent Q&A System',
+            'Multi-turn Dialogue Management',
+            'Sentiment Analysis Recognition',
+            'Knowledge Base Auto-update',
+            'Multi-channel Integration',
+            'Real-time Monitoring Analysis'
+          ],
+          metrics: [
+            { label: 'Response Time', value: '< 1s' },
+            { label: 'Problem Resolution Rate', value: '98%' }
+          ]
+        },
+        {
+          id: 'smart-marketing',
+          title: 'Smart Marketing Platform',
+          description: 'AI-driven precision marketing platform that achieves personalized marketing strategies and automated execution through data analysis and intelligent algorithms.',
+          features: [
+            'Customer Profile Analysis',
+            'Intelligent Recommendation Engine',
+            'Automated Marketing Workflows',
+            'Multi-channel Outreach',
+            'Real-time Performance Monitoring',
+            'ROI Optimization Analysis'
+          ],
+          metrics: [
+            { label: 'Conversion Rate Increase', value: '300%' },
+            { label: 'Marketing Efficiency', value: '500%' }
+          ]
+        },
+        {
+          id: 'data-analysis',
+          title: 'Data Analysis Tools',
+          description: 'Intelligent data analysis and insights platform that provides scientific basis and visual analysis for enterprise decision-making.',
+          features: [
+            'Multi-dimensional Data Visualization',
+            'Intelligent Trend Prediction',
+            'Anomaly Detection Alerts',
+            'Automatic Report Generation',
+            'Business Metrics Monitoring',
+            'Decision Recommendation Output'
+          ],
+          metrics: [
+            { label: 'Analysis Efficiency', value: '300%' },
+            { label: 'Decision Accuracy', value: '96%' }
+          ]
+        },
+        {
+          id: 'enterprise-management',
+          title: 'Enterprise Management System',
+          description: 'AI-driven enterprise management solutions to improve operational efficiency and management level.',
+          features: [
+            'Intelligent Process Optimization',
+            'Performance Automatic Analysis',
+            'Risk Warning Management',
+            'Resource Allocation Optimization',
+            'Decision Support System',
+            'Operational Data Insights'
+          ],
+          metrics: [
+            { label: 'Operational Efficiency', value: '280%' },
+            { label: 'Management Satisfaction', value: '93%' }
+          ]
+        }
+      ],
+      ctaPrimary: "Try Now"
+    },
+    caseStudies: {
+      title: "Customer Success Stories",
+      subtitle: "Deep dive into how Entropy Intelligence creates measurable business value for customers across different industries",
+      studies: [
+        {
+          id: 'sales-ai-ecosystem',
+          title: 'Sales AI Assistant Ecosystem',
+          subtitle: 'Tech Services Company - 300% Conversion Rate Increase',
+          challenge: 'Traditional sales processes are inefficient, slow customer response, unable to achieve personalized service',
+          solution: 'Deploy sales AI assistant ecosystem based on five core capabilities',
+          capabilities: [
+            'Long-context Dialogue Engine',
+            'Advisory Marketing Talk Tracks',
+            'Dynamic Knowledge Base & Intelligent Retrieval',
+            'Customer Profiles & Hyper-personalization',
+            'Automated Marketing Outreach',
+            'WeChat Ecosystem Deep Integration'
+          ],
+          results: [
+            { metric: 'Conversion Rate Increase', value: '300%' },
+            { metric: 'Response Time Reduction', value: '80%' },
+            { metric: 'Customer Satisfaction', value: '95%' }
+          ],
+          quote: '"The advisory dialogue of Sales AI Assistant increased our conversion rate by 3x, and the customer profile system achieved true one-to-one service."',
+          author: 'Zhang - Sales Director'
+        },
+        {
+          id: 'video-creation-platform',
+          title: 'AI Video Creation Platform',
+          subtitle: 'Content Marketing Company - 500% Production Efficiency Increase',
+          challenge: 'High cost of large-scale video content production, unstable quality, platform risks',
+          solution: 'Adopt AI video creation platform with perception-decision-execution three-layer architecture',
+          capabilities: [
+            'Intelligent Material Analysis & Slicing',
+            'AI-driven Creative Orchestration',
+            'Sameness Detection Risk Management',
+            'Batch Video Intelligent Synthesis',
+            'Multi-platform Distribution Adaptation',
+            'Sustainable Operation Guarantee'
+          ],
+          results: [
+            { metric: 'Production Efficiency Increase', value: '500%' },
+            { metric: 'Production Cost Reduction', value: '70%' },
+            { metric: 'Content Security Guarantee', value: '100%' }
+          ],
+          quote: '"The sameness risk management of AI video creation platform allows us to produce content on a large scale, and business security is fully guaranteed."',
+          author: 'Li - Marketing Manager'
+        },
+        {
+          id: 'enterprise-rag-system',
+          title: 'Enterprise RAG Knowledge System',
+          subtitle: 'E-commerce Enterprise - 400% Knowledge Retrieval Efficiency Increase',
+          challenge: 'Enterprise knowledge is scattered, employees find it difficult to search for information, low knowledge asset utilization',
+          solution: 'Build enterprise-level RAG system for dynamic knowledge base management',
+          capabilities: [
+            'Dynamic Knowledge Base Management',
+            'High-precision Information Retrieval',
+            'Personalized Style Synthesis',
+            'Referenced Traceable Verification',
+            'Multi-source Data Integration',
+            'Intelligent Knowledge Association & Supplementation'
+          ],
+          results: [
+            { metric: 'Retrieval Efficiency Increase', value: '400%' },
+            { metric: 'Knowledge Utilization Rate', value: '85%' },
+            { metric: 'Employee Satisfaction', value: '92%' }
+          ],
+          quote: '"The enterprise RAG system has brought our knowledge assets to life, employees can quickly obtain accurate information, and work efficiency has improved significantly."',
+          author: 'Wang - Operations Manager'
+        }
+      ]
     },
     features: {
       header1: "Five core pillars",
